@@ -1,0 +1,90 @@
+{
+  "resourceType": "Patient",
+  "id": "example8",
+  "meta": {
+    "profile": [
+      "http://hl7.org.au/fhir/StructureDefinition/au-patient"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org.au/fhir/StructureDefinition/indigenous-status",
+      "valueCoding": {
+        "code": "4",
+        "system": "https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1",
+        "display": "Neither Aboriginal nor Torres Strait Islander origin"
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org.au/fhir/StructureDefinition/ihi-status",
+          "valueCoding": {
+            "code": "active",
+            "system": "https://healthterminologies.gov.au/fhir/CodeSystem/ihi-status-1",
+            "display": "active"
+          }
+        },
+        {
+          "url": "http://hl7.org.au/fhir/StructureDefinition/ihi-record-status",
+          "valueCoding": {
+            "code": "verified",
+            "system": "https://healthterminologies.gov.au/fhir/CodeSystem/ihi-record-status-1",
+            "display": "verified"
+          }
+        }
+      ],
+      "type": {
+        "coding": [
+          {
+            "code": "NI",
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "display": "National unique individual identifier"
+          }
+        ],
+        "text": "IHI"
+      },
+      "system": "http://ns.electronichealth.net.au/id/hi/ihi/1.0",
+      "value": "8003608833357361"
+    }
+  ],
+  "name": [
+    {
+      "family": "Jones",
+      "given": [
+        "Nicholas"
+      ],
+      "prefix": [
+        "Mr"
+      ]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "email",
+      "value": "nick.jones@amail.example.com",
+      "use": "home"
+    },
+    {
+      "system": "phone",
+      "value": "(0491) 579 455",
+      "use": "mobile"
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1949-01-08",
+  "address": [
+    {
+      "use": "home",
+      "line": [
+        "4 Brisbane Street"
+      ],
+      "city": "Brisbane",
+      "state": "QLD",
+      "postalCode": "4112",
+      "country": "Australia"
+    }
+  ]
+}

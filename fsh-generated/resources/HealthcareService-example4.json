@@ -1,0 +1,177 @@
+{
+  "resourceType": "HealthcareService",
+  "id": "example4",
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "RACSI",
+            "system": "http://terminology.hl7.org.au/CodeSystem/v2-0203"
+          }
+        ],
+        "text": "RACS ID"
+      },
+      "system": "http://ns.electronichealth.net.au/id/residential-aged-care-service-id",
+      "value": "0009"
+    }
+  ],
+  "active": true,
+  "providedBy": {
+    "reference": "Organization/example5"
+  },
+  "type": [
+    {
+      "coding": [
+        {
+          "code": "1120991000168102",
+          "system": "http://snomed.info/sct"
+        }
+      ],
+      "text": "Aged care residential service"
+    }
+  ],
+  "location": [
+    {
+      "reference": "Location/example8"
+    }
+  ],
+  "name": "Leafy Grove Home for the Aged",
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "(07) 8543 5755",
+      "use": "work"
+    }
+  ],
+  "serviceProvisionCode": [
+    {
+      "coding": [
+        {
+          "code": "FAP",
+          "system": "http://terminology.hl7.org.au/CodeSystem/service-provision-conditions"
+        }
+      ],
+      "text": "Fees Apply"
+    },
+    {
+      "coding": [
+        {
+          "code": "COP",
+          "system": "http://terminology.hl7.org.au/CodeSystem/service-provision-conditions"
+        }
+      ],
+      "text": "Co-payment"
+    },
+    {
+      "coding": [
+        {
+          "code": "MIX",
+          "system": "http://terminology.hl7.org.au/CodeSystem/service-provision-conditions"
+        }
+      ],
+      "text": "Mixed Billing"
+    }
+  ],
+  "communication": [
+    {
+      "coding": [
+        {
+          "code": "en",
+          "system": "urn:ietf:bcp:47"
+        }
+      ],
+      "text": "English"
+    },
+    {
+      "coding": [
+        {
+          "code": "ar",
+          "system": "urn:ietf:bcp:47"
+        }
+      ],
+      "text": "Arabic"
+    },
+    {
+      "coding": [
+        {
+          "code": "yue",
+          "system": "urn:ietf:bcp:47"
+        }
+      ],
+      "text": "Cantonese"
+    },
+    {
+      "coding": [
+        {
+          "code": "zh",
+          "system": "urn:ietf:bcp:47"
+        }
+      ],
+      "text": "Chinese"
+    },
+    {
+      "coding": [
+        {
+          "code": "hr",
+          "system": "urn:ietf:bcp:47"
+        }
+      ],
+      "text": "Croatian"
+    },
+    {
+      "coding": [
+        {
+          "code": "el",
+          "system": "urn:ietf:bcp:47"
+        }
+      ],
+      "text": "Greek"
+    },
+    {
+      "coding": [
+        {
+          "code": "it",
+          "system": "urn:ietf:bcp:47"
+        }
+      ],
+      "text": "Italian"
+    },
+    {
+      "coding": [
+        {
+          "code": "cmn",
+          "system": "urn:ietf:bcp:47"
+        }
+      ],
+      "text": "Mandarin"
+    },
+    {
+      "coding": [
+        {
+          "code": "pl",
+          "system": "urn:ietf:bcp:47"
+        }
+      ],
+      "text": "Polish"
+    },
+    {
+      "coding": [
+        {
+          "code": "es",
+          "system": "urn:ietf:bcp:47"
+        }
+      ],
+      "text": "Spanish"
+    },
+    {
+      "coding": [
+        {
+          "code": "vi",
+          "system": "urn:ietf:bcp:47"
+        }
+      ],
+      "text": "Vietnamese"
+    }
+  ]
+}

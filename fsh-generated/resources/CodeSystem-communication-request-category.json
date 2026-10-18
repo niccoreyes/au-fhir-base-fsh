@@ -1,0 +1,50 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CommunicationRequestCategory",
+  "id": "communication-request-category",
+  "title": "Communication Request Category",
+  "description": "The Communication Request Category code system defines concepts that represent the category for a communication request.",
+  "url": "http://terminology.hl7.org.au/CodeSystem/communication-request-category",
+  "concept": [
+    {
+      "code": "urgent-results",
+      "display": "Urgent Results",
+      "definition": "A request for results to be communicated urgently to the nominated recipient(s)."
+    },
+    {
+      "code": "patient-preference",
+      "display": "Patient Preference",
+      "definition": "A patient's preferences on communication to them from a service provider."
+    },
+    {
+      "code": "copyto-reports",
+      "display": "Copy To Reports",
+      "definition": "A request for reports to be copied to additional recipient(s)."
+    }
+  ],
+  "meta": {
+    "profile": [
+      "https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.2.3.4.1.4.37"
+    }
+  ],
+  "experimental": false,
+  "caseSensitive": true,
+  "valueSet": "http://terminology.hl7.org.au/ValueSet/communication-request-category",
+  "compositional": false,
+  "versionNeeded": false,
+  "count": 3
+}

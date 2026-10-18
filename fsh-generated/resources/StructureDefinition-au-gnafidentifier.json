@@ -1,0 +1,64 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "au-gnafidentifier",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 2
+    }
+  ],
+  "url": "http://hl7.org.au/fhir/StructureDefinition/au-gnafidentifier",
+  "name": "AUGNAFIdentifier",
+  "title": "AU G-NAF Identifier",
+  "status": "active",
+  "description": "This identifier profile defines a Geocoded National Address File (G-NAF) identifier in an Australian context. The [PSMA G-NAF](https://data.gov.au/data/dataset/geocoded-national-address-file-g-naf) is Australia’s authoritative, geocoded address file. A G-NAF identifier (sometimes referred to as G-NAF ID, or G-NAF PID, or GNAF ID, or address_detail_pid) identifies an address in the PSMA G-NAF.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "type": "Identifier",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Identifier",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Identifier",
+        "path": "Identifier",
+        "short": "Geocoded National Address File (G-NAF) Identifier",
+        "definition": "Geocoded National Address File (G-NAF) identifier assigned to a location address in the G-NAF."
+      },
+      {
+        "id": "Identifier.type",
+        "path": "Identifier.type",
+        "short": "Coded identifier type for G-NAF",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "GNAF",
+              "system": "http://terminology.hl7.org.au/CodeSystem/v2-0203"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Identifier.system",
+        "path": "Identifier.system",
+        "min": 1,
+        "fixedUri": "http://hl7.org.au/id/gnafidentifier"
+      },
+      {
+        "id": "Identifier.value",
+        "path": "Identifier.value",
+        "short": "G-NAF identifier",
+        "min": 1,
+        "example": [
+          {
+            "label": "G-NAF identifier",
+            "valueString": "GAVIC411711441"
+          }
+        ],
+        "maxLength": 15
+      }
+    ]
+  }
+}

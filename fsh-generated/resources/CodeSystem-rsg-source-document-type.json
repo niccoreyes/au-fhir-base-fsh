@@ -1,0 +1,51 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "AURecordedSexOrGenderSourceDocumentType",
+  "id": "rsg-source-document-type",
+  "title": "AU Recorded Sex or Gender Source Document Type",
+  "description": "The AU Recorded Sex or Gender Source Document Type code system defines concepts that represent the type of document where this sex or gender value is recorded.",
+  "url": "http://terminology.hl7.org.au/CodeSystem/rsg-source-document-type",
+  "concept": [
+    {
+      "code": "passport",
+      "display": "Passport",
+      "definition": "A passport issued by a jurisdiction."
+    },
+    {
+      "code": "citizenship-certificate",
+      "display": "Citizenship Certificate",
+      "definition": "A citizenship certificate issued by a jurisdiction."
+    },
+    {
+      "code": "birth-notification",
+      "display": "Birth Notification",
+      "definition": "A notification of a birth from the health service in which the birth occurred."
+    }
+  ],
+  "meta": {
+    "profile": [
+      "https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.2.3.4.1.4.30"
+    }
+  ],
+  "experimental": false,
+  "caseSensitive": true,
+  "valueSet": "http://terminology.hl7.org.au/ValueSet/au-recorded-sex-or-gender-source-document-type",
+  "hierarchyMeaning": "is-a",
+  "compositional": false,
+  "versionNeeded": false,
+  "count": 3
+}

@@ -1,0 +1,68 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "au-employeenumber",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 2
+    }
+  ],
+  "url": "http://hl7.org.au/fhir/StructureDefinition/au-employeenumber",
+  "name": "AUEmployeeNumber",
+  "title": "AU Employee Number",
+  "status": "active",
+  "description": "This identifier profile defines an employee number (sometimes referred to as an employee identifier (EI)) in an Australian context. An employee number is an organisation's identifier for an individual employed by that organisation.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "type": "Identifier",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Identifier",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Identifier",
+        "path": "Identifier",
+        "short": "Employee Number",
+        "definition": "Employee number for an individual staff member or service provider as issued by an employing organisation."
+      },
+      {
+        "id": "Identifier.type",
+        "path": "Identifier.type",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "EI",
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Identifier.system",
+        "path": "Identifier.system",
+        "short": "System identifier namespace for the employing organisation",
+        "min": 1
+      },
+      {
+        "id": "Identifier.value",
+        "path": "Identifier.value",
+        "short": "Employee number",
+        "min": 1
+      },
+      {
+        "id": "Identifier.assigner",
+        "path": "Identifier.assigner",
+        "short": "Employing organisation",
+        "min": 1
+      },
+      {
+        "id": "Identifier.assigner.display",
+        "path": "Identifier.assigner.display",
+        "short": "Employing organisation's name",
+        "min": 1
+      }
+    ]
+  }
+}

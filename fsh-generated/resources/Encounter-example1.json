@@ -1,0 +1,91 @@
+{
+  "resourceType": "Encounter",
+  "id": "example1",
+  "meta": {
+    "profile": [
+      "http://hl7.org.au/fhir/StructureDefinition/au-encounter"
+    ]
+  },
+  "status": "finished",
+  "class": {
+    "code": "AMB",
+    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "display": "ambulatory"
+  },
+  "type": [
+    {
+      "coding": [
+        {
+          "code": "866149003",
+          "system": "http://snomed.info/sct",
+          "display": "Annual visit"
+        }
+      ]
+    }
+  ],
+  "serviceType": {
+    "coding": [
+      {
+        "code": "788007007",
+        "system": "http://snomed.info/sct",
+        "display": "General practice service"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example4",
+    "identifier": {
+      "type": {
+        "coding": [
+          {
+            "code": "MR",
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+          }
+        ]
+      },
+      "system": "http://ns.electronichealth.net.au/id/abn-scoped/medicalrecord/1.0/51824754455",
+      "value": "22446688",
+      "assigner": {
+        "display": "TAS GP Medical Center TAS"
+      }
+    }
+  },
+  "participant": [
+    {
+      "type": [
+        {
+          "coding": [
+            {
+              "code": "PPRF",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+              "display": "primary performer"
+            }
+          ]
+        }
+      ],
+      "individual": {
+        "identifier": {
+          "type": {
+            "coding": [
+              {
+                "code": "EI",
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                "display": "Employee number"
+              }
+            ],
+            "text": "Employee Number"
+          },
+          "system": "http://tasmedicalcenter.example.com/providers",
+          "value": "8223TAS",
+          "assigner": {
+            "display": "TAS GP Medical Center TAS"
+          }
+        }
+      }
+    }
+  ],
+  "period": {
+    "start": "2022-02-10T09:20:00+10:00",
+    "end": "2022-02-10T09:35:00+10:00"
+  }
+}

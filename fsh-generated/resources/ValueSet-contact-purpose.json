@@ -1,0 +1,39 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "ContactPurpose",
+  "id": "contact-purpose",
+  "title": "Contact Purpose",
+  "description": "The purpose for which an associated contact can be reached.",
+  "url": "http://terminology.hl7.org.au/ValueSet/contact-purpose",
+  "meta": {
+    "profile": [
+      "https://healthterminologies.gov.au/fhir/StructureDefinition/composed-value-set-4"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.2.3.4.2.4.19"
+    }
+  ],
+  "experimental": false,
+  "compose": {
+    "include": [
+      {
+        "system": "http://terminology.hl7.org.au/CodeSystem/contact-purpose"
+      },
+      {
+        "valueSet": [
+          "http://terminology.hl7.org/ValueSet/contactentity-type"
+        ]
+      }
+    ]
+  }
+}

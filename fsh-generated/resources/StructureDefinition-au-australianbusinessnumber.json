@@ -1,0 +1,66 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "au-australianbusinessnumber",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 2
+    }
+  ],
+  "url": "http://hl7.org.au/fhir/StructureDefinition/au-australianbusinessnumber",
+  "name": "AUAustralianBusinessNumber",
+  "title": "AU Australian Business Number",
+  "status": "active",
+  "description": "This identifier profile defines an Australian Business Number (ABN) in an Australian context. An ABN is issued to all entities registered in the Australian Business Register (ABR).",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "type": "Identifier",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Identifier",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Identifier",
+        "path": "Identifier",
+        "short": "Australian Business Number (ABN)",
+        "definition": "Australian Business Number (ABN) assigned by the Australian Securities and Investment Commission (ASIC) to an entity registered in the Australian Business Register (ABR).",
+        "constraint": [
+          {
+            "key": "inv-abn-0",
+            "human": "ABN shall be 11 digits",
+            "source": "http://hl7.org.au/fhir/StructureDefinition/au-australianbusinessnumber",
+            "severity": "error",
+            "expression": "value.matches('^([0-9]{11})$')"
+          }
+        ]
+      },
+      {
+        "id": "Identifier.type",
+        "path": "Identifier.type",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "ABN",
+              "system": "http://terminology.hl7.org.au/CodeSystem/v2-0203"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Identifier.system",
+        "path": "Identifier.system",
+        "min": 1,
+        "fixedUri": "http://hl7.org.au/id/abn"
+      },
+      {
+        "id": "Identifier.value",
+        "path": "Identifier.value",
+        "short": "ABN",
+        "comment": "See information on the [format of the ABN](https://www.abr.business.gov.au/HelpAbnFormat.aspx) on [ABN Lookup](https://www.abr.business.gov.au).",
+        "min": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "au-cspregistrationnumber",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    }
+  ],
+  "url": "http://hl7.org.au/fhir/StructureDefinition/au-cspregistrationnumber",
+  "name": "AUCSPRegistrationNumber",
+  "title": "AU CSP Registration Number",
+  "status": "active",
+  "description": "This identifier profile defines a Contracted Service Provider (CSP) registration number in an Australian context (see [My Health Record](https://www.myhealthrecord.gov.au/for-healthcare-professionals/howtos/contracted-service-provider-registration) for further information). A CSP registration number may be issued to organisations who wish to participate in the My Health Record and/or the Healthcare Identifiers Service as a CSP.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "type": "Identifier",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Identifier",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Identifier",
+        "path": "Identifier",
+        "short": "Contracted Service Provider (CSP) Registration Number",
+        "definition": "Contracted Service Provider (CSP) registration number assigned to an organisation.",
+        "constraint": [
+          {
+            "key": "inv-csp-0",
+            "human": "CSP registration number shall be 16 digits",
+            "source": "http://hl7.org.au/fhir/StructureDefinition/au-cspregistrationnumber",
+            "severity": "error",
+            "expression": "value.matches('^([0-9]{16})$')"
+          },
+          {
+            "key": "inv-csp-1",
+            "human": "CSP registration number prefix shall be 800363",
+            "source": "http://hl7.org.au/fhir/StructureDefinition/au-cspregistrationnumber",
+            "severity": "error",
+            "expression": "value.startsWith('800363')"
+          },
+          {
+            "key": "inv-csp-2",
+            "human": "CSP registration number shall pass the Luhn algorithm check",
+            "source": "http://hl7.org.au/fhir/StructureDefinition/au-cspregistrationnumber",
+            "severity": "error",
+            "expression": "(((select(value.substring(0,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(value.substring(1,1).toInteger())+(select(value.substring(2,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(value.substring(3,1).toInteger())+(select(value.substring(4,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(value.substring(5,1).toInteger())+(select(value.substring(6,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(value.substring(7,1).toInteger())+(select(value.substring(8,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(value.substring(9,1).toInteger())+(select(value.substring(10,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(value.substring(11,1).toInteger())+(select(value.substring(12,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(value.substring(13,1).toInteger())+(select(value.substring(14,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(value.substring(15,1).toInteger()))mod 10=0)"
+          }
+        ]
+      },
+      {
+        "id": "Identifier.type",
+        "path": "Identifier.type",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "CSPRN",
+              "system": "http://terminology.hl7.org.au/CodeSystem/v2-0203"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Identifier.system",
+        "path": "Identifier.system",
+        "min": 1,
+        "fixedUri": "http://ns.electronichealth.net.au/id/hi/csp/1.0"
+      },
+      {
+        "id": "Identifier.value",
+        "path": "Identifier.value",
+        "short": "CSP registration number",
+        "min": 1,
+        "example": [
+          {
+            "label": "CSP registration number",
+            "valueString": "8003639900027009"
+          }
+        ],
+        "maxLength": 16
+      }
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+Invariant: inv-relper-4
+Description: "Recorded sex or gender jurisdiction shall be a member of the Jurisdiction ValueSet - AU Extended if any codes within that value set can apply"
+* severity = #warning
+* expression = "extension('http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender').extension('jurisdiction').empty() or extension('http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender').extension('jurisdiction').value.all(memberOf('http://terminology.hl7.org.au/ValueSet/jurisdiction-extended'))"

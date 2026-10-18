@@ -1,0 +1,70 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "date-accuracy-indicator",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 2
+    }
+  ],
+  "url": "http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator",
+  "name": "DateAccuracyIndicator",
+  "title": "Date Accuracy Indicator",
+  "status": "active",
+  "description": "This extension applies to the [date](http://hl7.org/fhir/R4/datatypes.html#date) and [dateTime](http://hl7.org/fhir/R4/datatypes.html#dateTime) data types and is used to represent the accuracy of the associated date.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "date",
+      "type": "element"
+    },
+    {
+      "expression": "dateTime",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Date accuracy indicator",
+        "definition": "General date accuracy indicator coding.",
+        "comment": "In some circumstances, systems may capture date or dateTime data that has unknown or estimated parts. This coding indicates the accuracy of the day, month and year parts. This concept is equivalent to Australian Institute of Health and Welfare data element 294418 [Date—accuracy indicator](https://meteor.aihw.gov.au/content/index.phtml/itemId/294418).",
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "Date accuracy coding",
+        "definition": "Coding of the accuracy of a date.",
+        "min": 1,
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://healthterminologies.gov.au/fhir/ValueSet/date-accuracy-indicator-1",
+          "description": "Date accuracy coding"
+        }
+      }
+    ]
+  }
+}

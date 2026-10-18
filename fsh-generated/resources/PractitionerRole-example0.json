@@ -1,0 +1,72 @@
+{
+  "resourceType": "PractitionerRole",
+  "id": "example0",
+  "meta": {
+    "profile": [
+      "http://hl7.org.au/fhir/StructureDefinition/au-practitionerrole"
+    ]
+  },
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "UPIN",
+            "system": "http://terminology.hl7.org.au/CodeSystem/v2-0203"
+          }
+        ],
+        "text": "Medicare Provider Number"
+      },
+      "system": "http://ns.electronichealth.net.au/id/medicare-provider-number",
+      "value": "1234561A"
+    }
+  ],
+  "active": true,
+  "practitioner": {
+    "reference": "Practitioner/example0"
+  },
+  "organization": {
+    "reference": "Organization/example0"
+  },
+  "specialty": [
+    {
+      "coding": [
+        {
+          "code": "394579002",
+          "system": "http://snomed.info/sct",
+          "display": "Cardiology"
+        }
+      ]
+    }
+  ],
+  "location": [
+    {
+      "reference": "Location/example0"
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "0255507777",
+      "use": "work"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org.au/fhir/StructureDefinition/contact-purpose",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "after-hours",
+                "system": "http://terminology.hl7.org.au/CodeSystem/contact-purpose",
+                "display": "After Hours"
+              }
+            ]
+          }
+        }
+      ],
+      "system": "phone",
+      "value": "0255508888"
+    }
+  ]
+}

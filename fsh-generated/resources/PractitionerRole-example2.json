@@ -1,0 +1,102 @@
+{
+  "resourceType": "PractitionerRole",
+  "id": "example2",
+  "meta": {
+    "profile": [
+      "http://hl7.org.au/fhir/StructureDefinition/au-practitionerrole"
+    ]
+  },
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "EI",
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "display": "Employee number"
+          }
+        ],
+        "text": "Employee Number"
+      },
+      "system": "http://ns.electronichealth.net.au/id/abn-scoped/service-provider-individual/1.0/51824753556",
+      "value": "peterwinslow44",
+      "assigner": {
+        "display": "Albion Hospital"
+      }
+    }
+  ],
+  "practitioner": {
+    "reference": "Practitioner/example2"
+  },
+  "organization": {
+    "reference": "Organization/example1"
+  },
+  "code": [
+    {
+      "coding": [
+        {
+          "code": "85733003",
+          "system": "http://snomed.info/sct",
+          "display": "General pathologist"
+        }
+      ]
+    }
+  ],
+  "specialty": [
+    {
+      "coding": [
+        {
+          "code": "394915009",
+          "system": "http://snomed.info/sct",
+          "display": "General pathology (specialty)"
+        }
+      ]
+    }
+  ],
+  "location": [
+    {
+      "reference": "Location/example2"
+    }
+  ],
+  "healthcareService": [
+    {
+      "reference": "HealthcareService/example2"
+    }
+  ],
+  "telecom": [
+    {
+      "system": "email",
+      "value": "peter.winslow@amail.example.com",
+      "use": "work"
+    }
+  ],
+  "availableTime": [
+    {
+      "daysOfWeek": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri"
+      ],
+      "availableStartTime": "08:30:00",
+      "_availableStartTime": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/timezone",
+            "valueCode": "Australia/Brisbane"
+          }
+        ]
+      },
+      "availableEndTime": "17:30:00",
+      "_availableEndTime": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/timezone",
+            "valueCode": "Australia/Brisbane"
+          }
+        ]
+      }
+    }
+  ]
+}

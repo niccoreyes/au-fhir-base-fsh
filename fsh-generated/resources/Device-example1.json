@@ -1,0 +1,52 @@
+{
+  "resourceType": "Device",
+  "id": "example1",
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "NDI",
+            "system": "http://terminology.hl7.org.au/CodeSystem/v2-0203",
+            "display": "National Device Identifier"
+          }
+        ],
+        "text": "PAI-D"
+      },
+      "system": "http://ns.electronichealth.net.au/id/pcehr/paid/1.0",
+      "value": "8003640013000057"
+    }
+  ],
+  "deviceName": [
+    {
+      "name": "Some registered repository service",
+      "type": "other"
+    }
+  ],
+  "type": {
+    "coding": [
+      {
+        "code": "462240000",
+        "system": "http://snomed.info/sct",
+        "display": "Patient health record information system"
+      }
+    ],
+    "text": "National patient health record repository"
+  },
+  "owner": {
+    "identifier": {
+      "type": {
+        "coding": [
+          {
+            "code": "NOI",
+            "system": "http://terminology.hl7.org.au/CodeSystem/v2-0203",
+            "display": "National Organisation Identifier"
+          }
+        ],
+        "text": "PAI-O"
+      },
+      "system": "http://ns.electronichealth.net.au/id/pcehr/paio/1.0",
+      "value": "8003640011000059"
+    }
+  }
+}

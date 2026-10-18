@@ -1,0 +1,74 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "au-ahpraregistrationnumber",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    }
+  ],
+  "url": "http://hl7.org.au/fhir/StructureDefinition/au-ahpraregistrationnumber",
+  "name": "AUAhpraRegistrationNumber",
+  "title": "AU Ahpra Registration Number",
+  "status": "active",
+  "description": "This identifier profile defines an Australian Health Practitioner Regulation Agency (Ahpra) registration number in an Australian context (see [Ahpra](https://www.ahpra.gov.au) for further information).",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "type": "Identifier",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Identifier",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Identifier",
+        "path": "Identifier",
+        "short": "Australian Health Practitioner Regulation Agency (Ahpra) Registration Number",
+        "definition": "Australian Health Practitioner Regulation Authority (Ahpra) registration number assigned to a practitioner.",
+        "constraint": [
+          {
+            "key": "inv-ahpra-0",
+            "human": "Ahpra identifier shall be 3 uppercase letters, followed by 10 digits",
+            "source": "http://hl7.org.au/fhir/StructureDefinition/au-ahpraregistrationnumber",
+            "severity": "error",
+            "expression": "value.matches('^[A-Z]{3}[0-9]{10}$')"
+          }
+        ]
+      },
+      {
+        "id": "Identifier.type",
+        "path": "Identifier.type",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "AHPRA",
+              "system": "http://terminology.hl7.org.au/CodeSystem/v2-0203"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Identifier.system",
+        "path": "Identifier.system",
+        "min": 1,
+        "fixedUri": "http://hl7.org.au/id/ahpra-registration-number"
+      },
+      {
+        "id": "Identifier.value",
+        "path": "Identifier.value",
+        "short": "Ahpra registration number",
+        "min": 1,
+        "example": [
+          {
+            "label": "Ahpra registration number",
+            "valueString": "MED0000932846"
+          }
+        ],
+        "condition": [
+          "inv-ahpra-0"
+        ]
+      }
+    ]
+  }
+}

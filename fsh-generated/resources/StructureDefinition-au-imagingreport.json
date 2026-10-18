@@ -1,0 +1,87 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "au-imagingreport",
+  "url": "http://hl7.org.au/fhir/StructureDefinition/au-imagingreport",
+  "name": "AUBaseDiagnosticImagingReport",
+  "title": "AU Base Diagnostic Imaging Report",
+  "status": "active",
+  "description": "This profile defines a diagnostic report structure to represent a diagnostic imaging report issued by a diagnostic service provider in an Australian context.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "DiagnosticReport",
+  "baseDefinition": "http://hl7.org.au/fhir/StructureDefinition/au-diagnosticreport",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "DiagnosticReport",
+        "path": "DiagnosticReport",
+        "short": "A diagnostic imaging report in an Australian healthcare context"
+      },
+      {
+        "id": "DiagnosticReport.basedOn",
+        "path": "DiagnosticReport.basedOn",
+        "short": "Diagnostic imaging order",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
+              "http://hl7.org.au/fhir/StructureDefinition/au-servicerequest",
+              "http://hl7.org/fhir/StructureDefinition/CarePlan"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.category",
+        "path": "DiagnosticReport.category",
+        "short": "Relevant diagnostic imaging category: service, modality",
+        "comment": "A category denoting diagnostic imaging service identifies the type of report and supports macro handling of requests is required. A second category to provide the modality should be provided where possible; a value set to support this categorisation is not yet available.",
+        "min": 1
+      },
+      {
+        "id": "DiagnosticReport.code",
+        "path": "DiagnosticReport.code",
+        "short": "Diagnostic imaging examination or study",
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "https://healthterminologies.gov.au/fhir/ValueSet/imaging-procedure-1"
+        }
+      },
+      {
+        "id": "DiagnosticReport.subject",
+        "path": "DiagnosticReport.subject",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.effective[x]",
+        "path": "DiagnosticReport.effective[x]",
+        "short": "Time of imaging examination",
+        "min": 1
+      },
+      {
+        "id": "DiagnosticReport.result",
+        "path": "DiagnosticReport.result",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org.au/fhir/StructureDefinition/au-diagnosticresult",
+              "http://hl7.org.au/fhir/StructureDefinition/au-imagingresult"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

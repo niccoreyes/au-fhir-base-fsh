@@ -1,0 +1,153 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "identifier-routability",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 2
+    }
+  ],
+  "url": "http://hl7.org.au/fhir/StructureDefinition/identifier-routability",
+  "name": "IdentifierRoutability",
+  "title": "Identifier Routability",
+  "status": "active",
+  "description": "This extension applies to the [Identifier](http://hl7.org/fhir/datatypes.html#identifier) data type. Identifier routability preferences for an asserter.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "Identifier",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Identifier routability",
+        "definition": "Asserted routing preferences for the associated identifier.",
+        "max": "1",
+        "constraint": [
+          {
+            "key": "inv-idrout-0",
+            "human": "preference is required when flag is true",
+            "source": "http://hl7.org.au/fhir/StructureDefinition/identifier-routability",
+            "severity": "error",
+            "expression": "extension.where(url='routability-flag').value.single()=true implies extension.where(url='routability-preference').exists()"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "min": 2
+      },
+      {
+        "id": "Extension.extension:routability-flag",
+        "path": "Extension.extension",
+        "sliceName": "routability-flag",
+        "short": "Indicates asserter can route associated identifier",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:routability-flag.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:routability-flag.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "routability-flag"
+      },
+      {
+        "id": "Extension.extension:routability-flag.value[x]",
+        "path": "Extension.extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "condition": [
+          "inv-routability-preference"
+        ]
+      },
+      {
+        "id": "Extension.extension:routability-preference",
+        "path": "Extension.extension",
+        "sliceName": "routability-preference",
+        "short": "Indicates the asserter's preference for selection of this identifier for routing",
+        "definition": "Lower value is higher preference.  0 is highest priority.",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:routability-preference.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:routability-preference.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "routability-preference"
+      },
+      {
+        "id": "Extension.extension:routability-preference.value[x]",
+        "path": "Extension.extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "unsignedInt"
+          }
+        ],
+        "condition": [
+          "inv-routability-preference"
+        ]
+      },
+      {
+        "id": "Extension.extension:routability-asserter",
+        "path": "Extension.extension",
+        "sliceName": "routability-asserter",
+        "short": "Identifies asserter",
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Extension.extension:routability-asserter.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:routability-asserter.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "routability-asserter"
+      },
+      {
+        "id": "Extension.extension:routability-asserter.value[x]",
+        "path": "Extension.extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "uri"
+          }
+        ]
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://hl7.org.au/fhir/StructureDefinition/identifier-routability"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "max": "0"
+      }
+    ]
+  }
+}

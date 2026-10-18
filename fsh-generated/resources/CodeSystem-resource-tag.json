@@ -1,0 +1,45 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "ResourceTag",
+  "id": "resource-tag",
+  "title": "Resource Tag",
+  "description": "The Resource Tag code system defines concepts that represent tag values for labelling resources.",
+  "url": "http://terminology.hl7.org.au/CodeSystem/resource-tag",
+  "concept": [
+    {
+      "code": "fulfilment-task",
+      "display": "fulfilment of a task",
+      "definition": "A tag value indicating fulfilment of a task."
+    },
+    {
+      "code": "fulfilment-task-group",
+      "display": "fulfilment of a group task",
+      "definition": "A tag value indicating fulfilment of a group task."
+    }
+  ],
+  "meta": {
+    "profile": [
+      "https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.2.3.4.1.4.35"
+    }
+  ],
+  "experimental": false,
+  "caseSensitive": true,
+  "valueSet": "http://terminology.hl7.org.au/ValueSet/resource-tag",
+  "compositional": false,
+  "versionNeeded": false,
+  "count": 2
+}

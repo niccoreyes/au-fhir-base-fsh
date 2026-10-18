@@ -1,0 +1,76 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "au-encounter",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    }
+  ],
+  "url": "http://hl7.org.au/fhir/StructureDefinition/au-encounter",
+  "name": "AUBaseEncounter",
+  "title": "AU Base Encounter",
+  "status": "active",
+  "description": "This profile defines an encounter structure that localises core concepts, including terminology, for use in an Australian context. This profile is intended to be applicable for recording details of ambulatory and non-ambulatory patient encounters in an Australian healthcare context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Encounter",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Encounter",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Encounter",
+        "path": "Encounter",
+        "short": "An encounter in an Australian healthcare context"
+      },
+      {
+        "id": "Encounter.class",
+        "path": "Encounter.class",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://terminology.hl7.org.au/ValueSet/v3-ActEncounterCode-extended"
+        }
+      },
+      {
+        "id": "Encounter.type",
+        "path": "Encounter.type",
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "https://healthterminologies.gov.au/fhir/ValueSet/encounter-type-1"
+        }
+      },
+      {
+        "id": "Encounter.serviceType",
+        "path": "Encounter.serviceType",
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "https://healthterminologies.gov.au/fhir/ValueSet/service-type-1"
+        }
+      },
+      {
+        "id": "Encounter.participant",
+        "path": "Encounter.participant",
+        "comment": "When representing a HealthcareService involved in an encounter, pre-adoption of the FHIR R5 [Encounter.participant.actor](https://hl7.org/fhir/R5/encounter-definitions.html#Encounter.participant.actor) element with the extension URL http://hl7.org/fhir/5.0/StructureDefinition/extension-Encounter.participant.actor can be used."
+      },
+      {
+        "id": "Encounter.reasonCode",
+        "path": "Encounter.reasonCode",
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "https://healthterminologies.gov.au/fhir/ValueSet/reason-for-encounter-1"
+        }
+      },
+      {
+        "id": "Encounter.hospitalization.dischargeDisposition",
+        "path": "Encounter.hospitalization.dischargeDisposition",
+        "short": "Separation Mode",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://healthterminologies.gov.au/fhir/ValueSet/separation-mode-1"
+        }
+      }
+    ]
+  }
+}

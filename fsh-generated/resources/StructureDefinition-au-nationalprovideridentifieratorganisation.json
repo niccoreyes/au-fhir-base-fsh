@@ -1,0 +1,82 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "au-nationalprovideridentifieratorganisation",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 2
+    }
+  ],
+  "url": "http://hl7.org.au/fhir/StructureDefinition/au-nationalprovideridentifieratorganisation",
+  "name": "AUNationalProviderIdentifierAtOrganisation",
+  "title": "AU National Provider Identifier At Organisation",
+  "status": "active",
+  "description": "This identifier profile defines a National Provider Identifier at Organisation (NPIO) in an Australian context. An NPIO identifies an individual practitioner at an organisation using the practitioner's HPI-I and organisation's HPI-O to form the NPIO.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "type": "Identifier",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Identifier",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Identifier",
+        "path": "Identifier",
+        "short": "National Provider Identifier at Organisation (NPIO)",
+        "definition": "National Provider Identifier at Organisation (NPIO) identifies an individual practitioner at an organisation using the practitioner's HPI-I and organisation's HPI-O to form the NPIO.",
+        "constraint": [
+          {
+            "key": "inv-npio-0",
+            "human": "NPIO shall be 33 characters",
+            "source": "http://hl7.org.au/fhir/StructureDefinition/au-nationalprovideridentifieratorganisation",
+            "severity": "error",
+            "expression": "value.length() = 33"
+          },
+          {
+            "key": "inv-npio-1",
+            "human": "NPIO shall start with '800361', then 10 digits, then '@', then '800362', then 10 digits",
+            "source": "http://hl7.org.au/fhir/StructureDefinition/au-nationalprovideridentifieratorganisation",
+            "severity": "error",
+            "expression": "value.matches('^(800361)([0-9]{10})(@)(800362)([0-9]{10})$')"
+          }
+        ]
+      },
+      {
+        "id": "Identifier.type",
+        "path": "Identifier.type",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "NPIO",
+              "system": "http://terminology.hl7.org.au/CodeSystem/v2-0203"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Identifier.system",
+        "path": "Identifier.system",
+        "min": 1,
+        "fixedUri": "http://hl7.org.au/id/npio"
+      },
+      {
+        "id": "Identifier.value",
+        "path": "Identifier.value",
+        "short": "NPIO",
+        "min": 1,
+        "example": [
+          {
+            "label": "NPIO",
+            "valueString": "8003619900015717@8003621566684455"
+          }
+        ],
+        "condition": [
+          "inv-npio-0",
+          "inv-npio-1"
+        ]
+      }
+    ]
+  }
+}

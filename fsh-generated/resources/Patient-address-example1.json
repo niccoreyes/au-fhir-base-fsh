@@ -1,0 +1,16 @@
+{
+  "resourceType": "Patient",
+  "id": "address-example1",
+  "address": [
+    {
+      "text": "Level 1, 300 George St, Brisbane, QLD 4000",
+      "line": [
+        "Level 1 300 George St"
+      ],
+      "city": "Brisbane",
+      "state": "QLD",
+      "postalCode": "4000",
+      "country": "AU"
+    }
+  ]
+}

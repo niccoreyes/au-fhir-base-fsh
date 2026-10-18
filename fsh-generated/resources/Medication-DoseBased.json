@@ -1,0 +1,54 @@
+{
+  "resourceType": "Medication",
+  "id": "DoseBased",
+  "meta": {
+    "profile": [
+      "http://hl7.org.au/fhir/StructureDefinition/au-medication"
+    ]
+  },
+  "form": {
+    "coding": [
+      {
+        "code": "129011000036109",
+        "system": "http://snomed.info/sct",
+        "display": "Injection"
+      }
+    ]
+  },
+  "ingredient": [
+    {
+      "itemCodeableConcept": {
+        "coding": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org.au/fhir/StructureDefinition/medication-type",
+                "valueCoding": {
+                  "code": "UPD",
+                  "system": "http://terminology.hl7.org.au/CodeSystem/medication-type",
+                  "display": "Unbranded product with no strengths or form"
+                }
+              }
+            ],
+            "code": "31865003",
+            "system": "http://snomed.info/sct",
+            "display": "Fluconazole"
+          }
+        ]
+      },
+      "isActive": true,
+      "strength": {
+        "numerator": {
+          "value": 200,
+          "code": "mg",
+          "system": "http://unitsofmeasure.org"
+        },
+        "denominator": {
+          "value": 100,
+          "code": "mL",
+          "system": "http://unitsofmeasure.org"
+        }
+      }
+    }
+  ]
+}

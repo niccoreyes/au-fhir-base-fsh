@@ -1,0 +1,57 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "AURecordedSexOrGenderSourceDocumentType",
+  "id": "rsg-source-document-type",
+  "title": "AU Recorded Sex or Gender (RSG) Source Document Type",
+  "description": "The AU Recorded Sex or Gender (RSG) Source Document Type value set includes codes that can be used to represent the type of document where this sex or gender value is recorded.",
+  "url": "http://terminology.hl7.org.au/ValueSet/rsg-source-document-type",
+  "meta": {
+    "profile": [
+      "https://healthterminologies.gov.au/fhir/StructureDefinition/composed-value-set-4"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.2.3.4.2.4.32"
+    }
+  ],
+  "experimental": false,
+  "copyright": "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "71230-7"
+          },
+          {
+            "code": "53245-7"
+          }
+        ]
+      },
+      {
+        "system": "http://terminology.hl7.org.au/CodeSystem/rsg-source-document-type",
+        "concept": [
+          {
+            "code": "passport"
+          },
+          {
+            "code": "citizenship-certificate"
+          },
+          {
+            "code": "birth-notification"
+          }
+        ]
+      }
+    ]
+  }
+}

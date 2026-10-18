@@ -1,0 +1,60 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "EndpointConnectionTypeAU",
+  "id": "au-endpoint-connection-type",
+  "title": "Endpoint Connection Type AU",
+  "description": "Additional concept codes for endpoint connection type defined for use in an Australian context. These codes are used as extensions to the HL7 International code set.",
+  "url": "http://terminology.hl7.org.au/CodeSystem/endpoint-connection-type",
+  "concept": [
+    {
+      "code": "http://ns.electronichealth.net.au/smd/intf/SealedImmediateMessageDelivery/TLS/2010",
+      "display": "Sealed Immediate Message Delivery",
+      "definition": "Service interface for secure message delivery (immediate mode)"
+    },
+    {
+      "code": "http://ns.electronichealth.net.au/smd/intf/SealedMessageDelivery/TLS/2010",
+      "display": "Sealed Message Delivery",
+      "definition": "Service interface for secure message delivery (deferred mode)"
+    },
+    {
+      "code": "http://ns.electronichealth.net.au/smd/intf/SealedMessageRetrieval/TLS/2010",
+      "display": "Sealed Message Retrieval",
+      "definition": "Service interface for secure message retrieval (deferred mode)"
+    },
+    {
+      "code": "http://ns.electronichealth.net.au/smd/intf/TransportResponseDelivery/TLS/2010",
+      "display": "Transport Response Delivery",
+      "definition": "Service interface for secure message delivery (deliver acknowledgement)"
+    },
+    {
+      "code": "http://ns.electronichealth.net.au/smd/intf/TransportResponseRetrieval/TLS/2010",
+      "display": "Transport Response Retrieval",
+      "definition": "Service interface for secure message delivery (retrieve acknowledgement)"
+    }
+  ],
+  "meta": {
+    "profile": [
+      "https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.2.3.4.1.4.40"
+    }
+  ],
+  "experimental": false,
+  "caseSensitive": true,
+  "valueSet": "http://terminology.hl7.org.au/ValueSet/endpoint-connection-type",
+  "compositional": false,
+  "versionNeeded": false,
+  "count": 5
+}

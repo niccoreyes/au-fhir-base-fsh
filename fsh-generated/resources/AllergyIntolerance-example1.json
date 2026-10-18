@@ -1,0 +1,88 @@
+{
+  "resourceType": "AllergyIntolerance",
+  "id": "example1",
+  "meta": {
+    "profile": [
+      "http://hl7.org.au/fhir/StructureDefinition/au-allergyintolerance"
+    ]
+  },
+  "clinicalStatus": {
+    "coding": [
+      {
+        "code": "active",
+        "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+        "display": "Active"
+      }
+    ]
+  },
+  "verificationStatus": {
+    "coding": [
+      {
+        "code": "unconfirmed",
+        "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+        "display": "Unconfirmed"
+      }
+    ]
+  },
+  "type": "allergy",
+  "category": [
+    "food"
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "213020009",
+        "system": "http://snomed.info/sct",
+        "display": "Allergy to egg protein"
+      }
+    ]
+  },
+  "patient": {
+    "reference": "Patient/example2",
+    "display": "Sally Grant"
+  },
+  "onsetAge": {
+    "value": 4,
+    "code": "a",
+    "system": "http://unitsofmeasure.org",
+    "unit": "year"
+  },
+  "recordedDate": "2018-03-07",
+  "asserter": {
+    "reference": "Patient/example2",
+    "display": "Sally Grant"
+  },
+  "reaction": [
+    {
+      "manifestation": [
+        {
+          "coding": [
+            {
+              "code": "247472004",
+              "system": "http://snomed.info/sct",
+              "display": "Hives"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "code": "422587007",
+              "system": "http://snomed.info/sct",
+              "display": "Nausea"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "code": "422400008",
+              "system": "http://snomed.info/sct",
+              "display": "Vomiting"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

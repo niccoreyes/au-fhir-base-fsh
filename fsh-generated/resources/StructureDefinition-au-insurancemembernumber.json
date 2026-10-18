@@ -1,0 +1,68 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "au-insurancemembernumber",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 2
+    }
+  ],
+  "url": "http://hl7.org.au/fhir/StructureDefinition/au-insurancemembernumber",
+  "name": "AUInsuranceMemberNumber",
+  "title": "AU Insurance Member Number",
+  "status": "active",
+  "description": "This identifier profile defines an insurance member number in an Australian context. An insurance member number is the unique member number assigned to an individual by an insurer and is typically displayed on their insurance card. An individual will not have more than one member number per insurer.\n\nThis definition supports the sending of an insurance member number that is relevant in a healthcare context and may be used to capture Australian and International health insurer issued member numbers. In Australia this will typically be a private health insurance member number. This identifier should not be confused with an insurance policy number.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "type": "Identifier",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Identifier",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Identifier",
+        "path": "Identifier",
+        "short": "Insurance Member Number",
+        "definition": "Insurance member number assigned to an individual by an insurer as their unique member number. It is typically displayed on their insurance card and an individual will not have more than one member number per insurer. This identifier should not be confused with an insurance policy number."
+      },
+      {
+        "id": "Identifier.type",
+        "path": "Identifier.type",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "MB",
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Identifier.system",
+        "path": "Identifier.system",
+        "short": "System identifier namespace for the insurer that assigned the insurance member number",
+        "min": 1
+      },
+      {
+        "id": "Identifier.value",
+        "path": "Identifier.value",
+        "short": "Insurance member number",
+        "min": 1
+      },
+      {
+        "id": "Identifier.assigner",
+        "path": "Identifier.assigner",
+        "short": "Insurer",
+        "min": 1
+      },
+      {
+        "id": "Identifier.assigner.display",
+        "path": "Identifier.assigner.display",
+        "short": "Name of insurer",
+        "min": 1
+      }
+    ]
+  }
+}

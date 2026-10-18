@@ -1,0 +1,38 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "servicerequest-supporting-info",
+  "url": "http://hl7.org.au/fhir/SearchParameter/servicerequest-supporting-info",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    }
+  ],
+  "name": "ServiceRequestSupportingInfo",
+  "status": "active",
+  "description": "This search parameter returns service requests that reference the specified resource in ServiceRequest.supportingInfo.",
+  "code": "supporting-info",
+  "base": [
+    "ServiceRequest"
+  ],
+  "type": "reference",
+  "expression": "ServiceRequest.supportingInfo",
+  "multipleOr": true,
+  "_multipleOr": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+        "valueCode": "MAY"
+      }
+    ]
+  },
+  "multipleAnd": true,
+  "_multipleAnd": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+        "valueCode": "MAY"
+      }
+    ]
+  }
+}

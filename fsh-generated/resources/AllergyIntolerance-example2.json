@@ -1,0 +1,97 @@
+{
+  "resourceType": "AllergyIntolerance",
+  "id": "example2",
+  "meta": {
+    "profile": [
+      "http://hl7.org.au/fhir/StructureDefinition/au-allergyintolerance"
+    ]
+  },
+  "clinicalStatus": {
+    "coding": [
+      {
+        "code": "active",
+        "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+        "display": "Active"
+      }
+    ]
+  },
+  "verificationStatus": {
+    "coding": [
+      {
+        "code": "confirmed",
+        "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+        "display": "Confirmed"
+      }
+    ]
+  },
+  "type": "intolerance",
+  "category": [
+    "food"
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "782415009",
+        "system": "http://snomed.info/sct",
+        "display": "Intolerance to lactose"
+      }
+    ]
+  },
+  "patient": {
+    "reference": "Patient/example4",
+    "display": "Suzanne Simmons"
+  },
+  "onsetAge": {
+    "value": 1,
+    "code": "a",
+    "system": "http://unitsofmeasure.org",
+    "unit": "year"
+  },
+  "recordedDate": "2009-10-09",
+  "asserter": {
+    "reference": "Practitioner/example3",
+    "display": "Francis Fernando"
+  },
+  "reaction": [
+    {
+      "substance": {
+        "coding": [
+          {
+            "code": "47703008",
+            "system": "http://snomed.info/sct",
+            "display": "Lactose"
+          }
+        ]
+      },
+      "manifestation": [
+        {
+          "coding": [
+            {
+              "code": "21522001",
+              "system": "http://snomed.info/sct",
+              "display": "Abdominal pain"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "code": "116289008",
+              "system": "http://snomed.info/sct",
+              "display": "Abdominal bloating"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "code": "62315008",
+              "system": "http://snomed.info/sct",
+              "display": "Diarrhoea"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

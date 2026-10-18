@@ -1,0 +1,87 @@
+{
+  "resourceType": "PractitionerRole",
+  "id": "example3",
+  "meta": {
+    "profile": [
+      "http://hl7.org.au/fhir/StructureDefinition/au-practitionerrole"
+    ]
+  },
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "UPIN",
+            "system": "http://terminology.hl7.org.au/CodeSystem/v2-0203"
+          }
+        ],
+        "text": "Medicare Provider Number"
+      },
+      "system": "http://ns.electronichealth.net.au/id/medicare-provider-number",
+      "value": "1234561A"
+    }
+  ],
+  "practitioner": {
+    "reference": "Practitioner/example3"
+  },
+  "organization": {
+    "reference": "Organization/example3"
+  },
+  "code": [
+    {
+      "coding": [
+        {
+          "code": "62247001",
+          "system": "http://snomed.info/sct",
+          "display": "General practitioner"
+        }
+      ]
+    }
+  ],
+  "specialty": [
+    {
+      "coding": [
+        {
+          "code": "394814009",
+          "system": "http://snomed.info/sct",
+          "display": "General practice (specialty)"
+        }
+      ]
+    }
+  ],
+  "location": [
+    {
+      "reference": "Location/example3"
+    }
+  ],
+  "healthcareService": [
+    {
+      "reference": "HealthcareService/example3"
+    }
+  ],
+  "telecom": [
+    {
+      "system": "email",
+      "value": "francis.fernando@alphamail.example.com",
+      "use": "work"
+    }
+  ],
+  "availableTime": [
+    {
+      "daysOfWeek": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri"
+      ],
+      "availableStartTime": "08:00:00",
+      "availableEndTime": "20:00:00"
+    }
+  ],
+  "notAvailable": [
+    {
+      "description": "Weekends"
+    }
+  ]
+}

@@ -1,0 +1,481 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "au-patient",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 3
+    }
+  ],
+  "url": "http://hl7.org.au/fhir/StructureDefinition/au-patient",
+  "name": "AUBasePatient",
+  "title": "AU Base Patient",
+  "status": "active",
+  "description": "This profile defines a patient structure that localises core concepts, including identifiers and terminology, for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Patient",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Patient",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Patient",
+        "path": "Patient",
+        "short": "A patient in an Australian healthcare context",
+        "definition": "Demographics and other administrative information about an individual receiving care or other health-related services.",
+        "constraint": [
+          {
+            "key": "inv-pat-0",
+            "human": "If present, birth time's date shall be the birth date",
+            "source": "http://hl7.org.au/fhir/StructureDefinition/au-patient",
+            "severity": "error",
+            "expression": "birthDate.extension('http://hl7.org/fhir/StructureDefinition/patient-birthTime').exists() implies birthDate.extension('http://hl7.org/fhir/StructureDefinition/patient-birthTime').value.toString().substring(0,10) = birthDate.toString()"
+          },
+          {
+            "key": "inv-pat-1",
+            "human": "Individual gender identity shall be a member of the Gender Identity Response value set if any codes within that value set can apply",
+            "source": "http://hl7.org.au/fhir/StructureDefinition/au-patient",
+            "severity": "warning",
+            "expression": "extension('http://hl7.org/fhir/StructureDefinition/individual-genderIdentity').extension('value').empty() or extension('http://hl7.org/fhir/StructureDefinition/individual-genderIdentity').extension('value').value.all(memberOf('https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1'))"
+          },
+          {
+            "key": "inv-pat-2",
+            "human": "Individual pronouns shall be a member of the Australian Pronouns value set if any codes within that value set can apply",
+            "source": "http://hl7.org.au/fhir/StructureDefinition/au-patient",
+            "severity": "warning",
+            "expression": "extension('http://hl7.org/fhir/StructureDefinition/individual-pronouns').empty() or extension('http://hl7.org/fhir/StructureDefinition/individual-pronouns').extension('value').value.all(memberOf('https://healthterminologies.gov.au/fhir/ValueSet/australian-pronouns-1'))"
+          },
+          {
+            "key": "inv-pat-3",
+            "human": "Recorded sex or gender type shall be a member of the AU Recorded Sex or Gender Type value set if any codes within that value set can apply",
+            "source": "http://hl7.org.au/fhir/StructureDefinition/au-patient",
+            "severity": "warning",
+            "expression": "extension('http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender').extension('type').empty() or extension('http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender').extension('type').value.all(memberOf('http://terminology.hl7.org.au/ValueSet/rsg-type'))"
+          },
+          {
+            "key": "inv-pat-4",
+            "human": "Recorded sex or gender source document type shall be a member of the AU Recorded Sex or Gender (RSG) Source Document Type value set if any codes within that value set can apply",
+            "source": "http://hl7.org.au/fhir/StructureDefinition/au-patient",
+            "severity": "warning",
+            "expression": "extension('http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender').extension('sourceDocument').empty() or extension('http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender').extension('sourceDocument').value.ofType(CodeableConcept).all(memberOf('http://terminology.hl7.org.au/ValueSet/rsg-source-document-type'))"
+          },
+          {
+            "key": "inv-pat-5",
+            "human": "Recorded sex or gender jurisdiction shall be a member of the Jurisdiction ValueSet - AU Extended value set if any codes within that value set can apply",
+            "source": "http://hl7.org.au/fhir/StructureDefinition/au-patient",
+            "severity": "warning",
+            "expression": "extension('http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender').extension('jurisdiction').empty() or extension('http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender').extension('jurisdiction').value.all(memberOf('http://terminology.hl7.org.au/ValueSet/jurisdiction-extended'))"
+          },
+          {
+            "key": "inv-pat-6",
+            "human": "Recorded sex or gender source shall be a member of the AU Recorded Sex or Gender (RSG) Source value set if any codes within that value set can apply",
+            "source": "http://hl7.org.au/fhir/StructureDefinition/au-patient",
+            "severity": "warning",
+            "expression": "extension('http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender').extension('source').empty() or extension('http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender').extension('source').value.ofType(CodeableConcept).all(memberOf('http://terminology.hl7.org.au/ValueSet/rsg-source'))"
+          }
+        ]
+      },
+      {
+        "id": "Patient.extension",
+        "path": "Patient.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Patient.extension:birthPlace",
+        "path": "Patient.extension",
+        "sliceName": "birthPlace",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Patient.extension:indigenousStatus",
+        "path": "Patient.extension",
+        "sliceName": "indigenousStatus",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org.au/fhir/StructureDefinition/indigenous-status"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Patient.extension:veteranStatus",
+        "path": "Patient.extension",
+        "sliceName": "veteranStatus",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org.au/fhir/StructureDefinition/veteran-status"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Patient.extension:closingTheGapRegistration",
+        "path": "Patient.extension",
+        "sliceName": "closingTheGapRegistration",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org.au/fhir/StructureDefinition/closing-the-gap-registration"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Patient.extension:mothersMaidenName",
+        "path": "Patient.extension",
+        "sliceName": "mothersMaidenName",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Patient.extension:interpreterRequired",
+        "path": "Patient.extension",
+        "sliceName": "interpreterRequired",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/patient-interpreterRequired"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Patient.extension:dateOfArrival",
+        "path": "Patient.extension",
+        "sliceName": "dateOfArrival",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org.au/fhir/StructureDefinition/date-of-arrival"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Patient.extension:genderIdentity",
+        "path": "Patient.extension",
+        "sliceName": "genderIdentity",
+        "short": "Gender identity shall be a member of the Gender Identity Response value set if any codes within that value set can apply",
+        "comment": "The individual's gender identity is populated in the `extension:value.value[x]` of the [Individual Gender Identity](http://hl7.org/fhir/StructureDefinition/individual-genderIdentity) extension and shall contain one of the codes from the [Gender Identity Response](https://healthterminologies.gov.au/fhir/ValueSet/gender-identity-response-1) value set if any of the codes within the value set can apply.\n\nSee [Australian Bureau of Statics (ABS) Standard for Sex, Gender, Variations of Sex Characteristics and Sexual Orientation Variables, 2020](https://www.abs.gov.au/statistics/standards/standard-sex-gender-variations-sex-characteristics-and-sexual-orientation-variables/latest-release#gender) for further materials.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/individual-genderIdentity"
+            ]
+          }
+        ],
+        "condition": [
+          "inv-pat-1"
+        ]
+      },
+      {
+        "id": "Patient.extension:individualPronouns",
+        "path": "Patient.extension",
+        "sliceName": "individualPronouns",
+        "short": "Pronouns shall be a member of the Australian Pronouns value set if any codes within that value set can apply",
+        "comment": "The individual's pronouns are populated in the `extension:value.value[x]` of the [Individual Pronouns](http://hl7.org/fhir/StructureDefinition/individual-pronouns) extension and shall contain one of the codes from the [Australian Pronouns](https://healthterminologies.gov.au/fhir/ValueSet/australian-pronouns-1) value set if any of the codes within the value set can apply.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/individual-pronouns"
+            ]
+          }
+        ],
+        "condition": [
+          "inv-pat-2"
+        ]
+      },
+      {
+        "id": "Patient.extension:recordedSexOrGender",
+        "path": "Patient.extension",
+        "sliceName": "recordedSexOrGender",
+        "short": "Recorded sex or gender type shall be a member of the AU Recorded Sex or Gender Type value set if any codes within that value set can apply. Recorded sex or gender source document type shall be a member of the AU Recorded Sex or Gender (RSG) Source Document Type value set if any codes within that value set can apply. Recorded sex or gender jurisdiction shall be a member of the Jurisdiction - ValueSet AU Extended value set if any codes within that value set can apply. Recorded sex or gender source shall be a member of the AU Recorded Sex or Gender (RSG) Source value set if any codes within that value set can apply.",
+        "comment": "The type of recorded sex or gender is populated in the `extension:type.value[x]` of the [Person Recorded Sex or Gender](http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender) extension and shall contain one of the codes from the [AU Recorded Sex or Gender Type](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-rsg-type.html) value set if any of the codes within the value set can apply.\n\nThe document from which the sex or gender property was acquired is populated in the `extension:sourceDocument.value[x]` of the [Person Recorded Sex or Gender](http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender) extension and shall contain one of the codes from the [AU Recorded Sex or Gender (RSG) Source Document Type](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-rsg-source-document-type.html) value set if any of the codes within the value set can apply.\n\nThe jurisdiction that issued the document where the sex or gender was acquired is populated in the `extension:jurisdiction.value[x]` of the [Person Recorded Sex or Gender](http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender) extension and shall contain one of the codes from the [Jurisdiction ValueSet - AU Extended](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-au-jurisdiction-extended.html) value set if any of the codes within the value set can apply.\n\nThe non-document source from which the sex or gender property was acquired is populated in the `extension:source.value[x]` of the [Person Recorded Sex or Gender](http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender) extension and shall contain one of the codes from the [AU Recorded Sex or Gender (RSG) Source](https://build.fhir.org/ig/hl7au/au-fhir-base/ValueSet-rsg-source.html) value set if any of the codes within the value set can apply.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender"
+            ]
+          }
+        ],
+        "condition": [
+          "inv-pat-3",
+          "inv-pat-4",
+          "inv-pat-5",
+          "inv-pat-6"
+        ]
+      },
+      {
+        "id": "Patient.extension:sexParameterForClinicalUse",
+        "path": "Patient.extension",
+        "sliceName": "sexParameterForClinicalUse",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/patient-sexParameterForClinicalUse"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Patient.identifier",
+        "path": "Patient.identifier",
+        "short": "Identifies this patient across multiple systems",
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/Identifier",
+              "http://hl7.org.au/fhir/StructureDefinition/au-ihi",
+              "http://hl7.org.au/fhir/StructureDefinition/au-medicarecardnumber",
+              "http://hl7.org.au/fhir/StructureDefinition/au-dvanumber",
+              "http://hl7.org.au/fhir/StructureDefinition/au-healthcarecardnumber",
+              "http://hl7.org.au/fhir/StructureDefinition/au-pensionerconcessioncardnumber",
+              "http://hl7.org.au/fhir/StructureDefinition/au-cwlthseniorshealthcardnumber",
+              "http://hl7.org.au/fhir/StructureDefinition/au-medicalrecordnumber",
+              "http://hl7.org.au/fhir/StructureDefinition/au-insurancemembernumber",
+              "http://hl7.org.au/fhir/StructureDefinition/au-pi"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Patient.birthDate",
+        "path": "Patient.birthDate",
+        "short": "Date of birth extended for time and accuracy indicator",
+        "requirements": "Age of the individual drives many clinical processes. May include accuracy indicator and specific birth time.",
+        "condition": [
+          "inv-pat-0"
+        ]
+      },
+      {
+        "id": "Patient.birthDate.extension",
+        "path": "Patient.birthDate.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Patient.birthDate.extension:accuracyIndicator",
+        "path": "Patient.birthDate.extension",
+        "sliceName": "accuracyIndicator",
+        "short": "Birth date accuracy indicator",
+        "comment": "In some circumstances, systems may only have date or datetime data that has unknown or estimated parts.  This coding establishes the accuracy of the day, month and year parts.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Patient.birthDate.extension:birthTime",
+        "path": "Patient.birthDate.extension",
+        "sliceName": "birthTime",
+        "short": "Birth time",
+        "definition": "The time of day that the patient was born. This includes the date to ensure that the timezone information can be communicated effectively.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/patient-birthTime"
+            ]
+          }
+        ],
+        "condition": [
+          "inv-pat-0"
+        ]
+      },
+      {
+        "id": "Patient.deceased[x]",
+        "path": "Patient.deceased[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "rules": "closed"
+        },
+        "definition": "Indicates if the individual is deceased or not. Deceased date accuracy indicator is optional."
+      },
+      {
+        "id": "Patient.deceased[x]:deceasedBoolean",
+        "path": "Patient.deceased[x]",
+        "sliceName": "deceasedBoolean",
+        "short": "Deceased indicator",
+        "definition": "Boolean indicator if the individual is deceased or not.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "id": "Patient.deceased[x]:deceasedDateTime",
+        "path": "Patient.deceased[x]",
+        "sliceName": "deceasedDateTime",
+        "short": "Deceased date time",
+        "definition": "Individual deceased date-time with optional accuracy indicator.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Patient.deceased[x]:deceasedDateTime.extension",
+        "path": "Patient.deceased[x].extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Patient.deceased[x]:deceasedDateTime.extension:accuracyIndicator",
+        "path": "Patient.deceased[x].extension",
+        "sliceName": "accuracyIndicator",
+        "short": "Deceased date accuracy indicator",
+        "comment": "In some circumstances, systems may only have date or datetime data that has unknown or estimated parts.  This coding establishes the accuracy of the day, month and year parts.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org.au/fhir/StructureDefinition/date-accuracy-indicator"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Patient.address",
+        "path": "Patient.address",
+        "comment": "The address is intended to describe postal addresses for administrative purposes, not to describe absolute geographical coordinates. Postal addresses are often used as proxies for physical locations (also see the Location resource).",
+        "type": [
+          {
+            "code": "Address",
+            "profile": [
+              "http://hl7.org.au/fhir/StructureDefinition/au-address",
+              "http://hl7.org/fhir/StructureDefinition/Address"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Patient.contact.relationship",
+        "path": "Patient.contact.relationship",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://healthterminologies.gov.au/fhir/ValueSet/contact-relationship-type-3"
+        }
+      },
+      {
+        "id": "Patient.contact.address",
+        "path": "Patient.contact.address",
+        "comment": "The address is intended to describe postal addresses for administrative purposes, not to describe absolute geographical coordinates. Postal addresses are often used as proxies for physical locations (also see the Location resource).",
+        "type": [
+          {
+            "code": "Address",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/Address",
+              "http://hl7.org.au/fhir/StructureDefinition/au-address"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Patient.communication.language",
+        "path": "Patient.communication.language",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://healthterminologies.gov.au/fhir/ValueSet/common-languages-australia-2"
+        }
+      },
+      {
+        "id": "Patient.link",
+        "path": "Patient.link",
+        "short": "Link to a Patient or RelatedPerson resource that concerns the same actual person",
+        "definition": "Link to a Patient or RelatedPerson resource that concerns the same actual person."
+      }
+    ]
+  }
+}

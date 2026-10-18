@@ -1,0 +1,85 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "TaskBusinessStatus",
+  "id": "task-business-status",
+  "title": "Task Business Status",
+  "description": "The Task Business Status code system defines concepts that represent business status values for a task.",
+  "url": "http://terminology.hl7.org.au/CodeSystem/task-business-status",
+  "concept": [
+    {
+      "code": "service-booked",
+      "display": "Service booked",
+      "definition": "Service has been booked."
+    },
+    {
+      "code": "request-claimed",
+      "display": "Request claimed",
+      "definition": "Task has been cancelled as the request has been claimed by another filler."
+    },
+    {
+      "code": "request-cancelled-placer",
+      "display": "Request cancelled by placer",
+      "definition": "Task has been cancelled as the request has been cancelled by the placer."
+    },
+    {
+      "code": "cancel-handled",
+      "display": "Cancel handled",
+      "definition": "Cancelled task has been handled by the filler."
+    },
+    {
+      "code": "request-data-issue",
+      "display": "Request rejected with data issue",
+      "definition": "Rejected fulfilment task due to an issue with the request data."
+    },
+    {
+      "code": "preliminary-results",
+      "display": "Preliminary results",
+      "definition": "There are preliminary results."
+    },
+    {
+      "code": "addendum-report-complete",
+      "display": "Addendum report complete",
+      "definition": "Addendum report is complete."
+    },
+    {
+      "code": "specimen-collected",
+      "display": "Specimen collected",
+      "definition": "Specimen has been collected."
+    },
+    {
+      "code": "pathology-in-lab",
+      "display": "Pathology specimen in lab",
+      "definition": "Specimen is in a pathology lab."
+    },
+    {
+      "code": "image-acquired",
+      "display": "Image acquired",
+      "definition": "Image acquisition complete."
+    }
+  ],
+  "meta": {
+    "profile": [
+      "https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.2.3.4.1.4.39"
+    }
+  ],
+  "experimental": false,
+  "caseSensitive": true,
+  "valueSet": "http://terminology.hl7.org.au/ValueSet/task-business-status",
+  "compositional": false,
+  "versionNeeded": false,
+  "count": 10
+}

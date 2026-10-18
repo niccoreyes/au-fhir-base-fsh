@@ -1,0 +1,22 @@
+Instance: example3-of-AUBasePractitioner
+InstanceOf: AUBasePractitioner
+Usage: #example
+* id = "example3"
+* identifier[0].type = $v2-0203#NPI "National provider identifier"
+* identifier[=].type.text = "HPI-I"
+* identifier[=].system = "http://ns.electronichealth.net.au/id/hi/hpii/1.0"
+* identifier[=].value = "8003619900015717"
+* identifier[+].type = IdentifierTypeAU#AHPRA "Australian Health Practitioner Regulation Agency Registration Number"
+* identifier[=].type.text = "Ahpra Registration Number"
+* identifier[=].system = "http://hl7.org.au/id/ahpra-registration-number"
+* identifier[=].value = "MED0000932850"
+* name.family = "Fernando"
+* name.given = "Francis"
+* name.prefix = "Dr"
+* qualification.identifier.type = IdentifierTypeAU#AHPRA "Australian Health Practitioner Regulation Agency Registration Number"
+* qualification.identifier.type.text = "Ahpra Registration Number"
+* qualification.identifier.system = "http://hl7.org.au/id/ahpra-registration-number"
+* qualification.identifier.value = "MED0000932850"
+* qualification.code = DegreeLicenseCertificateAU#AHPRA "Ahpra Registration"
+* qualification.code.text = "Ahpra General Practice"
+* qualification.issuer.display = "Australian Health Practitioner Regulation Agency"

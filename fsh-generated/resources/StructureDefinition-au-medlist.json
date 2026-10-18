@@ -1,0 +1,109 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "au-medlist",
+  "url": "http://hl7.org.au/fhir/StructureDefinition/au-medlist",
+  "name": "AUMedicineList",
+  "title": "AU Medicine List",
+  "status": "active",
+  "description": "This profile defines a list structure that localises core concepts for use as a medicines list in an Australian context. This profile is intended to offer a common structure and expectations for a list of medications associated with a patient in an Australian healthcare context.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "List",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/List",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "List",
+        "path": "List",
+        "short": "A list of medications in an Australian healthcare context",
+        "definition": "A medicines list is a curated collection of medication resources."
+      },
+      {
+        "id": "List.extension",
+        "path": "List.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "List.extension:sourceRelatedPerson",
+        "path": "List.extension",
+        "sliceName": "sourceRelatedPerson",
+        "short": "Related person that defined the list contents (aka Author)",
+        "definition": "The related person responsible for deciding what the contents of the list were. This is the same as the author of the list.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org.au/fhir/StructureDefinition/author-related-person"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "List.entry.extension",
+        "path": "List.entry.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "List.entry.extension:changeDescription",
+        "path": "List.entry.extension",
+        "sliceName": "changeDescription",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org.au/fhir/StructureDefinition/change-description"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "List.entry.flag",
+        "path": "List.entry.flag",
+        "short": "Medicine item change",
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "http://terminology.hl7.org.au/ValueSet/medicine-item-change"
+        }
+      },
+      {
+        "id": "List.entry.item",
+        "path": "List.entry.item",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/MedicationStatement",
+              "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
+              "http://hl7.org/fhir/StructureDefinition/MedicationDispense",
+              "http://hl7.org/fhir/StructureDefinition/MedicationAdministration",
+              "http://hl7.org/fhir/StructureDefinition/Immunization",
+              "http://hl7.org.au/fhir/StructureDefinition/au-norelevantfinding"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "resourceType": "HealthcareService",
+  "id": "example2",
+  "meta": {
+    "profile": [
+      "http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice"
+    ]
+  },
+  "active": true,
+  "providedBy": {
+    "reference": "Organization/example1",
+    "display": "Albion Hospital"
+  },
+  "specialty": [
+    {
+      "coding": [
+        {
+          "code": "394915009",
+          "system": "http://snomed.info/sct",
+          "display": "General pathology (specialty)"
+        }
+      ]
+    }
+  ],
+  "location": [
+    {
+      "reference": "Location/example2"
+    }
+  ],
+  "name": "Albion Hospital Pathology Service",
+  "availableTime": [
+    {
+      "daysOfWeek": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri"
+      ],
+      "availableStartTime": "08:30:00",
+      "availableEndTime": "17:30:00"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "resourceType": "Patient",
+  "id": "address-example2",
+  "address": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/no-fixed-address",
+          "valueBoolean": true
+        }
+      ],
+      "use": "temp",
+      "type": "physical",
+      "text": "NO FIXED ADDRESS Melbourne, VIC",
+      "state": "VIC",
+      "country": "AU"
+    }
+  ]
+}

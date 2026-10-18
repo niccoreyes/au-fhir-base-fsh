@@ -1,0 +1,2274 @@
+[
+  {
+    "outputFile": "AllergyIntolerance-example0.json",
+    "fshName": "example0-of-AUBaseAllergyIntolerance",
+    "fshType": "Instance",
+    "fshFile": "instances/example0-of-AUBaseAllergyIntolerance.fsh",
+    "startLine": 1,
+    "endLine": 14
+  },
+  {
+    "outputFile": "AllergyIntolerance-example1.json",
+    "fshName": "example1-of-AUBaseAllergyIntolerance",
+    "fshType": "Instance",
+    "fshFile": "instances/example1-of-AUBaseAllergyIntolerance.fsh",
+    "startLine": 1,
+    "endLine": 18
+  },
+  {
+    "outputFile": "AllergyIntolerance-example2.json",
+    "fshName": "example2-of-AUBaseAllergyIntolerance",
+    "fshType": "Instance",
+    "fshFile": "instances/example2-of-AUBaseAllergyIntolerance.fsh",
+    "startLine": 1,
+    "endLine": 19
+  },
+  {
+    "outputFile": "AllergyIntolerance-example3.json",
+    "fshName": "example3-of-AUBaseAllergyIntolerance",
+    "fshType": "Instance",
+    "fshFile": "instances/example3-of-AUBaseAllergyIntolerance.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "BodyStructure-example0.json",
+    "fshName": "example0-of-AUBaseBodyStructure",
+    "fshType": "Instance",
+    "fshFile": "instances/example0-of-AUBaseBodyStructure.fsh",
+    "startLine": 1,
+    "endLine": 9
+  },
+  {
+    "outputFile": "BodyStructure-example1.json",
+    "fshName": "example1-of-AUBaseBodyStructure",
+    "fshType": "Instance",
+    "fshFile": "instances/example1-of-AUBaseBodyStructure.fsh",
+    "startLine": 1,
+    "endLine": 7
+  },
+  {
+    "outputFile": "Bundle-example0.json",
+    "fshName": "example0-of-Bundle",
+    "fshType": "Instance",
+    "fshFile": "instances/example0-of-Bundle.fsh",
+    "startLine": 1,
+    "endLine": 34
+  },
+  {
+    "outputFile": "CodeSystem-au-digital-health-source-system.json",
+    "fshName": "AustralianDigitalHealthSourceSystem",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/AustralianDigitalHealthSourceSystem.fsh",
+    "startLine": 1,
+    "endLine": 22
+  },
+  {
+    "outputFile": "CodeSystem-au-endpoint-connection-type.json",
+    "fshName": "EndpointConnectionTypeAU",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/EndpointConnectionTypeAU.fsh",
+    "startLine": 1,
+    "endLine": 23
+  },
+  {
+    "outputFile": "CodeSystem-au-endpoint-payload-type.json",
+    "fshName": "EndpointPayloadTypeAU",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/EndpointPayloadTypeAU.fsh",
+    "startLine": 1,
+    "endLine": 27
+  },
+  {
+    "outputFile": "CodeSystem-au-location-physical-type.json",
+    "fshName": "LocationTypePhysicalAU",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/LocationTypePhysicalAU.fsh",
+    "startLine": 1,
+    "endLine": 31
+  },
+  {
+    "outputFile": "CodeSystem-au-location-type.json",
+    "fshName": "LocationType",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/LocationType.fsh",
+    "startLine": 1,
+    "endLine": 19
+  },
+  {
+    "outputFile": "CodeSystem-au-v2-0203.json",
+    "fshName": "IdentifierTypeAU",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/IdentifierTypeAU.fsh",
+    "startLine": 1,
+    "endLine": 51
+  },
+  {
+    "outputFile": "CodeSystem-au-v2-0360.json",
+    "fshName": "DegreeLicenseCertificateAU",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/DegreeLicenseCertificateAU.fsh",
+    "startLine": 1,
+    "endLine": 45
+  },
+  {
+    "outputFile": "CodeSystem-au-v2-0443.json",
+    "fshName": "ProviderRoleAU",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/ProviderRoleAU.fsh",
+    "startLine": 1,
+    "endLine": 19
+  },
+  {
+    "outputFile": "CodeSystem-au-v3-ActCode.json",
+    "fshName": "ActCodeAU",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/ActCodeAU.fsh",
+    "startLine": 1,
+    "endLine": 24
+  },
+  {
+    "outputFile": "CodeSystem-communication-request-category.json",
+    "fshName": "CommunicationRequestCategory",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/CommunicationRequestCategory.fsh",
+    "startLine": 1,
+    "endLine": 21
+  },
+  {
+    "outputFile": "CodeSystem-contact-purpose.json",
+    "fshName": "ContactPurpose",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/ContactPurpose.fsh",
+    "startLine": 1,
+    "endLine": 23
+  },
+  {
+    "outputFile": "CodeSystem-medication-type.json",
+    "fshName": "MedicationType",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/MedicationType.fsh",
+    "startLine": 1,
+    "endLine": 29
+  },
+  {
+    "outputFile": "CodeSystem-medicine-item-change.json",
+    "fshName": "MedicineItemChange",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/MedicineItemChange.fsh",
+    "startLine": 1,
+    "endLine": 34
+  },
+  {
+    "outputFile": "CodeSystem-mims-external.json",
+    "fshName": "MIMS",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/MIMS.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "CodeSystem-name-context.json",
+    "fshName": "NameContext",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/NameContext.fsh",
+    "startLine": 1,
+    "endLine": 19
+  },
+  {
+    "outputFile": "CodeSystem-pbs-item-external.json",
+    "fshName": "PBSItemCodes",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/PBSItemCodes.fsh",
+    "startLine": 1,
+    "endLine": 18
+  },
+  {
+    "outputFile": "CodeSystem-resource-tag.json",
+    "fshName": "ResourceTag",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/ResourceTag.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "CodeSystem-rsg-source-document-type.json",
+    "fshName": "AURecordedSexOrGenderSourceDocumentType",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/AURecordedSexOrGenderSourceDocumentType.fsh",
+    "startLine": 1,
+    "endLine": 22
+  },
+  {
+    "outputFile": "CodeSystem-rsg-type.json",
+    "fshName": "AURecordedSexOrGenderType",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/AURecordedSexOrGenderType.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "CodeSystem-service-provision-conditions.json",
+    "fshName": "ServiceProvisionConditionsAustralianConcepts",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/ServiceProvisionConditionsAustralianConcepts.fsh",
+    "startLine": 1,
+    "endLine": 43
+  },
+  {
+    "outputFile": "CodeSystem-task-business-status.json",
+    "fshName": "TaskBusinessStatus",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/TaskBusinessStatus.fsh",
+    "startLine": 1,
+    "endLine": 28
+  },
+  {
+    "outputFile": "Composition-different-authors.json",
+    "fshName": "different-authors",
+    "fshType": "Instance",
+    "fshFile": "instances/different-authors.fsh",
+    "startLine": 1,
+    "endLine": 25
+  },
+  {
+    "outputFile": "Composition-example0.json",
+    "fshName": "example0-of-AUBaseComposition",
+    "fshType": "Instance",
+    "fshFile": "instances/example0-of-AUBaseComposition.fsh",
+    "startLine": 1,
+    "endLine": 18
+  },
+  {
+    "outputFile": "Composition-multiple-information-recipients.json",
+    "fshName": "multiple-information-recipients",
+    "fshType": "Instance",
+    "fshFile": "instances/multiple-information-recipients.fsh",
+    "startLine": 1,
+    "endLine": 22
+  },
+  {
+    "outputFile": "Condition-example0.json",
+    "fshName": "example0-of-AUBaseCondition",
+    "fshType": "Instance",
+    "fshFile": "instances/example0-of-AUBaseCondition.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
+    "outputFile": "Coverage-dva.json",
+    "fshName": "dva",
+    "fshType": "Instance",
+    "fshFile": "instances/dva.fsh",
+    "startLine": 1,
+    "endLine": 18
+  },
+  {
+    "outputFile": "Coverage-private.json",
+    "fshName": "private",
+    "fshType": "Instance",
+    "fshFile": "instances/private.fsh",
+    "startLine": 1,
+    "endLine": 17
+  },
+  {
+    "outputFile": "Device-example1.json",
+    "fshName": "example1-of-Device",
+    "fshType": "Instance",
+    "fshFile": "instances/example1-of-Device.fsh",
+    "startLine": 1,
+    "endLine": 16
+  },
+  {
+    "outputFile": "Encounter-example0.json",
+    "fshName": "example0-of-AUBaseEncounter",
+    "fshType": "Instance",
+    "fshFile": "instances/example0-of-AUBaseEncounter.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
+    "outputFile": "Encounter-example1.json",
+    "fshName": "example1-of-AUBaseEncounter",
+    "fshType": "Instance",
+    "fshFile": "instances/example1-of-AUBaseEncounter.fsh",
+    "startLine": 1,
+    "endLine": 21
+  },
+  {
+    "outputFile": "Endpoint-example0.json",
+    "fshName": "example0-of-AUBaseEndpoint",
+    "fshType": "Instance",
+    "fshFile": "instances/example0-of-AUBaseEndpoint.fsh",
+    "startLine": 1,
+    "endLine": 36
+  },
+  {
+    "outputFile": "Endpoint-example1.json",
+    "fshName": "example1-of-AUBaseEndpoint",
+    "fshType": "Instance",
+    "fshFile": "instances/example1-of-AUBaseEndpoint.fsh",
+    "startLine": 1,
+    "endLine": 24
+  },
+  {
+    "outputFile": "Endpoint-example2.json",
+    "fshName": "example2-of-AUBaseEndpoint",
+    "fshType": "Instance",
+    "fshFile": "instances/example2-of-AUBaseEndpoint.fsh",
+    "startLine": 1,
+    "endLine": 17
+  },
+  {
+    "outputFile": "Endpoint-example3.json",
+    "fshName": "example3-of-AUBaseEndpoint",
+    "fshType": "Instance",
+    "fshFile": "instances/example3-of-AUBaseEndpoint.fsh",
+    "startLine": 1,
+    "endLine": 17
+  },
+  {
+    "outputFile": "HealthcareService-example0.json",
+    "fshName": "example0-of-AUBaseHealthcareService",
+    "fshType": "Instance",
+    "fshFile": "instances/example0-of-AUBaseHealthcareService.fsh",
+    "startLine": 1,
+    "endLine": 24
+  },
+  {
+    "outputFile": "HealthcareService-example1.json",
+    "fshName": "example1-of-AUBaseHealthcareService",
+    "fshType": "Instance",
+    "fshFile": "instances/example1-of-AUBaseHealthcareService.fsh",
+    "startLine": 1,
+    "endLine": 22
+  },
+  {
+    "outputFile": "HealthcareService-example2.json",
+    "fshName": "example2-of-AUBaseHealthcareService",
+    "fshType": "Instance",
+    "fshFile": "instances/example2-of-AUBaseHealthcareService.fsh",
+    "startLine": 1,
+    "endLine": 17
+  },
+  {
+    "outputFile": "HealthcareService-example3.json",
+    "fshName": "example3-of-AUBaseHealthcareService",
+    "fshType": "Instance",
+    "fshFile": "instances/example3-of-AUBaseHealthcareService.fsh",
+    "startLine": 1,
+    "endLine": 34
+  },
+  {
+    "outputFile": "HealthcareService-example4.json",
+    "fshName": "example4-of-HealthcareService",
+    "fshType": "Instance",
+    "fshFile": "instances/example4-of-HealthcareService.fsh",
+    "startLine": 1,
+    "endLine": 45
+  },
+  {
+    "outputFile": "HealthcareService-example5.json",
+    "fshName": "example5-of-HealthcareService",
+    "fshType": "Instance",
+    "fshFile": "instances/example5-of-HealthcareService.fsh",
+    "startLine": 1,
+    "endLine": 23
+  },
+  {
+    "outputFile": "Immunization-example0.json",
+    "fshName": "example0-of-AUBaseImmunization",
+    "fshType": "Instance",
+    "fshFile": "instances/example0-of-AUBaseImmunization.fsh",
+    "startLine": 1,
+    "endLine": 16
+  },
+  {
+    "outputFile": "Immunization-example1.json",
+    "fshName": "example1-of-AUBaseImmunization",
+    "fshType": "Instance",
+    "fshFile": "instances/example1-of-AUBaseImmunization.fsh",
+    "startLine": 1,
+    "endLine": 11
+  },
+  {
+    "outputFile": "Immunization-example2.json",
+    "fshName": "example2-of-AUBaseImmunization",
+    "fshType": "Instance",
+    "fshFile": "instances/example2-of-AUBaseImmunization.fsh",
+    "startLine": 1,
+    "endLine": 21
+  },
+  {
+    "outputFile": "Immunization-example3.json",
+    "fshName": "example3-of-AUBaseImmunization",
+    "fshType": "Instance",
+    "fshFile": "instances/example3-of-AUBaseImmunization.fsh",
+    "startLine": 1,
+    "endLine": 32
+  },
+  {
+    "outputFile": "List-example0.json",
+    "fshName": "example0-of-AUMedicineList",
+    "fshType": "Instance",
+    "fshFile": "instances/example0-of-AUMedicineList.fsh",
+    "startLine": 1,
+    "endLine": 16
+  },
+  {
+    "outputFile": "List-example1.json",
+    "fshName": "example1-of-AUMedicineList",
+    "fshType": "Instance",
+    "fshFile": "instances/example1-of-AUMedicineList.fsh",
+    "startLine": 1,
+    "endLine": 13
+  },
+  {
+    "outputFile": "List-example2.json",
+    "fshName": "example2-of-AUMedicineList",
+    "fshType": "Instance",
+    "fshFile": "instances/example2-of-AUMedicineList.fsh",
+    "startLine": 1,
+    "endLine": 38
+  },
+  {
+    "outputFile": "List-example3.json",
+    "fshName": "example3-of-AUMedicineList",
+    "fshType": "Instance",
+    "fshFile": "instances/example3-of-AUMedicineList.fsh",
+    "startLine": 1,
+    "endLine": 16
+  },
+  {
+    "outputFile": "Location-example0.json",
+    "fshName": "example0-of-AUBaseLocation",
+    "fshType": "Instance",
+    "fshFile": "instances/example0-of-AUBaseLocation.fsh",
+    "startLine": 1,
+    "endLine": 16
+  },
+  {
+    "outputFile": "Location-example1.json",
+    "fshName": "example1-of-AUBaseLocation",
+    "fshType": "Instance",
+    "fshFile": "instances/example1-of-AUBaseLocation.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "Location-example2.json",
+    "fshName": "example2-of-AUBaseLocation",
+    "fshType": "Instance",
+    "fshFile": "instances/example2-of-AUBaseLocation.fsh",
+    "startLine": 1,
+    "endLine": 23
+  },
+  {
+    "outputFile": "Location-example3.json",
+    "fshName": "example3-of-AUBaseLocation",
+    "fshType": "Instance",
+    "fshFile": "instances/example3-of-AUBaseLocation.fsh",
+    "startLine": 1,
+    "endLine": 13
+  },
+  {
+    "outputFile": "Location-example4.json",
+    "fshName": "example4-of-AUBaseLocation",
+    "fshType": "Instance",
+    "fshFile": "instances/example4-of-AUBaseLocation.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
+    "outputFile": "Location-example5.json",
+    "fshName": "example5-of-AUBaseLocation",
+    "fshType": "Instance",
+    "fshFile": "instances/example5-of-AUBaseLocation.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
+    "outputFile": "Location-example6.json",
+    "fshName": "example6-of-AUBaseLocation",
+    "fshType": "Instance",
+    "fshFile": "instances/example6-of-AUBaseLocation.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
+    "outputFile": "Location-example7.json",
+    "fshName": "example7-of-AUBaseLocation",
+    "fshType": "Instance",
+    "fshFile": "instances/example7-of-AUBaseLocation.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
+    "outputFile": "Location-example8.json",
+    "fshName": "example8-of-Location",
+    "fshType": "Instance",
+    "fshFile": "instances/example8-of-Location.fsh",
+    "startLine": 1,
+    "endLine": 17
+  },
+  {
+    "outputFile": "Location-example9.json",
+    "fshName": "example9",
+    "fshType": "Instance",
+    "fshFile": "instances/example9.fsh",
+    "startLine": 1,
+    "endLine": 15
+  },
+  {
+    "outputFile": "Medication-BrandProductwithBatchDetails0.json",
+    "fshName": "BrandProductwithBatchDetails0",
+    "fshType": "Instance",
+    "fshFile": "instances/BrandProductwithBatchDetails0.fsh",
+    "startLine": 1,
+    "endLine": 15
+  },
+  {
+    "outputFile": "Medication-BrandedPack0.json",
+    "fshName": "BrandedPack0",
+    "fshType": "Instance",
+    "fshFile": "instances/BrandedPack0.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "Medication-BrandedPack1.json",
+    "fshName": "BrandedPack1",
+    "fshType": "Instance",
+    "fshFile": "instances/BrandedPack1.fsh",
+    "startLine": 1,
+    "endLine": 15
+  },
+  {
+    "outputFile": "Medication-BrandedPackSingleActiveIngredient0.json",
+    "fshName": "BrandedPackSingleActiveIngredient0",
+    "fshType": "Instance",
+    "fshFile": "instances/BrandedPackSingleActiveIngredient0.fsh",
+    "startLine": 1,
+    "endLine": 13
+  },
+  {
+    "outputFile": "Medication-DoseBased.json",
+    "fshName": "DoseBased",
+    "fshType": "Instance",
+    "fshFile": "instances/DoseBased.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
+    "outputFile": "Medication-FourOrMoreActiveIngredientsProduct0.json",
+    "fshName": "FourOrMoreActiveIngredientsProduct0",
+    "fshType": "Instance",
+    "fshFile": "instances/FourOrMoreActiveIngredientsProduct0.fsh",
+    "startLine": 1,
+    "endLine": 39
+  },
+  {
+    "outputFile": "Medication-GenericPack0.json",
+    "fshName": "GenericPack0",
+    "fshType": "Instance",
+    "fshFile": "instances/GenericPack0.fsh",
+    "startLine": 1,
+    "endLine": 11
+  },
+  {
+    "outputFile": "Medication-IngredientStrengthExtension0.json",
+    "fshName": "IngredientStrengthExtension0",
+    "fshType": "Instance",
+    "fshFile": "instances/IngredientStrengthExtension0.fsh",
+    "startLine": 1,
+    "endLine": 9
+  },
+  {
+    "outputFile": "Medication-StrengthExtension0.json",
+    "fshName": "StrengthExtension0",
+    "fshType": "Instance",
+    "fshFile": "instances/StrengthExtension0.fsh",
+    "startLine": 1,
+    "endLine": 11
+  },
+  {
+    "outputFile": "Medication-StrengthExtension1.json",
+    "fshName": "StrengthExtension1",
+    "fshType": "Instance",
+    "fshFile": "instances/StrengthExtension1.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
+    "outputFile": "Medication-TwoActiveIngredientsProduct0.json",
+    "fshName": "TwoActiveIngredientsProduct0",
+    "fshType": "Instance",
+    "fshFile": "instances/TwoActiveIngredientsProduct0.fsh",
+    "startLine": 1,
+    "endLine": 16
+  },
+  {
+    "outputFile": "Medication-UnbrandedProduct0.json",
+    "fshName": "UnbrandedProduct0",
+    "fshType": "Instance",
+    "fshFile": "instances/UnbrandedProduct0.fsh",
+    "startLine": 1,
+    "endLine": 16
+  },
+  {
+    "outputFile": "Medication-UnbrandedProduct1.json",
+    "fshName": "UnbrandedProduct1",
+    "fshType": "Instance",
+    "fshFile": "instances/UnbrandedProduct1.fsh",
+    "startLine": 1,
+    "endLine": 16
+  },
+  {
+    "outputFile": "Medication-UnbrandedProduct2.json",
+    "fshName": "UnbrandedProduct2",
+    "fshType": "Instance",
+    "fshFile": "instances/UnbrandedProduct2.fsh",
+    "startLine": 1,
+    "endLine": 16
+  },
+  {
+    "outputFile": "Medication-UncodedProduct0.json",
+    "fshName": "UncodedProduct0",
+    "fshType": "Instance",
+    "fshFile": "instances/UncodedProduct0.fsh",
+    "startLine": 1,
+    "endLine": 15
+  },
+  {
+    "outputFile": "MedicationAdministration-example0.json",
+    "fshName": "example0-of-AUBaseMedicationAdministration",
+    "fshType": "Instance",
+    "fshFile": "instances/example0-of-AUBaseMedicationAdministration.fsh",
+    "startLine": 1,
+    "endLine": 15
+  },
+  {
+    "outputFile": "MedicationAdministration-example1.json",
+    "fshName": "example1-of-AUBaseMedicationAdministration",
+    "fshType": "Instance",
+    "fshFile": "instances/example1-of-AUBaseMedicationAdministration.fsh",
+    "startLine": 1,
+    "endLine": 17
+  },
+  {
+    "outputFile": "MedicationDispense-example0.json",
+    "fshName": "example0-of-AUBaseMedicationDispense",
+    "fshType": "Instance",
+    "fshFile": "instances/example0-of-AUBaseMedicationDispense.fsh",
+    "startLine": 1,
+    "endLine": 32
+  },
+  {
+    "outputFile": "MedicationDispense-example1.json",
+    "fshName": "example1-of-AUBaseMedicationDispense",
+    "fshType": "Instance",
+    "fshFile": "instances/example1-of-AUBaseMedicationDispense.fsh",
+    "startLine": 1,
+    "endLine": 25
+  },
+  {
+    "outputFile": "MedicationRequest-example0.json",
+    "fshName": "example0-of-AUBaseMedicationRequest",
+    "fshType": "Instance",
+    "fshFile": "instances/example0-of-AUBaseMedicationRequest.fsh",
+    "startLine": 1,
+    "endLine": 35
+  },
+  {
+    "outputFile": "MedicationRequest-example1.json",
+    "fshName": "example1-of-AUBaseMedicationRequest",
+    "fshType": "Instance",
+    "fshFile": "instances/example1-of-AUBaseMedicationRequest.fsh",
+    "startLine": 1,
+    "endLine": 34
+  },
+  {
+    "outputFile": "MedicationRequest-example2.json",
+    "fshName": "example2-of-AUBaseMedicationRequest",
+    "fshType": "Instance",
+    "fshFile": "instances/example2-of-AUBaseMedicationRequest.fsh",
+    "startLine": 1,
+    "endLine": 32
+  },
+  {
+    "outputFile": "MedicationStatement-example0.json",
+    "fshName": "example0-of-AUBaseMedicationStatement",
+    "fshType": "Instance",
+    "fshFile": "instances/example0-of-AUBaseMedicationStatement.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "MedicationStatement-example1.json",
+    "fshName": "example1-of-AUBaseMedicationStatement",
+    "fshType": "Instance",
+    "fshFile": "instances/example1-of-AUBaseMedicationStatement.fsh",
+    "startLine": 1,
+    "endLine": 14
+  },
+  {
+    "outputFile": "MedicationStatement-example2.json",
+    "fshName": "example2-of-AUBaseMedicationStatement",
+    "fshType": "Instance",
+    "fshFile": "instances/example2-of-AUBaseMedicationStatement.fsh",
+    "startLine": 1,
+    "endLine": 24
+  },
+  {
+    "outputFile": "Observation-norelevantfinding-example0.json",
+    "fshName": "norelevantfinding-example0",
+    "fshType": "Instance",
+    "fshFile": "instances/norelevantfinding-example0.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
+    "outputFile": "Observation-norelevantfinding-example1.json",
+    "fshName": "norelevantfinding-example1",
+    "fshType": "Instance",
+    "fshFile": "instances/norelevantfinding-example1.fsh",
+    "startLine": 1,
+    "endLine": 9
+  },
+  {
+    "outputFile": "Observation-norelevantfinding-example2.json",
+    "fshName": "norelevantfinding-example2",
+    "fshType": "Instance",
+    "fshFile": "instances/norelevantfinding-example2.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
+    "outputFile": "Observation-norelevantfinding-example3.json",
+    "fshName": "norelevantfinding-example3",
+    "fshType": "Instance",
+    "fshFile": "instances/norelevantfinding-example3.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
+    "outputFile": "Observation-specimen-hepatitis-b-serology.json",
+    "fshName": "specimen-hepatitis-b-serology",
+    "fshType": "Instance",
+    "fshFile": "instances/specimen-hepatitis-b-serology.fsh",
+    "startLine": 1,
+    "endLine": 18
+  },
+  {
+    "outputFile": "Organization-5-8631-1.json",
+    "fshName": "5-8631-1",
+    "fshType": "Instance",
+    "fshFile": "instances/5-8631-1.fsh",
+    "startLine": 1,
+    "endLine": 18
+  },
+  {
+    "outputFile": "Organization-example0.json",
+    "fshName": "example0-of-AUBaseOrganization",
+    "fshType": "Instance",
+    "fshFile": "instances/example0-of-AUBaseOrganization.fsh",
+    "startLine": 1,
+    "endLine": 19
+  },
+  {
+    "outputFile": "Organization-example1.json",
+    "fshName": "example1-of-AUBaseOrganization",
+    "fshType": "Instance",
+    "fshFile": "instances/example1-of-AUBaseOrganization.fsh",
+    "startLine": 1,
+    "endLine": 23
+  },
+  {
+    "outputFile": "Organization-example2.json",
+    "fshName": "example2-of-AUBaseOrganization",
+    "fshType": "Instance",
+    "fshFile": "instances/example2-of-AUBaseOrganization.fsh",
+    "startLine": 1,
+    "endLine": 23
+  },
+  {
+    "outputFile": "Organization-example3.json",
+    "fshName": "example3-of-AUBaseOrganization",
+    "fshType": "Instance",
+    "fshFile": "instances/example3-of-AUBaseOrganization.fsh",
+    "startLine": 1,
+    "endLine": 25
+  },
+  {
+    "outputFile": "Organization-example4.json",
+    "fshName": "example4-of-AUBaseOrganization",
+    "fshType": "Instance",
+    "fshFile": "instances/example4-of-AUBaseOrganization.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "Organization-example5.json",
+    "fshName": "example5-of-Organization",
+    "fshType": "Instance",
+    "fshFile": "instances/example5-of-Organization.fsh",
+    "startLine": 1,
+    "endLine": 21
+  },
+  {
+    "outputFile": "Organization-example6.json",
+    "fshName": "example6-of-AUBaseOrganization",
+    "fshType": "Instance",
+    "fshFile": "instances/example6-of-AUBaseOrganization.fsh",
+    "startLine": 1,
+    "endLine": 54
+  },
+  {
+    "outputFile": "Patient-DateAccuracyIndicatorAAAexample0.json",
+    "fshName": "DateAccuracyIndicatorAAAexample0",
+    "fshType": "Instance",
+    "fshFile": "instances/DateAccuracyIndicatorAAAexample0.fsh",
+    "startLine": 1,
+    "endLine": 11
+  },
+  {
+    "outputFile": "Patient-DateAccuracyIndicatorAAUexample1.json",
+    "fshName": "DateAccuracyIndicatorAAUexample1",
+    "fshType": "Instance",
+    "fshFile": "instances/DateAccuracyIndicatorAAUexample1.fsh",
+    "startLine": 1,
+    "endLine": 11
+  },
+  {
+    "outputFile": "Patient-DateAccuracyIndicatorUAAexample2.json",
+    "fshName": "DateAccuracyIndicatorUAAexample2",
+    "fshType": "Instance",
+    "fshFile": "instances/DateAccuracyIndicatorUAAexample2.fsh",
+    "startLine": 1,
+    "endLine": 11
+  },
+  {
+    "outputFile": "Patient-DateAccuracyIndicatorUEAexample3.json",
+    "fshName": "DateAccuracyIndicatorUEAexample3",
+    "fshType": "Instance",
+    "fshFile": "instances/DateAccuracyIndicatorUEAexample3.fsh",
+    "startLine": 1,
+    "endLine": 11
+  },
+  {
+    "outputFile": "Patient-DateAccuracyIndicatorUUUexample4.json",
+    "fshName": "DateAccuracyIndicatorUUUexample4",
+    "fshType": "Instance",
+    "fshFile": "instances/DateAccuracyIndicatorUUUexample4.fsh",
+    "startLine": 1,
+    "endLine": 11
+  },
+  {
+    "outputFile": "Patient-address-example0.json",
+    "fshName": "address-example0",
+    "fshType": "Instance",
+    "fshFile": "instances/address-example0.fsh",
+    "startLine": 1,
+    "endLine": 22
+  },
+  {
+    "outputFile": "Patient-address-example1.json",
+    "fshName": "address-example1",
+    "fshType": "Instance",
+    "fshFile": "instances/address-example1.fsh",
+    "startLine": 1,
+    "endLine": 9
+  },
+  {
+    "outputFile": "Patient-address-example2.json",
+    "fshName": "address-example2",
+    "fshType": "Instance",
+    "fshFile": "instances/address-example2.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
+    "outputFile": "Patient-address-example3.json",
+    "fshName": "address-example3",
+    "fshType": "Instance",
+    "fshFile": "instances/address-example3.fsh",
+    "startLine": 1,
+    "endLine": 32
+  },
+  {
+    "outputFile": "Patient-example-sex-and-gender.json",
+    "fshName": "example-sex-and-gender-of-AUBasePatient",
+    "fshType": "Instance",
+    "fshFile": "instances/example-sex-and-gender-of-AUBasePatient.fsh",
+    "startLine": 1,
+    "endLine": 73
+  },
+  {
+    "outputFile": "Patient-example0.json",
+    "fshName": "example0-of-AUBasePatient",
+    "fshType": "Instance",
+    "fshFile": "instances/example0-of-AUBasePatient.fsh",
+    "startLine": 1,
+    "endLine": 49
+  },
+  {
+    "outputFile": "Patient-example1.json",
+    "fshName": "example1-of-AUBasePatient",
+    "fshType": "Instance",
+    "fshFile": "instances/example1-of-AUBasePatient.fsh",
+    "startLine": 1,
+    "endLine": 35
+  },
+  {
+    "outputFile": "Patient-example2.json",
+    "fshName": "example2-of-AUBasePatient",
+    "fshType": "Instance",
+    "fshFile": "instances/example2-of-AUBasePatient.fsh",
+    "startLine": 1,
+    "endLine": 23
+  },
+  {
+    "outputFile": "Patient-example3.json",
+    "fshName": "example3-of-AUBasePatient",
+    "fshType": "Instance",
+    "fshFile": "instances/example3-of-AUBasePatient.fsh",
+    "startLine": 1,
+    "endLine": 18
+  },
+  {
+    "outputFile": "Patient-example4.json",
+    "fshName": "example4-of-AUBasePatient",
+    "fshType": "Instance",
+    "fshFile": "instances/example4-of-AUBasePatient.fsh",
+    "startLine": 1,
+    "endLine": 33
+  },
+  {
+    "outputFile": "Patient-example5.json",
+    "fshName": "example5-of-AUBasePatient",
+    "fshType": "Instance",
+    "fshFile": "instances/example5-of-AUBasePatient.fsh",
+    "startLine": 1,
+    "endLine": 26
+  },
+  {
+    "outputFile": "Patient-example6.json",
+    "fshName": "example6-of-AUBasePatient",
+    "fshType": "Instance",
+    "fshFile": "instances/example6-of-AUBasePatient.fsh",
+    "startLine": 1,
+    "endLine": 23
+  },
+  {
+    "outputFile": "Patient-example7.json",
+    "fshName": "example7-of-AUBasePatient",
+    "fshType": "Instance",
+    "fshFile": "instances/example7-of-AUBasePatient.fsh",
+    "startLine": 1,
+    "endLine": 40
+  },
+  {
+    "outputFile": "Patient-example8.json",
+    "fshName": "example8-of-AUBasePatient",
+    "fshType": "Instance",
+    "fshFile": "instances/example8-of-AUBasePatient.fsh",
+    "startLine": 1,
+    "endLine": 31
+  },
+  {
+    "outputFile": "Practitioner-example-sex-and-gender.json",
+    "fshName": "example-sex-and-gender-of-AUBasePractitioner",
+    "fshType": "Instance",
+    "fshFile": "instances/example-sex-and-gender-of-AUBasePractitioner.fsh",
+    "startLine": 1,
+    "endLine": 24
+  },
+  {
+    "outputFile": "Practitioner-example0.json",
+    "fshName": "example0-of-AUBasePractitioner",
+    "fshType": "Instance",
+    "fshFile": "instances/example0-of-AUBasePractitioner.fsh",
+    "startLine": 1,
+    "endLine": 36
+  },
+  {
+    "outputFile": "Practitioner-example1.json",
+    "fshName": "example1-of-AUBasePractitioner",
+    "fshType": "Instance",
+    "fshFile": "instances/example1-of-AUBasePractitioner.fsh",
+    "startLine": 1,
+    "endLine": 14
+  },
+  {
+    "outputFile": "Practitioner-example2.json",
+    "fshName": "example2-of-AUBasePractitioner",
+    "fshType": "Instance",
+    "fshFile": "instances/example2-of-AUBasePractitioner.fsh",
+    "startLine": 1,
+    "endLine": 14
+  },
+  {
+    "outputFile": "Practitioner-example3.json",
+    "fshName": "example3-of-AUBasePractitioner",
+    "fshType": "Instance",
+    "fshFile": "instances/example3-of-AUBasePractitioner.fsh",
+    "startLine": 1,
+    "endLine": 22
+  },
+  {
+    "outputFile": "Practitioner-example4.json",
+    "fshName": "example4-of-AUBasePractitioner",
+    "fshType": "Instance",
+    "fshFile": "instances/example4-of-AUBasePractitioner.fsh",
+    "startLine": 1,
+    "endLine": 39
+  },
+  {
+    "outputFile": "PractitionerRole-example0.json",
+    "fshName": "example0-of-AUBasePractitionerRole",
+    "fshType": "Instance",
+    "fshFile": "instances/example0-of-AUBasePractitionerRole.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "PractitionerRole-example1.json",
+    "fshName": "example1-of-AUBasePractitionerRole",
+    "fshType": "Instance",
+    "fshFile": "instances/example1-of-AUBasePractitionerRole.fsh",
+    "startLine": 1,
+    "endLine": 17
+  },
+  {
+    "outputFile": "PractitionerRole-example2.json",
+    "fshName": "example2-of-AUBasePractitionerRole",
+    "fshType": "Instance",
+    "fshFile": "instances/example2-of-AUBasePractitionerRole.fsh",
+    "startLine": 1,
+    "endLine": 29
+  },
+  {
+    "outputFile": "PractitionerRole-example3.json",
+    "fshName": "example3-of-AUBasePractitionerRole",
+    "fshType": "Instance",
+    "fshFile": "instances/example3-of-AUBasePractitionerRole.fsh",
+    "startLine": 1,
+    "endLine": 25
+  },
+  {
+    "outputFile": "PractitionerRole-example4.json",
+    "fshName": "example4-of-AUBasePractitionerRole",
+    "fshType": "Instance",
+    "fshFile": "instances/example4-of-AUBasePractitionerRole.fsh",
+    "startLine": 1,
+    "endLine": 29
+  },
+  {
+    "outputFile": "Procedure-example0.json",
+    "fshName": "example0-of-AUBaseProcedure",
+    "fshType": "Instance",
+    "fshFile": "instances/example0-of-AUBaseProcedure.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "Procedure-example1.json",
+    "fshName": "example1-of-AUBaseProcedure",
+    "fshType": "Instance",
+    "fshFile": "instances/example1-of-AUBaseProcedure.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "Procedure-example2.json",
+    "fshName": "example2-of-AUBaseProcedure",
+    "fshType": "Instance",
+    "fshFile": "instances/example2-of-AUBaseProcedure.fsh",
+    "startLine": 1,
+    "endLine": 13
+  },
+  {
+    "outputFile": "RelatedPerson-example-sex-and-gender.json",
+    "fshName": "example-sex-and-gender-of-AUBaseRelatedPerson",
+    "fshType": "Instance",
+    "fshFile": "instances/example-sex-and-gender-of-AUBaseRelatedPerson.fsh",
+    "startLine": 1,
+    "endLine": 47
+  },
+  {
+    "outputFile": "RelatedPerson-example0.json",
+    "fshName": "example0-of-AUBaseRelatedPerson",
+    "fshType": "Instance",
+    "fshFile": "instances/example0-of-AUBaseRelatedPerson.fsh",
+    "startLine": 1,
+    "endLine": 26
+  },
+  {
+    "outputFile": "RelatedPerson-example1.json",
+    "fshName": "example1-of-AUBaseRelatedPerson",
+    "fshType": "Instance",
+    "fshFile": "instances/example1-of-AUBaseRelatedPerson.fsh",
+    "startLine": 1,
+    "endLine": 22
+  },
+  {
+    "outputFile": "RelatedPerson-example2.json",
+    "fshName": "example2-of-AUBaseRelatedPerson",
+    "fshType": "Instance",
+    "fshFile": "instances/example2-of-AUBaseRelatedPerson.fsh",
+    "startLine": 1,
+    "endLine": 26
+  },
+  {
+    "outputFile": "RelatedPerson-example3.json",
+    "fshName": "example3-of-AUBaseRelatedPerson",
+    "fshType": "Instance",
+    "fshFile": "instances/example3-of-AUBaseRelatedPerson.fsh",
+    "startLine": 1,
+    "endLine": 32
+  },
+  {
+    "outputFile": "SearchParameter-encounter-discharge-disposition.json",
+    "fshName": "encounter-discharge-disposition",
+    "fshType": "Instance",
+    "fshFile": "instances/encounter-discharge-disposition.fsh",
+    "startLine": 1,
+    "endLine": 19
+  },
+  {
+    "outputFile": "SearchParameter-gender-identity.json",
+    "fshName": "gender-identity",
+    "fshType": "Instance",
+    "fshFile": "instances/gender-identity.fsh",
+    "startLine": 1,
+    "endLine": 23
+  },
+  {
+    "outputFile": "SearchParameter-indigenous-status.json",
+    "fshName": "indigenous-status",
+    "fshType": "Instance",
+    "fshFile": "instances/indigenous-status.fsh",
+    "startLine": 1,
+    "endLine": 19
+  },
+  {
+    "outputFile": "SearchParameter-servicerequest-supporting-info.json",
+    "fshName": "servicerequest-supporting-info",
+    "fshType": "Instance",
+    "fshFile": "instances/servicerequest-supporting-info.fsh",
+    "startLine": 1,
+    "endLine": 19
+  },
+  {
+    "outputFile": "ServiceRequest-hepatitis-b-antibody.json",
+    "fshName": "hepatitis-b-antibody",
+    "fshType": "Instance",
+    "fshFile": "instances/hepatitis-b-antibody.fsh",
+    "startLine": 1,
+    "endLine": 16
+  },
+  {
+    "outputFile": "ServiceRequest-path-example0.json",
+    "fshName": "path-example0",
+    "fshType": "Instance",
+    "fshFile": "instances/path-example0.fsh",
+    "startLine": 1,
+    "endLine": 22
+  },
+  {
+    "outputFile": "Specimen-serum.json",
+    "fshName": "serum",
+    "fshType": "Instance",
+    "fshFile": "instances/serum.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
+    "outputFile": "StructureDefinition-address-identifier.json",
+    "fshName": "AddressIdentifier",
+    "fshType": "Extension",
+    "fshFile": "extensions/AddressIdentifier.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "StructureDefinition-ahpraprofession-details.json",
+    "fshName": "AhpraProfessionDetails",
+    "fshType": "Extension",
+    "fshFile": "extensions/AhpraProfessionDetails.fsh",
+    "startLine": 1,
+    "endLine": 124
+  },
+  {
+    "outputFile": "StructureDefinition-ahpraregistration-details.json",
+    "fshName": "AhpraRegistrationDetails",
+    "fshType": "Extension",
+    "fshFile": "extensions/AhpraRegistrationDetails.fsh",
+    "startLine": 1,
+    "endLine": 122
+  },
+  {
+    "outputFile": "StructureDefinition-associated-healthcareservice.json",
+    "fshName": "AssociatedHealthcareService",
+    "fshType": "Extension",
+    "fshFile": "extensions/AssociatedHealthcareService.fsh",
+    "startLine": 1,
+    "endLine": 17
+  },
+  {
+    "outputFile": "StructureDefinition-au-accessionnumber.json",
+    "fshName": "AUAccessionNumber",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUAccessionNumber.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "StructureDefinition-au-address.json",
+    "fshName": "AustralianAddress",
+    "fshType": "Profile",
+    "fshFile": "profiles/AustralianAddress.fsh",
+    "startLine": 1,
+    "endLine": 31
+  },
+  {
+    "outputFile": "StructureDefinition-au-ahpraregistrationnumber.json",
+    "fshName": "AUAhpraRegistrationNumber",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUAhpraRegistrationNumber.fsh",
+    "startLine": 1,
+    "endLine": 19
+  },
+  {
+    "outputFile": "StructureDefinition-au-allergyintolerance.json",
+    "fshName": "AUBaseAllergyIntolerance",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUBaseAllergyIntolerance.fsh",
+    "startLine": 1,
+    "endLine": 13
+  },
+  {
+    "outputFile": "StructureDefinition-au-assigningauthority.json",
+    "fshName": "HL7V2AssigningAuthority",
+    "fshType": "Extension",
+    "fshFile": "extensions/HL7V2AssigningAuthority.fsh",
+    "startLine": 1,
+    "endLine": 27
+  },
+  {
+    "outputFile": "StructureDefinition-au-australianbusinessnumber.json",
+    "fshName": "AUAustralianBusinessNumber",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUAustralianBusinessNumber.fsh",
+    "startLine": 1,
+    "endLine": 17
+  },
+  {
+    "outputFile": "StructureDefinition-au-australiancompanynumber.json",
+    "fshName": "AUAustralianCompanyNumber",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUAustralianCompanyNumber.fsh",
+    "startLine": 1,
+    "endLine": 17
+  },
+  {
+    "outputFile": "StructureDefinition-au-australianregistredbodynumber.json",
+    "fshName": "AUAustralianRegisteredBodyNumber",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUAustralianRegisteredBodyNumber.fsh",
+    "startLine": 1,
+    "endLine": 17
+  },
+  {
+    "outputFile": "StructureDefinition-au-bodystructure.json",
+    "fshName": "AUBaseBodyStructure",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUBaseBodyStructure.fsh",
+    "startLine": 1,
+    "endLine": 14
+  },
+  {
+    "outputFile": "StructureDefinition-au-careagencyemployeeidentifier.json",
+    "fshName": "AUCareAgencyEmployeeIdentifier",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUCareAgencyEmployeeIdentifier.fsh",
+    "startLine": 1,
+    "endLine": 19
+  },
+  {
+    "outputFile": "StructureDefinition-au-composition.json",
+    "fshName": "AUBaseComposition",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUBaseComposition.fsh",
+    "startLine": 1,
+    "endLine": 13
+  },
+  {
+    "outputFile": "StructureDefinition-au-condition.json",
+    "fshName": "AUBaseCondition",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUBaseCondition.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "StructureDefinition-au-coverage.json",
+    "fshName": "AUBaseCoverage",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUBaseCoverage.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
+    "outputFile": "StructureDefinition-au-cspregistrationnumber.json",
+    "fshName": "AUCSPRegistrationNumber",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUCSPRegistrationNumber.fsh",
+    "startLine": 1,
+    "endLine": 19
+  },
+  {
+    "outputFile": "StructureDefinition-au-cwlthseniorshealthcardnumber.json",
+    "fshName": "AUCwlthSeniorsHealthCardNumber",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUCwlthSeniorsHealthCardNumber.fsh",
+    "startLine": 1,
+    "endLine": 23
+  },
+  {
+    "outputFile": "StructureDefinition-au-deliverypointidentifier.json",
+    "fshName": "AUDeliveryPointIdentifier",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUDeliveryPointIdentifier.fsh",
+    "startLine": 1,
+    "endLine": 21
+  },
+  {
+    "outputFile": "StructureDefinition-au-diagnosticreport.json",
+    "fshName": "AUBaseDiagnosticReport",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUBaseDiagnosticReport.fsh",
+    "startLine": 1,
+    "endLine": 21
+  },
+  {
+    "outputFile": "StructureDefinition-au-diagnosticrequest.json",
+    "fshName": "AUBaseDiagnosticRequest",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUBaseDiagnosticRequest.fsh",
+    "startLine": 1,
+    "endLine": 29
+  },
+  {
+    "outputFile": "StructureDefinition-au-diagnosticresult.json",
+    "fshName": "AUBaseDiagnosticResult",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUBaseDiagnosticResult.fsh",
+    "startLine": 1,
+    "endLine": 30
+  },
+  {
+    "outputFile": "StructureDefinition-au-dosage.json",
+    "fshName": "AUBaseDosage",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUBaseDosage.fsh",
+    "startLine": 1,
+    "endLine": 14
+  },
+  {
+    "outputFile": "StructureDefinition-au-dvanumber.json",
+    "fshName": "AUDVANumber",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUDVANumber.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "StructureDefinition-au-employeenumber.json",
+    "fshName": "AUEmployeeNumber",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUEmployeeNumber.fsh",
+    "startLine": 1,
+    "endLine": 19
+  },
+  {
+    "outputFile": "StructureDefinition-au-encounter.json",
+    "fshName": "AUBaseEncounter",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUBaseEncounter.fsh",
+    "startLine": 1,
+    "endLine": 17
+  },
+  {
+    "outputFile": "StructureDefinition-au-endpoint.json",
+    "fshName": "AUBaseEndpoint",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUBaseEndpoint.fsh",
+    "startLine": 1,
+    "endLine": 13
+  },
+  {
+    "outputFile": "StructureDefinition-au-etpprescriptionidentifier.json",
+    "fshName": "AUETPPrescriptionIdentifier",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUETPPrescriptionIdentifier.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "StructureDefinition-au-gnafidentifier.json",
+    "fshName": "AUGNAFIdentifier",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUGNAFIdentifier.fsh",
+    "startLine": 1,
+    "endLine": 19
+  },
+  {
+    "outputFile": "StructureDefinition-au-hae.json",
+    "fshName": "AUHAE",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUHAE.fsh",
+    "startLine": 1,
+    "endLine": 22
+  },
+  {
+    "outputFile": "StructureDefinition-au-healthcarecardnumber.json",
+    "fshName": "AUHealthCareCardNumber",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUHealthCareCardNumber.fsh",
+    "startLine": 1,
+    "endLine": 23
+  },
+  {
+    "outputFile": "StructureDefinition-au-healthcareservice.json",
+    "fshName": "AUBaseHealthcareService",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUBaseHealthcareService.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "StructureDefinition-au-hpii.json",
+    "fshName": "AUHPII",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUHPII.fsh",
+    "startLine": 1,
+    "endLine": 22
+  },
+  {
+    "outputFile": "StructureDefinition-au-hpio.json",
+    "fshName": "AUHPIO",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUHPIO.fsh",
+    "startLine": 1,
+    "endLine": 23
+  },
+  {
+    "outputFile": "StructureDefinition-au-hspo.json",
+    "fshName": "AUHSPO",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUHSPO.fsh",
+    "startLine": 1,
+    "endLine": 22
+  },
+  {
+    "outputFile": "StructureDefinition-au-ihi.json",
+    "fshName": "AUIHI",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUIHI.fsh",
+    "startLine": 1,
+    "endLine": 30
+  },
+  {
+    "outputFile": "StructureDefinition-au-imagingreport.json",
+    "fshName": "AUBaseDiagnosticImagingReport",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUBaseDiagnosticImagingReport.fsh",
+    "startLine": 1,
+    "endLine": 22
+  },
+  {
+    "outputFile": "StructureDefinition-au-imagingresult.json",
+    "fshName": "AUBaseDiagnosticImagingResult",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUBaseDiagnosticImagingResult.fsh",
+    "startLine": 1,
+    "endLine": 66
+  },
+  {
+    "outputFile": "StructureDefinition-au-immunization.json",
+    "fshName": "AUBaseImmunization",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUBaseImmunization.fsh",
+    "startLine": 1,
+    "endLine": 53
+  },
+  {
+    "outputFile": "StructureDefinition-au-insurancemembernumber.json",
+    "fshName": "AUInsuranceMemberNumber",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUInsuranceMemberNumber.fsh",
+    "startLine": 1,
+    "endLine": 21
+  },
+  {
+    "outputFile": "StructureDefinition-au-localdispenseidentifier.json",
+    "fshName": "AULocalDispenseIdentifier",
+    "fshType": "Profile",
+    "fshFile": "profiles/AULocalDispenseIdentifier.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "StructureDefinition-au-localorderidentifier.json",
+    "fshName": "AULocalOrderIdentifier",
+    "fshType": "Profile",
+    "fshFile": "profiles/AULocalOrderIdentifier.fsh",
+    "startLine": 1,
+    "endLine": 21
+  },
+  {
+    "outputFile": "StructureDefinition-au-localprescriptionidentifier.json",
+    "fshName": "AULocalPrescriptionIdentifier",
+    "fshType": "Profile",
+    "fshFile": "profiles/AULocalPrescriptionIdentifier.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "StructureDefinition-au-localreportidentifier.json",
+    "fshName": "AULocalReportIdentifier",
+    "fshType": "Profile",
+    "fshFile": "profiles/AULocalReportIdentifier.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "StructureDefinition-au-location.json",
+    "fshName": "AUBaseLocation",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUBaseLocation.fsh",
+    "startLine": 1,
+    "endLine": 14
+  },
+  {
+    "outputFile": "StructureDefinition-au-locationspecificpracticenumber.json",
+    "fshName": "AULocationSpecificPracticeNumber",
+    "fshType": "Profile",
+    "fshFile": "profiles/AULocationSpecificPracticeNumber.fsh",
+    "startLine": 1,
+    "endLine": 18
+  },
+  {
+    "outputFile": "StructureDefinition-au-medicalrecordnumber.json",
+    "fshName": "AUMedicalRecordNumber",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUMedicalRecordNumber.fsh",
+    "startLine": 1,
+    "endLine": 19
+  },
+  {
+    "outputFile": "StructureDefinition-au-medicarecardnumber.json",
+    "fshName": "AUMedicareCardNumber",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUMedicareCardNumber.fsh",
+    "startLine": 1,
+    "endLine": 22
+  },
+  {
+    "outputFile": "StructureDefinition-au-medicareprovidernumber.json",
+    "fshName": "AUMedicareProviderNumber",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUMedicareProviderNumber.fsh",
+    "startLine": 1,
+    "endLine": 17
+  },
+  {
+    "outputFile": "StructureDefinition-au-medication.json",
+    "fshName": "AUBaseMedication",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUBaseMedication.fsh",
+    "startLine": 1,
+    "endLine": 63
+  },
+  {
+    "outputFile": "StructureDefinition-au-medicationadministration.json",
+    "fshName": "AUBaseMedicationAdministration",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUBaseMedicationAdministration.fsh",
+    "startLine": 1,
+    "endLine": 69
+  },
+  {
+    "outputFile": "StructureDefinition-au-medicationdispense.json",
+    "fshName": "AUBaseMedicationDispense",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUBaseMedicationDispense.fsh",
+    "startLine": 1,
+    "endLine": 73
+  },
+  {
+    "outputFile": "StructureDefinition-au-medicationrequest.json",
+    "fshName": "AUBaseMedicationRequest",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUBaseMedicationRequest.fsh",
+    "startLine": 1,
+    "endLine": 91
+  },
+  {
+    "outputFile": "StructureDefinition-au-medicationstatement.json",
+    "fshName": "AUBaseMedicationStatement",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUBaseMedicationStatement.fsh",
+    "startLine": 1,
+    "endLine": 72
+  },
+  {
+    "outputFile": "StructureDefinition-au-medlist.json",
+    "fshName": "AUMedicineList",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUMedicineList.fsh",
+    "startLine": 1,
+    "endLine": 21
+  },
+  {
+    "outputFile": "StructureDefinition-au-nataaccreditationnumber.json",
+    "fshName": "AUNATAAccreditationNumber",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUNATAAccreditationNumber.fsh",
+    "startLine": 1,
+    "endLine": 17
+  },
+  {
+    "outputFile": "StructureDefinition-au-natasitenumber.json",
+    "fshName": "AUNATASiteNumber",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUNATASiteNumber.fsh",
+    "startLine": 1,
+    "endLine": 17
+  },
+  {
+    "outputFile": "StructureDefinition-au-nationalprovideridentifieratorganisation.json",
+    "fshName": "AUNationalProviderIdentifierAtOrganisation",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUNationalProviderIdentifierAtOrganisation.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "StructureDefinition-au-norelevantfinding.json",
+    "fshName": "AUAssertionNoRelevantFinding",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUAssertionNoRelevantFinding.fsh",
+    "startLine": 1,
+    "endLine": 17
+  },
+  {
+    "outputFile": "StructureDefinition-au-organization.json",
+    "fshName": "AUBaseOrganization",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUBaseOrganization.fsh",
+    "startLine": 1,
+    "endLine": 15
+  },
+  {
+    "outputFile": "StructureDefinition-au-paididentifier.json",
+    "fshName": "AUPAIDIdentifier",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUPAIDIdentifier.fsh",
+    "startLine": 1,
+    "endLine": 24
+  },
+  {
+    "outputFile": "StructureDefinition-au-paioidentifier.json",
+    "fshName": "AUPAIOIdentifier",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUPAIOIdentifier.fsh",
+    "startLine": 1,
+    "endLine": 24
+  },
+  {
+    "outputFile": "StructureDefinition-au-pathologyreport.json",
+    "fshName": "AUBasePathologyReport",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUBasePathologyReport.fsh",
+    "startLine": 1,
+    "endLine": 24
+  },
+  {
+    "outputFile": "StructureDefinition-au-pathologyresult.json",
+    "fshName": "AUBasePathologyResult",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUBasePathologyResult.fsh",
+    "startLine": 1,
+    "endLine": 97
+  },
+  {
+    "outputFile": "StructureDefinition-au-patient.json",
+    "fshName": "AUBasePatient",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUBasePatient.fsh",
+    "startLine": 1,
+    "endLine": 87
+  },
+  {
+    "outputFile": "StructureDefinition-au-pbsprescribernumber.json",
+    "fshName": "AUPBSPrescriberNumber",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUPBSPrescriberNumber.fsh",
+    "startLine": 1,
+    "endLine": 18
+  },
+  {
+    "outputFile": "StructureDefinition-au-pensionerconcessioncardnumber.json",
+    "fshName": "AUPensionerConcessionCardNumber",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUPensionerConcessionCardNumber.fsh",
+    "startLine": 1,
+    "endLine": 23
+  },
+  {
+    "outputFile": "StructureDefinition-au-pharmacyapprovalnumber.json",
+    "fshName": "AUPharmacyApprovalNumber",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUPharmacyApprovalNumber.fsh",
+    "startLine": 1,
+    "endLine": 15
+  },
+  {
+    "outputFile": "StructureDefinition-au-pi.json",
+    "fshName": "AUPatientInternalIdentifier",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUPatientInternalIdentifier.fsh",
+    "startLine": 1,
+    "endLine": 21
+  },
+  {
+    "outputFile": "StructureDefinition-au-practitioner.json",
+    "fshName": "AUBasePractitioner",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUBasePractitioner.fsh",
+    "startLine": 1,
+    "endLine": 31
+  },
+  {
+    "outputFile": "StructureDefinition-au-practitionerrole.json",
+    "fshName": "AUBasePractitionerRole",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUBasePractitionerRole.fsh",
+    "startLine": 1,
+    "endLine": 18
+  },
+  {
+    "outputFile": "StructureDefinition-au-procedure.json",
+    "fshName": "AUBaseProcedure",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUBaseProcedure.fsh",
+    "startLine": 1,
+    "endLine": 18
+  },
+  {
+    "outputFile": "StructureDefinition-au-receivingapplication.json",
+    "fshName": "HL7V2ReceivingApplication",
+    "fshType": "Extension",
+    "fshFile": "extensions/HL7V2ReceivingApplication.fsh",
+    "startLine": 1,
+    "endLine": 27
+  },
+  {
+    "outputFile": "StructureDefinition-au-receivingfacility.json",
+    "fshName": "HL7V2ReceivingFacility",
+    "fshType": "Extension",
+    "fshFile": "extensions/HL7V2ReceivingFacility.fsh",
+    "startLine": 1,
+    "endLine": 27
+  },
+  {
+    "outputFile": "StructureDefinition-au-relatedperson.json",
+    "fshName": "AUBaseRelatedPerson",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUBaseRelatedPerson.fsh",
+    "startLine": 1,
+    "endLine": 39
+  },
+  {
+    "outputFile": "StructureDefinition-au-residentialagedcareserviceidentifier.json",
+    "fshName": "AUResidentialAgedCareServiceIdentifier",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUResidentialAgedCareServiceIdentifier.fsh",
+    "startLine": 1,
+    "endLine": 19
+  },
+  {
+    "outputFile": "StructureDefinition-au-servicerequest.json",
+    "fshName": "AUBaseServiceRequest",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUBaseServiceRequest.fsh",
+    "startLine": 1,
+    "endLine": 23
+  },
+  {
+    "outputFile": "StructureDefinition-au-specimen.json",
+    "fshName": "AUBaseSpecimen",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUBaseSpecimen.fsh",
+    "startLine": 1,
+    "endLine": 14
+  },
+  {
+    "outputFile": "StructureDefinition-au-substance.json",
+    "fshName": "AUBaseSubstance",
+    "fshType": "Profile",
+    "fshFile": "profiles/AUBaseSubstance.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "StructureDefinition-au-timezone-usage.json",
+    "fshName": "AustralianTimeZoneUsage",
+    "fshType": "Extension",
+    "fshFile": "extensions/AustralianTimeZoneUsage.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "StructureDefinition-au-timezone.json",
+    "fshName": "AustralianTimeZone",
+    "fshType": "Extension",
+    "fshFile": "extensions/AustralianTimeZone.fsh",
+    "startLine": 1,
+    "endLine": 19
+  },
+  {
+    "outputFile": "StructureDefinition-author-related-person.json",
+    "fshName": "AuthorRelatedPerson",
+    "fshType": "Extension",
+    "fshFile": "extensions/AuthorRelatedPerson.fsh",
+    "startLine": 1,
+    "endLine": 13
+  },
+  {
+    "outputFile": "StructureDefinition-change-description.json",
+    "fshName": "ChangeDescription",
+    "fshType": "Extension",
+    "fshFile": "extensions/ChangeDescription.fsh",
+    "startLine": 1,
+    "endLine": 11
+  },
+  {
+    "outputFile": "StructureDefinition-closing-the-gap-registration.json",
+    "fshName": "ClosingTheGapRegistration",
+    "fshType": "Extension",
+    "fshFile": "extensions/ClosingTheGapRegistration.fsh",
+    "startLine": 1,
+    "endLine": 13
+  },
+  {
+    "outputFile": "StructureDefinition-contact-purpose.json",
+    "fshName": "ContactPurpose",
+    "fshType": "Extension",
+    "fshFile": "extensions/ContactPurpose.fsh",
+    "startLine": 1,
+    "endLine": 14
+  },
+  {
+    "outputFile": "StructureDefinition-date-accuracy-indicator.json",
+    "fshName": "DateAccuracyIndicator",
+    "fshType": "Extension",
+    "fshFile": "extensions/DateAccuracyIndicator.fsh",
+    "startLine": 1,
+    "endLine": 17
+  },
+  {
+    "outputFile": "StructureDefinition-date-of-arrival.json",
+    "fshName": "DateOfArrivalAustralia",
+    "fshType": "Extension",
+    "fshFile": "extensions/DateOfArrivalAustralia.fsh",
+    "startLine": 1,
+    "endLine": 21
+  },
+  {
+    "outputFile": "StructureDefinition-dispense-number.json",
+    "fshName": "DispenseNumber",
+    "fshType": "Extension",
+    "fshFile": "extensions/DispenseNumber.fsh",
+    "startLine": 1,
+    "endLine": 14
+  },
+  {
+    "outputFile": "StructureDefinition-encounter-description.json",
+    "fshName": "EncounterDescription",
+    "fshType": "Extension",
+    "fshFile": "extensions/EncounterDescription.fsh",
+    "startLine": 1,
+    "endLine": 18
+  },
+  {
+    "outputFile": "StructureDefinition-encryption-certificate-pem-x509.json",
+    "fshName": "EncryptionCertificatePEMx509",
+    "fshType": "Extension",
+    "fshFile": "extensions/EncryptionCertificatePEMx509.fsh",
+    "startLine": 1,
+    "endLine": 13
+  },
+  {
+    "outputFile": "StructureDefinition-ethnicity.json",
+    "fshName": "Ethnicity",
+    "fshType": "Extension",
+    "fshFile": "extensions/Ethnicity.fsh",
+    "startLine": 1,
+    "endLine": 16
+  },
+  {
+    "outputFile": "StructureDefinition-identifier-routability.json",
+    "fshName": "IdentifierRoutability",
+    "fshType": "Extension",
+    "fshFile": "extensions/IdentifierRoutability.fsh",
+    "startLine": 1,
+    "endLine": 30
+  },
+  {
+    "outputFile": "StructureDefinition-ihi-record-status.json",
+    "fshName": "IHIRecordStatus",
+    "fshType": "Extension",
+    "fshFile": "extensions/IHIRecordStatus.fsh",
+    "startLine": 1,
+    "endLine": 15
+  },
+  {
+    "outputFile": "StructureDefinition-ihi-status.json",
+    "fshName": "IHIStatus",
+    "fshType": "Extension",
+    "fshFile": "extensions/IHIStatus.fsh",
+    "startLine": 1,
+    "endLine": 16
+  },
+  {
+    "outputFile": "StructureDefinition-ihi-verified-date.json",
+    "fshName": "IHIVerifiedDate",
+    "fshType": "Extension",
+    "fshFile": "extensions/IHIVerifiedDate.fsh",
+    "startLine": 1,
+    "endLine": 14
+  },
+  {
+    "outputFile": "StructureDefinition-indigenous-status.json",
+    "fshName": "AustralianIndigenousStatus",
+    "fshType": "Extension",
+    "fshFile": "extensions/AustralianIndigenousStatus.fsh",
+    "startLine": 1,
+    "endLine": 16
+  },
+  {
+    "outputFile": "StructureDefinition-information-recipient.json",
+    "fshName": "InformationRecipient",
+    "fshType": "Extension",
+    "fshFile": "extensions/InformationRecipient.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "StructureDefinition-medication-brand-name.json",
+    "fshName": "MedicationBrandName",
+    "fshType": "Extension",
+    "fshFile": "extensions/MedicationBrandName.fsh",
+    "startLine": 1,
+    "endLine": 15
+  },
+  {
+    "outputFile": "StructureDefinition-medication-generic-name.json",
+    "fshName": "MedicationGenericName",
+    "fshType": "Extension",
+    "fshFile": "extensions/MedicationGenericName.fsh",
+    "startLine": 1,
+    "endLine": 15
+  },
+  {
+    "outputFile": "StructureDefinition-medication-long-term.json",
+    "fshName": "MedicationLongTerm",
+    "fshType": "Extension",
+    "fshFile": "extensions/MedicationLongTerm.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "StructureDefinition-medication-strength.json",
+    "fshName": "MedicationStrength",
+    "fshType": "Extension",
+    "fshFile": "extensions/MedicationStrength.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "StructureDefinition-medication-type.json",
+    "fshName": "MedicationType",
+    "fshType": "Extension",
+    "fshFile": "extensions/MedicationType.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "StructureDefinition-name-context.json",
+    "fshName": "NameContext",
+    "fshType": "Extension",
+    "fshFile": "extensions/NameContext.fsh",
+    "startLine": 1,
+    "endLine": 14
+  },
+  {
+    "outputFile": "StructureDefinition-no-fixed-address.json",
+    "fshName": "NoFixedAddress",
+    "fshType": "Extension",
+    "fshFile": "extensions/NoFixedAddress.fsh",
+    "startLine": 1,
+    "endLine": 19
+  },
+  {
+    "outputFile": "StructureDefinition-result-copies-to.json",
+    "fshName": "ResultCopiesTo",
+    "fshType": "Extension",
+    "fshFile": "extensions/ResultCopiesTo.fsh",
+    "startLine": 1,
+    "endLine": 17
+  },
+  {
+    "outputFile": "StructureDefinition-subsidised-concurrent-supply.json",
+    "fshName": "GroundsForConcurrentSupplyOfMedication",
+    "fshType": "Extension",
+    "fshFile": "extensions/GroundsForConcurrentSupplyOfMedication.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "StructureDefinition-vaccine-serial-number.json",
+    "fshName": "VaccineSerialNumber",
+    "fshType": "Extension",
+    "fshFile": "extensions/VaccineSerialNumber.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "StructureDefinition-veteran-status.json",
+    "fshName": "AustralianVeteranStatus",
+    "fshType": "Extension",
+    "fshFile": "extensions/AustralianVeteranStatus.fsh",
+    "startLine": 1,
+    "endLine": 15
+  },
+  {
+    "outputFile": "Substance-example0.json",
+    "fshName": "example0-of-AUBaseSubstance",
+    "fshType": "Instance",
+    "fshFile": "instances/example0-of-AUBaseSubstance.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "Substance-example1.json",
+    "fshName": "example1-of-AUBaseSubstance",
+    "fshType": "Instance",
+    "fshFile": "instances/example1-of-AUBaseSubstance.fsh",
+    "startLine": 1,
+    "endLine": 7
+  },
+  {
+    "outputFile": "ValueSet-accession-number-type.json",
+    "fshName": "AccessionNumberType",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/AccessionNumberType.fsh",
+    "startLine": 1,
+    "endLine": 14
+  },
+  {
+    "outputFile": "ValueSet-amt-mp-codes.json",
+    "fshName": "AMTMedicinalProductAndSubstances",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/AMTMedicinalProductAndSubstances.fsh",
+    "startLine": 1,
+    "endLine": 20
+  },
+  {
+    "outputFile": "ValueSet-au-coverage-type-extended.json",
+    "fshName": "CoverageTypeandSelfPayCodesAUExtended",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/CoverageTypeandSelfPayCodesAUExtended.fsh",
+    "startLine": 1,
+    "endLine": 15
+  },
+  {
+    "outputFile": "ValueSet-au-endpoint-connection-type-extended.json",
+    "fshName": "EndpointConnectionTypeAUExtended",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/EndpointConnectionTypeAUExtended.fsh",
+    "startLine": 1,
+    "endLine": 14
+  },
+  {
+    "outputFile": "ValueSet-au-endpoint-payload-type-extended.json",
+    "fshName": "EndpointPayloadTypeAUExtended",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/EndpointPayloadTypeAUExtended.fsh",
+    "startLine": 1,
+    "endLine": 15
+  },
+  {
+    "outputFile": "ValueSet-au-jurisdiction-extended.json",
+    "fshName": "JurisdictionValueSetAUExtended",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/JurisdictionValueSetAUExtended.fsh",
+    "startLine": 1,
+    "endLine": 21
+  },
+  {
+    "outputFile": "ValueSet-au-location-physical-type-extended.json",
+    "fshName": "LocationPhysicalTypeAUExtended",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/LocationPhysicalTypeAUExtended.fsh",
+    "startLine": 1,
+    "endLine": 14
+  },
+  {
+    "outputFile": "ValueSet-au-timezone.json",
+    "fshName": "AUTimeZone",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/AUTimeZone.fsh",
+    "startLine": 1,
+    "endLine": 25
+  },
+  {
+    "outputFile": "ValueSet-au-v2-0203-extended.json",
+    "fshName": "Hl7VSIdentifierTypeAUExtended",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/Hl7VSIdentifierTypeAUExtended.fsh",
+    "startLine": 1,
+    "endLine": 14
+  },
+  {
+    "outputFile": "ValueSet-au-v2-0360-extended.json",
+    "fshName": "Hl7VSDegreeLicenseCertificateAUExtended",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/Hl7VSDegreeLicenseCertificateAUExtended.fsh",
+    "startLine": 1,
+    "endLine": 14
+  },
+  {
+    "outputFile": "ValueSet-au-v2-0443-extended.json",
+    "fshName": "Hl7VSProviderRoleAUExtended",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/Hl7VSProviderRoleAUExtended.fsh",
+    "startLine": 1,
+    "endLine": 14
+  },
+  {
+    "outputFile": "ValueSet-au-v3-ActEncounterCode-extended.json",
+    "fshName": "ActEncounterCodeAUExtended",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/ActEncounterCodeAUExtended.fsh",
+    "startLine": 1,
+    "endLine": 14
+  },
+  {
+    "outputFile": "ValueSet-au-v3-ServiceDeliveryLocationRoleType-extended.json",
+    "fshName": "ServiceDeliveryLocationRoleTypeAUExtended",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/ServiceDeliveryLocationRoleTypeAUExtended.fsh",
+    "startLine": 1,
+    "endLine": 14
+  },
+  {
+    "outputFile": "ValueSet-contact-purpose.json",
+    "fshName": "ContactPurpose",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/ContactPurpose.fsh",
+    "startLine": 1,
+    "endLine": 14
+  },
+  {
+    "outputFile": "ValueSet-dva-entitlement.json",
+    "fshName": "DVAEntitlement",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/DVAEntitlement.fsh",
+    "startLine": 1,
+    "endLine": 17
+  },
+  {
+    "outputFile": "ValueSet-medication-type.json",
+    "fshName": "MedicationType",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/MedicationType.fsh",
+    "startLine": 1,
+    "endLine": 13
+  },
+  {
+    "outputFile": "ValueSet-medicine-item-change.json",
+    "fshName": "MedicineItemChange",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/MedicineItemChange.fsh",
+    "startLine": 1,
+    "endLine": 13
+  },
+  {
+    "outputFile": "ValueSet-mims.json",
+    "fshName": "MIMS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/MIMS.fsh",
+    "startLine": 1,
+    "endLine": 13
+  },
+  {
+    "outputFile": "ValueSet-name-context.json",
+    "fshName": "NameContext",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/NameContext.fsh",
+    "startLine": 1,
+    "endLine": 13
+  },
+  {
+    "outputFile": "ValueSet-order-identifier-type.json",
+    "fshName": "OrderIdentifierType",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/OrderIdentifierType.fsh",
+    "startLine": 1,
+    "endLine": 16
+  },
+  {
+    "outputFile": "ValueSet-pbs-item.json",
+    "fshName": "PBSItemCodes",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/PBSItemCodes.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "ValueSet-rsg-source-document-type.json",
+    "fshName": "AURecordedSexOrGenderSourceDocumentType",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/AURecordedSexOrGenderSourceDocumentType.fsh",
+    "startLine": 1,
+    "endLine": 18
+  },
+  {
+    "outputFile": "ValueSet-rsg-source.json",
+    "fshName": "AURecordedSexOrGenderSource",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/AURecordedSexOrGenderSource.fsh",
+    "startLine": 1,
+    "endLine": 16
+  },
+  {
+    "outputFile": "ValueSet-rsg-type.json",
+    "fshName": "AURecordedSexOrGenderType",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/AURecordedSexOrGenderType.fsh",
+    "startLine": 1,
+    "endLine": 18
+  },
+  {
+    "outputFile": "ValueSet-service-provision-conditions.json",
+    "fshName": "ServiceProvisionConditionsAustralianConcepts",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/ServiceProvisionConditionsAustralianConcepts.fsh",
+    "startLine": 1,
+    "endLine": 13
+  }
+]

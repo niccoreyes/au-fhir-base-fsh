@@ -1,0 +1,1073 @@
+{
+  "resourceType": "Bundle",
+  "id": "example0",
+  "meta": {
+    "lastUpdated": "2014-08-18T01:43:33Z"
+  },
+  "identifier": {
+    "system": "https://tools.ietf.org/html/rfc4122",
+    "value": "4989a6a4-4e99-11e9-8647-d663bd873d93"
+  },
+  "type": "collection",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:e229b450-4e9c-11e9-8647-d663bd873d93",
+      "resource": {
+        "resourceType": "List",
+        "id": "e229b450-4e9c-11e9-8647-d663bd873d93",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/StructureDefinition/au-medlist"
+          ]
+        },
+        "status": "current",
+        "mode": "snapshot",
+        "code": {
+          "coding": [
+            {
+              "code": "8654-6",
+              "system": "http://loinc.org"
+            }
+          ],
+          "text": "Current Medicine on Discharge"
+        },
+        "subject": {
+          "reference": "urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93"
+        },
+        "date": "2019-03-19",
+        "entry": [
+          {
+            "item": {
+              "reference": "urn:uuid:e36cef42-4ea3-11e9-8647-d663bd873d93"
+            }
+          },
+          {
+            "item": {
+              "reference": "urn:uuid:fbc87b14-4ea4-11e9-8647-d663bd873d93"
+            }
+          },
+          {
+            "item": {
+              "reference": "urn:uuid:9b6194f8-4ea5-11e9-8647-d663bd873d93"
+            }
+          },
+          {
+            "item": {
+              "reference": "urn:uuid:cede882c-4ea5-11e9-8647-d663bd873d93"
+            }
+          },
+          {
+            "item": {
+              "reference": "urn:uuid:f0a81ae0-4ea5-11e9-8647-d663bd873d93"
+            }
+          },
+          {
+            "item": {
+              "reference": "urn:uuid:2450a7ea-4ea6-11e9-8647-d663bd873d93"
+            }
+          },
+          {
+            "item": {
+              "reference": "urn:uuid:613a96e8-4ea6-11e9-8647-d663bd873d93"
+            }
+          },
+          {
+            "item": {
+              "reference": "urn:uuid:91296398-4ea6-11e9-8647-d663bd873d93"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "f12d073e-4e99-11e9-8647-d663bd873d93",
+        "extension": [
+          {
+            "url": "http://hl7.org.au/fhir/StructureDefinition/indigenous-status",
+            "valueCoding": {
+              "code": "4",
+              "system": "https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1",
+              "display": "Neither Aboriginal nor Torres Strait Islander origin"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org.au/fhir/StructureDefinition/ihi-status",
+                "valueCoding": {
+                  "code": "active",
+                  "system": "https://healthterminologies.gov.au/fhir/CodeSystem/ihi-status-1",
+                  "display": "active"
+                }
+              },
+              {
+                "url": "http://hl7.org.au/fhir/StructureDefinition/ihi-record-status",
+                "valueCoding": {
+                  "code": "Verified",
+                  "system": "https://healthterminologies.gov.au/fhir/CodeSystem/ihi-record-status-1",
+                  "display": "verified"
+                }
+              }
+            ],
+            "type": {
+              "coding": [
+                {
+                  "code": "NI",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "display": "National unique individual identifier"
+                }
+              ]
+            },
+            "system": "http://ns.electronichealth.net.au/id/hi/ihi/1.0",
+            "value": "8003608833357361"
+          }
+        ],
+        "name": [
+          {
+            "family": "Jones",
+            "given": [
+              "Nicholas"
+            ],
+            "prefix": [
+              "Mr"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "email",
+            "value": "nick.jones@amail.example.com",
+            "use": "home"
+          },
+          {
+            "system": "phone",
+            "value": "(0491) 570 006",
+            "use": "mobile"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1949-01-08",
+        "address": [
+          {
+            "use": "home",
+            "line": [
+              "4 Brisbane Street"
+            ],
+            "city": "Brisbane",
+            "state": "QLD",
+            "postalCode": "4112",
+            "country": "Australia"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9024d4a6-4ea0-11e9-8647-d663bd873d93",
+      "resource": {
+        "resourceType": "PractitionerRole",
+        "id": "9024d4a6-4ea0-11e9-8647-d663bd873d93",
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "code": "UPIN",
+                  "system": "http://terminology.hl7.org.au/CodeSystem/v2-0203"
+                }
+              ]
+            },
+            "system": "http://ns.electronichealth.net.au/id/provider-number",
+            "value": "2426621B"
+          }
+        ],
+        "active": true,
+        "practitioner": {
+          "reference": "urn:uuid:9024d118-4ea0-11e9-8647-d663bd873d93"
+        },
+        "organization": {
+          "reference": "urn:uuid:b377cc18-4ea2-11e9-8647-d663bd873d93"
+        },
+        "specialty": [
+          {
+            "coding": [
+              {
+                "code": "17561000",
+                "system": "http://snomed.info/sct",
+                "display": "Cardiologist"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "025553333",
+            "use": "work"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9024d118-4ea0-11e9-8647-d663bd873d93",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "9024d118-4ea0-11e9-8647-d663bd873d93",
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "code": "NPI",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "display": "National provider identifier"
+                }
+              ]
+            },
+            "system": "http://ns.electronichealth.net.au/id/hi/hpii/1.0",
+            "value": "8003610833334085"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "code": "PRES",
+                  "system": "http://terminology.hl7.org.au/CodeSystem/v2-0203",
+                  "display": "Prescriber Number"
+                }
+              ]
+            },
+            "system": "http://ns.electronichealth.net.au/id/medicare-prescriber-number",
+            "value": "453221"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "Mayo",
+            "given": [
+              "Helen"
+            ],
+            "prefix": [
+              "Dr"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "email",
+            "value": "helen.mayo@downunderhospital.example.com",
+            "use": "work"
+          }
+        ],
+        "address": [
+          {
+            "use": "work",
+            "line": [
+              "3 McGregor Street"
+            ],
+            "city": "Blacktown",
+            "state": "NSW",
+            "postalCode": "2148",
+            "country": "Australia"
+          }
+        ],
+        "qualification": [
+          {
+            "identifier": [
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "code": "AHPRA",
+                      "system": "http://terminology.hl7.org.au/CodeSystem/v2-0203",
+                      "display": "Australian Health Practitioner Regulation Agency Registration Number"
+                    }
+                  ]
+                },
+                "system": "http://hl7.org.au/id/ahpra-registration-number",
+                "value": "MED0000932945"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "code": "253111",
+                  "system": "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0",
+                  "display": "General Practitioner"
+                }
+              ],
+              "text": "General Practitioner"
+            },
+            "issuer": {
+              "display": "Ahpra"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b377cc18-4ea2-11e9-8647-d663bd873d93",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "b377cc18-4ea2-11e9-8647-d663bd873d93",
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "code": "NOI",
+                  "system": "http://terminology.hl7.org.au/CodeSystem/v2-0203",
+                  "display": "National Organisation Identifier"
+                }
+              ]
+            },
+            "system": "http://ns.electronichealth.net.au/id/hi/hpio/1.0",
+            "value": "8003621566684455"
+          }
+        ],
+        "active": true,
+        "name": "Downunder Hospital",
+        "address": [
+          {
+            "line": [
+              "3 McGregor Street"
+            ],
+            "city": "Blacktown",
+            "state": "NSW",
+            "postalCode": "2148",
+            "country": "Australia"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e36cef42-4ea3-11e9-8647-d663bd873d93",
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "e36cef42-4ea3-11e9-8647-d663bd873d93",
+        "status": "active",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org.au/fhir/StructureDefinition/medication-type",
+                  "valueCoding": {
+                    "code": "UPDSF",
+                    "system": "http://terminology.hl7.org.au/CodeSystem/medication-type",
+                    "display": "Unbranded product with strengths and form"
+                  }
+                }
+              ],
+              "code": "844301000168106",
+              "system": "http://snomed.info/sct",
+              "display": "Fluoxetine 20 mg tablet"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org.au/fhir/StructureDefinition/medication-type",
+                  "valueCoding": {
+                    "code": "BPD",
+                    "system": "http://terminology.hl7.org.au/CodeSystem/medication-type",
+                    "display": "Branded product with no strengths or form"
+                  }
+                }
+              ],
+              "code": "2938011000036102",
+              "system": "http://snomed.info/sct"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org.au/fhir/StructureDefinition/medication-type",
+                  "valueCoding": {
+                    "code": "BPD",
+                    "system": "http://terminology.hl7.org.au/CodeSystem/medication-type",
+                    "display": "Branded product with no strengths or form"
+                  }
+                }
+              ],
+              "code": "2954011000036108",
+              "system": "http://snomed.info/sct"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org.au/fhir/StructureDefinition/medication-type",
+                  "valueCoding": {
+                    "code": "BPD",
+                    "system": "http://terminology.hl7.org.au/CodeSystem/medication-type",
+                    "display": "Branded product with no strengths or form"
+                  }
+                }
+              ],
+              "code": "2952011000036104",
+              "system": "http://snomed.info/sct"
+            }
+          ],
+          "text": "FLUOXETINE 20mg TABLETS, LOVAN,PROZAC,ZACTIN"
+        },
+        "subject": {
+          "reference": "urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93"
+        },
+        "reasonCode": [
+          {
+            "text": "Depression."
+          }
+        ],
+        "dosage": [
+          {
+            "text": "Take HALF a tablet dispersed in water in the MORNING.",
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 1,
+                "periodUnit": "d",
+                "when": [
+                  "MORN"
+                ]
+              }
+            },
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 0.5,
+                  "code": "TAB",
+                  "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+                  "unit": "TAB"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fbc87b14-4ea4-11e9-8647-d663bd873d93",
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "fbc87b14-4ea4-11e9-8647-d663bd873d93",
+        "status": "active",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org.au/fhir/StructureDefinition/medication-type",
+                  "valueCoding": {
+                    "code": "UPDSF",
+                    "system": "http://terminology.hl7.org.au/CodeSystem/medication-type",
+                    "display": "Unbranded product with strengths and form"
+                  }
+                }
+              ],
+              "code": "75561000036109",
+              "system": "http://snomed.info/sct",
+              "display": "Aspirin 100 mg enteric tablet"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org.au/fhir/StructureDefinition/medication-type",
+                  "valueCoding": {
+                    "code": "BPD",
+                    "system": "http://terminology.hl7.org.au/CodeSystem/medication-type",
+                    "display": "Branded product with no strengths or form"
+                  }
+                }
+              ],
+              "code": "3338011000036100",
+              "system": "http://snomed.info/sct",
+              "display": "Cartia"
+            }
+          ],
+          "text": "ASPIRIN 100mg EC TABLET, CARTIA"
+        },
+        "subject": {
+          "reference": "urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93"
+        },
+        "reasonCode": [
+          {
+            "text": "To thin the blood to prevent heart attack or stroke."
+          }
+        ],
+        "dosage": [
+          {
+            "text": "Swallow whole ONE tablet in the MORNING WITH FOOD.",
+            "patientInstruction": "Swallow whole after food. If develop swollen ankles, difficulty in breathing, black stools or vomit that looks like coffee grounds, stop taking the medicine and contact the doctor without delay. It may be advisable to stop taking aspirin 7 days before planed surgery and some dental procedure; discuss with your doctor or dentist.",
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "periodUnit": "d",
+                "when": [
+                  "MORN"
+                ]
+              }
+            },
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 1,
+                  "code": "TAB",
+                  "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+                  "unit": "TAB"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9b6194f8-4ea5-11e9-8647-d663bd873d93",
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "9b6194f8-4ea5-11e9-8647-d663bd873d93",
+        "status": "active",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org.au/fhir/StructureDefinition/medication-type",
+                  "valueCoding": {
+                    "code": "UPDSF",
+                    "system": "http://terminology.hl7.org.au/CodeSystem/medication-type",
+                    "display": "Unbranded product with strengths and form"
+                  }
+                }
+              ],
+              "code": "32641000036100",
+              "system": "http://snomed.info/sct",
+              "display": "Ticagrelor 90 mg tablet"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org.au/fhir/StructureDefinition/medication-type",
+                  "valueCoding": {
+                    "code": "BPD",
+                    "system": "http://terminology.hl7.org.au/CodeSystem/medication-type",
+                    "display": "Branded product with no strengths or form"
+                  }
+                }
+              ],
+              "code": "32101000036105",
+              "system": "http://snomed.info/sct",
+              "display": "Brilinta"
+            }
+          ],
+          "text": "TICAGRELOR 90mg TABLETS, BRILINTA"
+        },
+        "subject": {
+          "reference": "urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93"
+        },
+        "reasonCode": [
+          {
+            "text": "For angina or to keep the blood thin."
+          }
+        ],
+        "dosage": [
+          {
+            "text": "Take ONE tablet TWICE a day.",
+            "patientInstruction": "Do not take more than one aspirin tablet or capsule each day while being treated with this medicine.",
+            "timing": {
+              "repeat": {
+                "frequency": 2,
+                "period": 1,
+                "periodUnit": "d",
+                "when": [
+                  "MORN",
+                  "HS"
+                ]
+              }
+            },
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 1,
+                  "code": "TAB",
+                  "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+                  "unit": "TAB"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:cede882c-4ea5-11e9-8647-d663bd873d93",
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "cede882c-4ea5-11e9-8647-d663bd873d93",
+        "status": "active",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org.au/fhir/StructureDefinition/medication-type",
+                  "valueCoding": {
+                    "code": "UPDSF",
+                    "system": "http://terminology.hl7.org.au/CodeSystem/medication-type",
+                    "display": "Unbranded product with strengths and form"
+                  }
+                }
+              ],
+              "code": "931840011000036108",
+              "system": "http://snomed.info/sct",
+              "display": "Omega-3-acid ethyl esters-90 1 g capsule"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org.au/fhir/StructureDefinition/medication-type",
+                  "valueCoding": {
+                    "code": "BPD",
+                    "system": "http://terminology.hl7.org.au/CodeSystem/medication-type",
+                    "display": "Branded product with no strengths or form"
+                  }
+                }
+              ],
+              "code": "929850011000036100",
+              "system": "http://snomed.info/sct",
+              "display": "Omacor"
+            }
+          ],
+          "text": "OMEGA-3-ACID ETHYL ESTERS 1000mg CAPSULES, OMACOR"
+        },
+        "subject": {
+          "reference": "urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93"
+        },
+        "dosage": [
+          {
+            "text": "Take ONE capsule at NIGHT.",
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 1,
+                "periodUnit": "d",
+                "when": [
+                  "HS"
+                ]
+              }
+            },
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 1,
+                  "code": "CAP",
+                  "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+                  "unit": "CAP"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f0a81ae0-4ea5-11e9-8647-d663bd873d93",
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "f0a81ae0-4ea5-11e9-8647-d663bd873d93",
+        "status": "active",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org.au/fhir/StructureDefinition/medication-type",
+                  "valueCoding": {
+                    "code": "UPDSF",
+                    "system": "http://terminology.hl7.org.au/CodeSystem/medication-type",
+                    "display": "Unbranded product with strengths and form"
+                  }
+                }
+              ],
+              "code": "23369011000036100",
+              "system": "http://snomed.info/sct",
+              "display": "Nifedipine 30 mg modified release tablet"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org.au/fhir/StructureDefinition/medication-type",
+                  "valueCoding": {
+                    "code": "BPDSF",
+                    "system": "http://terminology.hl7.org.au/CodeSystem/medication-type",
+                    "display": "Branded product with strengths and form"
+                  }
+                }
+              ],
+              "code": "7270011000036102",
+              "system": "http://snomed.info/sct",
+              "display": "Adefin XL 30 mg modified release tablet"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org.au/fhir/StructureDefinition/medication-type",
+                  "valueCoding": {
+                    "code": "BPD",
+                    "system": "http://terminology.hl7.org.au/CodeSystem/medication-type",
+                    "display": "Branded product with no strengths or form"
+                  }
+                }
+              ],
+              "code": "28961000168100",
+              "system": "http://snomed.info/sct",
+              "display": "Adalat Oros"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org.au/fhir/StructureDefinition/medication-type",
+                  "valueCoding": {
+                    "code": "BPD",
+                    "system": "http://terminology.hl7.org.au/CodeSystem/medication-type",
+                    "display": "Branded product with no strengths or form"
+                  }
+                }
+              ],
+              "code": "30671000168101",
+              "system": "http://snomed.info/sct",
+              "display": "Addos XR"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org.au/fhir/StructureDefinition/medication-type",
+                  "valueCoding": {
+                    "code": "BPD",
+                    "system": "http://terminology.hl7.org.au/CodeSystem/medication-type",
+                    "display": "Branded product with no strengths or form"
+                  }
+                }
+              ],
+              "code": "501000168108",
+              "system": "http://snomed.info/sct",
+              "display": "Nifedipine XR (Apo)"
+            }
+          ],
+          "text": "NIFEDIPINE 30mg CONTROLLED RELEASE TABLETS, ADEFIN XL 30, ADALAT OROS, ADEFIN OROS, ADDOS XR 30, APO-NIFEDIPINE XR"
+        },
+        "subject": {
+          "reference": "urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93"
+        },
+        "dosage": [
+          {
+            "text": "Swallow whole ONE tablet at NIGHT.",
+            "patientInstruction": "Swallow whole with a glass of fluid, do not crush or chew the tablets. Take regularly and do not miss doses. Do not stop taking suddenly unless advised by your doctor. This medicine may affect mental alertness and/or operate machinery. If affected do not drive or operate machinery. Avoid eating grapefruit or drinking grapefruit juice while being treated with this medicine.",
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 1,
+                "periodUnit": "d",
+                "when": [
+                  "HS"
+                ]
+              }
+            },
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 1,
+                  "code": "TAB",
+                  "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+                  "unit": "TAB"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2450a7ea-4ea6-11e9-8647-d663bd873d93",
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "2450a7ea-4ea6-11e9-8647-d663bd873d93",
+        "status": "not-taken",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org.au/fhir/StructureDefinition/medication-type",
+                  "valueCoding": {
+                    "code": "UPG",
+                    "system": "http://terminology.hl7.org.au/CodeSystem/medication-type",
+                    "display": "Unbranded package with no container"
+                  }
+                }
+              ],
+              "code": "82521011000036105",
+              "system": "http://snomed.info/sct",
+              "display": "Glyceryl trinitrate 600 microgram sublingual tablet, 30"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org.au/fhir/StructureDefinition/medication-type",
+                  "valueCoding": {
+                    "code": "BPD",
+                    "system": "http://terminology.hl7.org.au/CodeSystem/medication-type",
+                    "display": "Branded product with no strengths or form"
+                  }
+                }
+              ],
+              "code": "3935011000036104",
+              "system": "http://snomed.info/sct",
+              "display": "Anginine"
+            }
+          ],
+          "text": "GLYCERIL TRINITRATE 600mcg (30) SUBLINGUAL TABLETS, ANGININE"
+        },
+        "subject": {
+          "reference": "urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93"
+        },
+        "reasonCode": [
+          {
+            "text": "To relieve chest pain associated with angina."
+          }
+        ],
+        "dosage": [
+          {
+            "text": "Place ONE tablet under the tongue and allow to dissolve when needed for chest pain. DISCARD CONTENTS THREE MONTHS AFTER OPENING.",
+            "patientInstruction": "Sit or lie down before use as it may cause dizziness. Get up gradually from sitting or lying to minimise this effect. Place half to one tablet under the tongue. Do not swallow it. After the pain has been relieved, spit out what is left of the tablet to avoid adverse effects such as headache. It is important to store these tablets properly or they may not work as well. Keep them in the original glass bottle away from moisture, heat and light. Do not carry them close to your body. Write the date on the bottle when you open it and discard any unused tablets 3 months later (after that time, they will not be reliably effective).",
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "asNeededBoolean": true
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:613a96e8-4ea6-11e9-8647-d663bd873d93",
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "613a96e8-4ea6-11e9-8647-d663bd873d93",
+        "status": "active",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org.au/fhir/StructureDefinition/medication-type",
+                  "valueCoding": {
+                    "code": "UPDSF",
+                    "system": "http://terminology.hl7.org.au/CodeSystem/medication-type",
+                    "display": "Unbranded product with strengths and form"
+                  }
+                }
+              ],
+              "code": "23165011000036107",
+              "system": "http://snomed.info/sct",
+              "display": "Atorvastatin 80 mg tablet"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org.au/fhir/StructureDefinition/medication-type",
+                  "valueCoding": {
+                    "code": "BPD",
+                    "system": "http://terminology.hl7.org.au/CodeSystem/medication-type",
+                    "display": "Branded product with no strengths or form"
+                  }
+                }
+              ],
+              "code": "8071000168101",
+              "system": "http://snomed.info/sct",
+              "display": "Atorvastatin (Apo)"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org.au/fhir/StructureDefinition/medication-type",
+                  "valueCoding": {
+                    "code": "BPD",
+                    "system": "http://terminology.hl7.org.au/CodeSystem/medication-type",
+                    "display": "Branded product with no strengths or form"
+                  }
+                }
+              ],
+              "code": "3877011000036101",
+              "system": "http://snomed.info/sct",
+              "display": "Lipitor"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org.au/fhir/StructureDefinition/medication-type",
+                  "valueCoding": {
+                    "code": "BPD",
+                    "system": "http://terminology.hl7.org.au/CodeSystem/medication-type",
+                    "display": "Branded product with no strengths or form"
+                  }
+                }
+              ],
+              "code": "3877011000036101",
+              "system": "http://snomed.info/sct",
+              "display": "Lipitor"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org.au/fhir/StructureDefinition/medication-type",
+                  "valueCoding": {
+                    "code": "BPD",
+                    "system": "http://terminology.hl7.org.au/CodeSystem/medication-type",
+                    "display": "Branded product with no strengths or form"
+                  }
+                }
+              ],
+              "code": "19751000036109",
+              "system": "http://snomed.info/sct",
+              "display": "Lorstat"
+            }
+          ],
+          "text": "ATORVASTATIN 80mg TABLETS, APO-ATORVASTATIN, LIPITOR, LORSTAT"
+        },
+        "subject": {
+          "reference": "urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93"
+        },
+        "reasonCode": [
+          {
+            "text": "To relieve chest pain associated with angina."
+          }
+        ],
+        "dosage": [
+          {
+            "text": "Take ONE tablet at NIGHT.",
+            "patientInstruction": "Avoid eating grapefruit or drinking grapefruit juice while being treated with this medicine as this could increase the chances of side-effects occurring. Seek medical advice promptly if your urine is dark (brown) or you have any muscle pain, tenderness or weakness.",
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 1,
+                "periodUnit": "d",
+                "when": [
+                  "HS"
+                ]
+              }
+            },
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 1,
+                  "code": "TAB",
+                  "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+                  "unit": "TAB"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:91296398-4ea6-11e9-8647-d663bd873d93",
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "91296398-4ea6-11e9-8647-d663bd873d93",
+        "status": "active",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org.au/fhir/StructureDefinition/medication-type",
+                  "valueCoding": {
+                    "code": "UPDSF",
+                    "system": "http://terminology.hl7.org.au/CodeSystem/medication-type",
+                    "display": "Unbranded product with strengths and form"
+                  }
+                }
+              ],
+              "code": "23221011000036102",
+              "system": "http://snomed.info/sct",
+              "display": "Metoprolol tartrate 50 mg tablet"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org.au/fhir/StructureDefinition/medication-type",
+                  "valueCoding": {
+                    "code": "BPD",
+                    "system": "http://terminology.hl7.org.au/CodeSystem/medication-type",
+                    "display": "Branded product with no strengths or form"
+                  }
+                }
+              ],
+              "code": "4275011000036101",
+              "system": "http://snomed.info/sct",
+              "display": "Minax"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org.au/fhir/StructureDefinition/medication-type",
+                  "valueCoding": {
+                    "code": "BPD",
+                    "system": "http://terminology.hl7.org.au/CodeSystem/medication-type",
+                    "display": "Branded product with no strengths or form"
+                  }
+                }
+              ],
+              "code": "3906011000036103",
+              "system": "http://snomed.info/sct",
+              "display": "Betaloc"
+            }
+          ],
+          "text": "METOPROLOL 50mg TABLETS, MINAX 50, BETALOC"
+        },
+        "subject": {
+          "reference": "urn:uuid:f12d073e-4e99-11e9-8647-d663bd873d93"
+        },
+        "reasonCode": [
+          {
+            "text": "For reducing blood pressure, angina or disturbances of heart rhythm."
+          }
+        ],
+        "dosage": [
+          {
+            "text": "Take ONE tablet TWICE a day.",
+            "timing": {
+              "repeat": {
+                "frequency": 2,
+                "period": 1,
+                "periodUnit": "d",
+                "when": [
+                  "MORN",
+                  "HS"
+                ]
+              }
+            },
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 1,
+                  "code": "TAB",
+                  "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+                  "unit": "TAB"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

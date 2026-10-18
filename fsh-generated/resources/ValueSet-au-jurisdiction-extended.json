@@ -1,0 +1,65 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "JurisdictionValueSetAUExtended",
+  "id": "au-jurisdiction-extended",
+  "title": "Jurisdiction ValueSet - AU Extended",
+  "description": "Jurisdiction ValueSet extended for use in an Australian context. Includes HL7 international codes plus Australian additions to create a complete set.",
+  "url": "http://terminology.hl7.org.au/ValueSet/jurisdiction-extended",
+  "meta": {
+    "profile": [
+      "https://healthterminologies.gov.au/fhir/StructureDefinition/composed-value-set-4"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.2.3.4.2.4.33"
+    }
+  ],
+  "experimental": false,
+  "compose": {
+    "include": [
+      {
+        "valueSet": [
+          "http://terminology.hl7.org/ValueSet/jurisdiction"
+        ]
+      },
+      {
+        "system": "https://healthterminologies.gov.au/fhir/CodeSystem/australian-states-territories-1",
+        "concept": [
+          {
+            "code": "ACT"
+          },
+          {
+            "code": "NSW"
+          },
+          {
+            "code": "NT"
+          },
+          {
+            "code": "QLD"
+          },
+          {
+            "code": "SA"
+          },
+          {
+            "code": "TAS"
+          },
+          {
+            "code": "VIC"
+          },
+          {
+            "code": "WA"
+          }
+        ]
+      }
+    ]
+  }
+}

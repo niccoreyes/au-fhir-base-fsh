@@ -1,0 +1,52 @@
+{
+  "resourceType": "Organization",
+  "id": "example5",
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "ABN",
+            "system": "http://terminology.hl7.org.au/CodeSystem/v2-0203",
+            "display": "Australian Business Number"
+          }
+        ],
+        "text": "ABN"
+      },
+      "system": "http://hl7.org.au/id/abn",
+      "value": "91420780376"
+    }
+  ],
+  "active": true,
+  "type": [
+    {
+      "coding": [
+        {
+          "code": "reli",
+          "system": "http://terminology.hl7.org/CodeSystem/organization-type"
+        }
+      ],
+      "text": "Religious Institution"
+    }
+  ],
+  "name": "The Corporation of the Synod of the Diocese of Nundah",
+  "telecom": [
+    {
+      "system": "email",
+      "value": "info@CSDN.example.com",
+      "use": "work"
+    }
+  ],
+  "address": [
+    {
+      "use": "work",
+      "line": [
+        "700 Church Road"
+      ],
+      "city": "Zillmere",
+      "state": "QLD",
+      "postalCode": "4034",
+      "country": "AU"
+    }
+  ]
+}

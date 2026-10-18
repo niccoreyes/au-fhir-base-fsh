@@ -1,0 +1,33 @@
+{
+  "resourceType": "Medication",
+  "id": "StrengthExtension1",
+  "meta": {
+    "profile": [
+      "http://hl7.org.au/fhir/StructureDefinition/au-medication"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org.au/fhir/StructureDefinition/medication-strength",
+      "valueString": "20 trillion vector genomes/mL"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "12940C",
+        "system": "http://pbs.gov.au/code/item"
+      }
+    ],
+    "text": "Zolgensma Composite Pack"
+  },
+  "form": {
+    "coding": [
+      {
+        "code": "385229008",
+        "system": "http://snomed.info/sct",
+        "display": "Solution for infusion"
+      }
+    ]
+  }
+}

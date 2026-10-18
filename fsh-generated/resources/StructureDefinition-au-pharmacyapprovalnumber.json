@@ -1,0 +1,56 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "au-pharmacyapprovalnumber",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    }
+  ],
+  "url": "http://hl7.org.au/fhir/StructureDefinition/au-pharmacyapprovalnumber",
+  "name": "AUPharmacyApprovalNumber",
+  "title": "AU Pharmacy Approval Number",
+  "status": "active",
+  "description": "This identifier profile defines a pharmacy approval number in an Australian context (see [Department of Health and Aged Care](https://www1.health.gov.au/internet/main/publishing.nsf/Content/pharmaceutical-benefits-scheme-approved-supplier-administrative-functions) for further information). A pharmacy approval number, also known as a PBS approval number, is assigned by the Department of Health to pharmacies that are approved to supply pharmaceutical benefits at particular premises under the National Health Act 1953.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "type": "Identifier",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Identifier",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Identifier",
+        "path": "Identifier",
+        "short": "Pharmacy Approval Number",
+        "definition": "Pharmacy approval number assigned by the Department of Health to a pharmacy that is approved to supply pharmaceutical benefits at particular premise."
+      },
+      {
+        "id": "Identifier.type",
+        "path": "Identifier.type",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "PAN",
+              "system": "http://terminology.hl7.org.au/CodeSystem/v2-0203"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Identifier.system",
+        "path": "Identifier.system",
+        "min": 1,
+        "fixedUri": "http://ns.electronichealth.net.au/id/pharmacy-approval-number"
+      },
+      {
+        "id": "Identifier.value",
+        "path": "Identifier.value",
+        "short": "Pharmacy approval number",
+        "min": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "encounter-discharge-disposition",
+  "url": "http://hl7.org.au/fhir/SearchParameter/encounter-discharge-disposition",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    }
+  ],
+  "name": "EncounterDischargeDisposition",
+  "status": "active",
+  "description": "This search parameter returns encounters with a discharge-disposition matching the specified code.",
+  "code": "discharge-disposition",
+  "base": [
+    "Encounter"
+  ],
+  "type": "token",
+  "expression": "Encounter.hospitalization.dischargeDisposition",
+  "multipleOr": true,
+  "_multipleOr": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+        "valueCode": "MAY"
+      }
+    ]
+  },
+  "multipleAnd": true,
+  "_multipleAnd": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+        "valueCode": "MAY"
+      }
+    ]
+  }
+}

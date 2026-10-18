@@ -1,0 +1,137 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "au-ihi",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 2
+    }
+  ],
+  "url": "http://hl7.org.au/fhir/StructureDefinition/au-ihi",
+  "name": "AUIHI",
+  "title": "AU IHI",
+  "status": "active",
+  "description": "This identifier profile defines an Individual Healthcare Identifier in an Australian context (see [Australian Digital Health Agency](https://developer.digitalhealth.gov.au/specifications/national-infrastructure/ep-1826-2014/nehta-1163-2010) for further information). An IHI is assigned under the Healthcare Identifiers (HI) Service to a patient.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "type": "Identifier",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Identifier",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Identifier",
+        "path": "Identifier",
+        "short": "Individual Healthcare Identifier (IHI)",
+        "definition": "Individual Healthcare Identifier (IHI) assigned under the HI Service to a patient.",
+        "constraint": [
+          {
+            "key": "inv-ihi-value-0",
+            "human": "IHI shall be an exactly 16 digit number",
+            "source": "http://hl7.org.au/fhir/StructureDefinition/au-ihi",
+            "severity": "error",
+            "expression": "value.matches('^([0-9]{16})$')"
+          },
+          {
+            "key": "inv-ihi-value-1",
+            "human": "IHI prefix is 800360",
+            "source": "http://hl7.org.au/fhir/StructureDefinition/au-ihi",
+            "severity": "error",
+            "expression": "value.startsWith('800360')"
+          },
+          {
+            "key": "inv-ihi-value-2",
+            "human": "IHI shall pass the Luhn algorithm check",
+            "source": "http://hl7.org.au/fhir/StructureDefinition/au-ihi",
+            "severity": "error",
+            "expression": "(((select(value.substring(0,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(value.substring(1,1).toInteger())+(select(value.substring(2,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(value.substring(3,1).toInteger())+(select(value.substring(4,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(value.substring(5,1).toInteger())+(select(value.substring(6,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(value.substring(7,1).toInteger())+(select(value.substring(8,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(value.substring(9,1).toInteger())+(select(value.substring(10,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(value.substring(11,1).toInteger())+(select(value.substring(12,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(value.substring(13,1).toInteger())+(select(value.substring(14,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(value.substring(15,1).toInteger()))mod 10=0)"
+          }
+        ]
+      },
+      {
+        "id": "Identifier.extension:ihiStatus",
+        "path": "Identifier.extension",
+        "sliceName": "ihiStatus",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org.au/fhir/StructureDefinition/ihi-status"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Identifier.extension:ihiRecordStatus",
+        "path": "Identifier.extension",
+        "sliceName": "ihiRecordStatus",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org.au/fhir/StructureDefinition/ihi-record-status"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Identifier.extension:ihiVerifiedDate",
+        "path": "Identifier.extension",
+        "sliceName": "ihiVerifiedDate",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org.au/fhir/StructureDefinition/ihi-verified-date"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Identifier.type",
+        "path": "Identifier.type",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "NI",
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Identifier.system",
+        "path": "Identifier.system",
+        "min": 1,
+        "fixedUri": "http://ns.electronichealth.net.au/id/hi/ihi/1.0"
+      },
+      {
+        "id": "Identifier.value",
+        "path": "Identifier.value",
+        "short": "IHI",
+        "comment": "This concept is equivalent to Australian Institute of Health and Welfare data element 743458 [Person—Individual Healthcare Identifier, N(16)](https://meteor.aihw.gov.au/content/index.phtml/itemId/743458).",
+        "min": 1,
+        "example": [
+          {
+            "label": "IHI",
+            "valueString": "8003608833357361"
+          }
+        ],
+        "maxLength": 16,
+        "condition": [
+          "inv-ihi-0",
+          "inv-ihi-1",
+          "inv-ihi-2"
+        ]
+      }
+    ]
+  }
+}

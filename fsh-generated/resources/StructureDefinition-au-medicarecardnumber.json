@@ -1,0 +1,75 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "au-medicarecardnumber",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 2
+    }
+  ],
+  "url": "http://hl7.org.au/fhir/StructureDefinition/au-medicarecardnumber",
+  "name": "AUMedicareCardNumber",
+  "title": "AU Medicare Card Number",
+  "status": "active",
+  "description": "This identifier profile defines a Medicare card number in an Australian context. A Medicare card is provided to individuals who are enrolled in [Medicare](https://www.servicesaustralia.gov.au/individuals/medicare). This definition supports sending either the 10 digit Medicare card number or the 11 digit number (includes the individual reference number (IRN)).",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "type": "Identifier",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Identifier",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Identifier",
+        "path": "Identifier",
+        "short": "Medicare Card Number",
+        "definition": "Medicare card number as either the the 10 digit Medicare card number or the 11 digit number (includes the individual reference number (IRN)). A Medicare card is provided to individuals who are enrolled in Medicare."
+      },
+      {
+        "id": "Identifier.type",
+        "path": "Identifier.type",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "MC",
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Identifier.system",
+        "path": "Identifier.system",
+        "min": 1,
+        "fixedUri": "http://ns.electronichealth.net.au/id/medicare-number"
+      },
+      {
+        "id": "Identifier.value",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/minLength",
+            "valueInteger": 10
+          }
+        ],
+        "path": "Identifier.value",
+        "short": "Medicare card number",
+        "min": 1,
+        "example": [
+          {
+            "label": "Medicare card number",
+            "valueString": "32788511952"
+          }
+        ],
+        "maxLength": 11
+      },
+      {
+        "id": "Identifier.period.end",
+        "path": "Identifier.period.end",
+        "short": "Medicare card expiry date",
+        "definition": "The expiry date for the Medicare card. While this is typically only month and year, the day date part may be included when the card is a temporary Medicare card."
+      }
+    ]
+  }
+}

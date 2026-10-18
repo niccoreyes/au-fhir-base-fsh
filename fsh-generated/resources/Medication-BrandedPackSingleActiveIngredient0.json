@@ -1,0 +1,61 @@
+{
+  "resourceType": "Medication",
+  "id": "BrandedPackSingleActiveIngredient0",
+  "meta": {
+    "profile": [
+      "http://hl7.org.au/fhir/StructureDefinition/au-medication"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org.au/fhir/StructureDefinition/medication-type",
+            "valueCoding": {
+              "code": "BPD",
+              "system": "http://terminology.hl7.org.au/CodeSystem/medication-type",
+              "display": "Branded product with no strengths or form"
+            }
+          }
+        ],
+        "code": "4445011000036103",
+        "system": "http://snomed.info/sct",
+        "display": "Chlorsig"
+      }
+    ]
+  },
+  "form": {
+    "coding": [
+      {
+        "code": "385124005",
+        "system": "http://snomed.info/sct",
+        "display": "Eye drops"
+      }
+    ]
+  },
+  "ingredient": [
+    {
+      "itemCodeableConcept": {
+        "coding": [
+          {
+            "code": "1931011000036105",
+            "system": "http://snomed.info/sct",
+            "display": "chloramphenicol"
+          }
+        ]
+      },
+      "isActive": true,
+      "strength": {
+        "numerator": {
+          "value": 0.5,
+          "unit": "%"
+        },
+        "denominator": {
+          "value": 1,
+          "unit": "unit"
+        }
+      }
+    }
+  ]
+}

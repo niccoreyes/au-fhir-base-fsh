@@ -1,0 +1,66 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "au-australianregistredbodynumber",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 2
+    }
+  ],
+  "url": "http://hl7.org.au/fhir/StructureDefinition/au-australianregistredbodynumber",
+  "name": "AUAustralianRegisteredBodyNumber",
+  "title": "AU Australian Registered Body Number",
+  "status": "active",
+  "description": "This identifier profile defines an Australian Registered Body Number (ARBN) in an Australian context. ARBNs are issued to registrable Australian bodies and foreign companies.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "type": "Identifier",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Identifier",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Identifier",
+        "path": "Identifier",
+        "short": "Australian Registered Body Number (ARBN)",
+        "definition": "Australian Registered Body Number (ARBN) assigned by the Australian Securities and Investment Commission (ASIC) to registrable Australian bodies and foreign companies.",
+        "constraint": [
+          {
+            "key": "inv-arbn-0",
+            "human": "ARBN shall be 9 digits",
+            "source": "http://hl7.org.au/fhir/StructureDefinition/au-australianregistredbodynumber",
+            "severity": "error",
+            "expression": "value.matches('^([0-9]{9})$')"
+          }
+        ]
+      },
+      {
+        "id": "Identifier.type",
+        "path": "Identifier.type",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "ARBN",
+              "system": "http://terminology.hl7.org.au/CodeSystem/v2-0203"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Identifier.system",
+        "path": "Identifier.system",
+        "min": 1,
+        "fixedUri": "http://hl7.org.au/id/arbn"
+      },
+      {
+        "id": "Identifier.value",
+        "path": "Identifier.value",
+        "short": "ARBN",
+        "comment": "See information on the [format of the ARBN](https://www.ppsr.gov.au/arbn-australian-registered-body-number).",
+        "min": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "resourceType": "RelatedPerson",
+  "id": "example-sex-and-gender",
+  "meta": {
+    "profile": [
+      "http://hl7.org.au/fhir/StructureDefinition/au-relatedperson"
+    ]
+  },
+  "extension": [
+    {
+      "extension": [
+        {
+          "url": "value",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "446151000124109",
+                "system": "http://snomed.info/sct",
+                "display": "Identifies as male gender"
+              }
+            ],
+            "text": "Male"
+          }
+        },
+        {
+          "url": "period",
+          "valuePeriod": {
+            "start": "2018-01-01",
+            "end": "2021-12-23"
+          }
+        },
+        {
+          "url": "comment",
+          "valueString": "Identified as male during this period. Began exploring gender identity more deeply towards the end of this period."
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/individual-genderIdentity"
+    },
+    {
+      "extension": [
+        {
+          "url": "value",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "33791000087105",
+                "system": "http://snomed.info/sct",
+                "display": "Identifies as nonbinary gender"
+              }
+            ],
+            "text": "Non-binary"
+          }
+        },
+        {
+          "url": "period",
+          "valuePeriod": {
+            "start": "2022-05-06"
+          }
+        },
+        {
+          "url": "comment",
+          "valueString": "Currently identifies as non-binary and uses 'they/them' pronouns. Open to exploring further gender fluidity."
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/individual-genderIdentity"
+    },
+    {
+      "extension": [
+        {
+          "url": "value",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "LA29520-6",
+                "system": "http://loinc.org",
+                "display": "they/them/their/theirs/themselves"
+              }
+            ]
+          }
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/individual-pronouns"
+    },
+    {
+      "extension": [
+        {
+          "url": "value",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "248153007",
+                "system": "http://snomed.info/sct",
+                "display": "Male"
+              }
+            ]
+          }
+        },
+        {
+          "url": "type",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "1515311000168102",
+                "system": "http://snomed.info/sct",
+                "display": "Biological sex at birth"
+              }
+            ]
+          }
+        },
+        {
+          "url": "acquisitionDate",
+          "valueDateTime": "2019-11-01"
+        },
+        {
+          "url": "sourceDocument",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "71230-7",
+                "system": "http://loinc.org",
+                "display": "Birth Certificate"
+              }
+            ]
+          }
+        },
+        {
+          "url": "sourceField",
+          "valueString": "Sex"
+        },
+        {
+          "url": "jurisdiction",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "VIC",
+                "system": "https://healthterminologies.gov.au/fhir/CodeSystem/australian-states-territories-1"
+              }
+            ]
+          }
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender"
+    }
+  ],
+  "active": true,
+  "patient": {
+    "reference": "Patient/example0"
+  },
+  "relationship": [
+    {
+      "coding": [
+        {
+          "code": "N",
+          "system": "http://terminology.hl7.org/CodeSystem/v2-0131"
+        },
+        {
+          "code": "FAMMEMB",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
+        }
+      ]
+    }
+  ],
+  "name": [
+    {
+      "use": "usual",
+      "family": "Baker",
+      "given": [
+        "Alex"
+      ]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "(02) 5550 6767"
+    }
+  ],
+  "gender": "other"
+}

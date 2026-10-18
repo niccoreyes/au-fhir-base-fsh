@@ -1,0 +1,57 @@
+{
+  "resourceType": "MedicationStatement",
+  "id": "example0",
+  "meta": {
+    "profile": [
+      "http://hl7.org.au/fhir/StructureDefinition/au-medicationstatement"
+    ]
+  },
+  "status": "active",
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org.au/fhir/StructureDefinition/medication-type",
+            "valueCoding": {
+              "code": "BPDSF",
+              "system": "http://terminology.hl7.org.au/CodeSystem/medication-type",
+              "display": "Branded product with strengths and form"
+            }
+          }
+        ],
+        "code": "6166011000036106",
+        "system": "http://snomed.info/sct",
+        "display": "Roferon-A 9 million units (33.333 microgram)/0.5 mL injection, 0.5 mL syringe"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example0",
+    "display": "Franklin"
+  },
+  "effectivePeriod": {
+    "start": "2018-06-25"
+  },
+  "dateAsserted": "2018-07-25",
+  "informationSource": {
+    "reference": "Practitioner/example0",
+    "display": "Doctor Mayo"
+  },
+  "dosage": [
+    {
+      "timing": {
+        "repeat": {
+          "frequency": 3,
+          "period": 1,
+          "periodUnit": "wk",
+          "dayOfWeek": [
+            "mon",
+            "wed",
+            "sat"
+          ]
+        }
+      }
+    }
+  ]
+}

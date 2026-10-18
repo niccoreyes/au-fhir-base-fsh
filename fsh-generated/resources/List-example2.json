@@ -1,0 +1,449 @@
+{
+  "resourceType": "List",
+  "id": "example2",
+  "meta": {
+    "profile": [
+      "http://hl7.org.au/fhir/StructureDefinition/au-medlist"
+    ]
+  },
+  "contained": [
+    {
+      "resourceType": "MedicationStatement",
+      "id": "medicationstatement-456",
+      "status": "active",
+      "medicationCodeableConcept": {
+        "text": "Multi-vitamins"
+      },
+      "subject": {
+        "reference": "#patient-123"
+      },
+      "dateAsserted": "2019-03-15",
+      "dosage": [
+        {
+          "text": "1 tablet daily"
+        }
+      ]
+    },
+    {
+      "resourceType": "MedicationStatement",
+      "id": "medicationstatement-678",
+      "status": "active",
+      "medicationCodeableConcept": {
+        "text": "Spiriva (tiotropium bromide 18mg per inhalation) inhalant"
+      },
+      "subject": {
+        "reference": "#patient-123"
+      },
+      "dateAsserted": "2019-03-15",
+      "reasonCode": [
+        {
+          "text": "COPD"
+        }
+      ],
+      "dosage": [
+        {
+          "text": "1 inhalation per day"
+        }
+      ]
+    },
+    {
+      "resourceType": "MedicationStatement",
+      "id": "medicationstatement-234",
+      "status": "active",
+      "medicationCodeableConcept": {
+        "coding": [
+          {
+            "code": "22075011000036103",
+            "system": "http://snomed.info/sct"
+          }
+        ],
+        "text": "paracetamol 665 mg modified release tablet"
+      },
+      "subject": {
+        "reference": "#patient-123"
+      },
+      "reasonCode": [
+        {
+          "text": "Osteoarthritis, pain relief"
+        }
+      ],
+      "dosage": [
+        {
+          "text": "Two tablets every 6-8 hours when required.",
+          "patientInstruction": "No more than 6 tablets in 24hr"
+        }
+      ]
+    },
+    {
+      "resourceType": "MedicationStatement",
+      "id": "medicationstatement-890",
+      "status": "active",
+      "medicationCodeableConcept": {
+        "coding": [
+          {
+            "code": "82923011000036103",
+            "system": "http://snomed.info/sct"
+          }
+        ],
+        "text": "cilostazol 100 mg tablet"
+      },
+      "subject": {
+        "reference": "#patient-123"
+      },
+      "reasonCode": [
+        {
+          "text": "Blood thinning"
+        }
+      ],
+      "dosage": [
+        {
+          "text": "One a day at night time"
+        }
+      ]
+    },
+    {
+      "resourceType": "MedicationStatement",
+      "id": "medicationstatement-246",
+      "status": "stopped",
+      "medicationCodeableConcept": {
+        "coding": [
+          {
+            "code": "38268001",
+            "system": "http://snomed.info/sct"
+          }
+        ],
+        "text": "Ibuprofen"
+      },
+      "subject": {
+        "reference": "#patient-123"
+      },
+      "reasonCode": [
+        {
+          "text": "Allergic reaction"
+        }
+      ]
+    },
+    {
+      "resourceType": "Patient",
+      "id": "patient-123",
+      "extension": [
+        {
+          "url": "http://hl7.org.au/fhir/StructureDefinition/indigenous-status",
+          "valueCoding": {
+            "code": "9",
+            "system": "https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1",
+            "display": "Not stated/inadequately described"
+          }
+        }
+      ],
+      "identifier": [
+        {
+          "type": {
+            "coding": [
+              {
+                "code": "NI",
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                "display": "National unique individual identifier"
+              }
+            ]
+          },
+          "system": "http://ns.electronichealth.net.au/id/hi/ihi/1.0",
+          "value": "8003608666701594"
+        }
+      ],
+      "name": [
+        {
+          "text": "David Goodpatient",
+          "family": "Goodpatient",
+          "given": [
+            "David"
+          ]
+        }
+      ],
+      "gender": "male",
+      "birthDate": "1953-09-14",
+      "address": [
+        {
+          "use": "home",
+          "line": [
+            "2 Round Court"
+          ],
+          "state": "QLD",
+          "postalCode": "4113",
+          "country": "Australia"
+        }
+      ],
+      "generalPractitioner": [
+        {
+          "reference": "#gp-13579"
+        }
+      ],
+      "managingOrganization": {
+        "reference": "#org-24680"
+      }
+    },
+    {
+      "resourceType": "Practitioner",
+      "id": "gp-13579",
+      "name": [
+        {
+          "family": "Grey",
+          "prefix": [
+            "Dr"
+          ]
+        }
+      ]
+    },
+    {
+      "resourceType": "Practitioner",
+      "id": "dr-97531",
+      "identifier": [
+        {
+          "type": {
+            "coding": [
+              {
+                "code": "NPI",
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                "display": "National provider identifier"
+              }
+            ],
+            "text": "HPI-I"
+          },
+          "system": "http://ns.electronichealth.net.au/id/hi/hpii/1.0",
+          "value": "8003619900015717"
+        }
+      ],
+      "name": [
+        {
+          "use": "official",
+          "family": "Practitioner",
+          "given": [
+            "Iam"
+          ],
+          "suffix": [
+            "M.D."
+          ]
+        }
+      ],
+      "telecom": [
+        {
+          "system": "phone",
+          "value": "0755501234",
+          "use": "work"
+        },
+        {
+          "system": "email",
+          "value": "iam.practitioner@example.com",
+          "use": "work"
+        }
+      ],
+      "qualification": [
+        {
+          "identifier": [
+            {
+              "type": {
+                "coding": [
+                  {
+                    "code": "AHPRA",
+                    "system": "http://terminology.hl7.org.au/CodeSystem/v2-0203",
+                    "display": "Australian Health Practitioner Regulation Agency Registration Number"
+                  }
+                ],
+                "text": "Ahpra registration number"
+              },
+              "system": "http://hl7.org.au/id/ahpra-registration-number",
+              "value": "MED0000932850"
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "code": "253111",
+                "system": "http://www.abs.gov.au/ausstats/abs@.nsf/mf/1220.0",
+                "display": "General Medical Practitioner"
+              }
+            ],
+            "text": "Ahpra qualification for General Practitioner"
+          },
+          "issuer": {
+            "display": "Ahpra"
+          }
+        }
+      ]
+    },
+    {
+      "resourceType": "Organization",
+      "id": "org-24680",
+      "name": "Grey Medical Practice"
+    },
+    {
+      "resourceType": "Encounter",
+      "id": "enc-24680",
+      "identifier": [
+        {
+          "system": "urn:ietf:rfc:3986",
+          "value": "urn:uuid:5c48d068-4ffb-11e9-8647-d663bd873d93"
+        }
+      ],
+      "status": "finished",
+      "class": {
+        "code": "AMB",
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "display": "ambulatory"
+      },
+      "type": [
+        {
+          "coding": [
+            {
+              "code": "34764-1",
+              "system": "http://loinc.org"
+            }
+          ]
+        }
+      ],
+      "priority": {
+        "coding": [
+          {
+            "code": "R",
+            "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority"
+          }
+        ]
+      },
+      "subject": {
+        "reference": "#patient-123"
+      },
+      "participant": [
+        {
+          "type": [
+            {
+              "coding": [
+                {
+                  "code": "PPRF",
+                  "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
+                }
+              ]
+            }
+          ],
+          "individual": {
+            "reference": "#dr-97531"
+          }
+        }
+      ],
+      "period": {
+        "start": "2019-03-15",
+        "end": "2019-03-15"
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:uuid:7f8fb180-4ea8-11e9-8647-d663bd873d93"
+    }
+  ],
+  "status": "current",
+  "mode": "snapshot",
+  "code": {
+    "coding": [
+      {
+        "code": "10160-0",
+        "system": "http://loinc.org"
+      }
+    ],
+    "text": "Medicine List"
+  },
+  "subject": {
+    "reference": "#patient-123"
+  },
+  "encounter": {
+    "reference": "#enc-24680"
+  },
+  "date": "2019-03-15",
+  "source": {
+    "reference": "#dr-97531"
+  },
+  "entry": [
+    {
+      "flag": {
+        "coding": [
+          {
+            "code": "new",
+            "system": "http://terminology.hl7.org.au/CodeSystem/medicine-item-change",
+            "display": "New"
+          }
+        ]
+      },
+      "item": {
+        "reference": "#medicationstatement-456"
+      }
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org.au/fhir/StructureDefinition/change-description",
+          "valueString": "Reduced to one inhalation a day"
+        }
+      ],
+      "flag": {
+        "coding": [
+          {
+            "code": "amended",
+            "system": "http://terminology.hl7.org.au/CodeSystem/medicine-item-change",
+            "display": "Amended"
+          }
+        ]
+      },
+      "item": {
+        "reference": "#medicationstatement-678"
+      }
+    },
+    {
+      "flag": {
+        "coding": [
+          {
+            "code": "nochange",
+            "system": "http://terminology.hl7.org.au/CodeSystem/medicine-item-change",
+            "display": "Unchanged"
+          }
+        ]
+      },
+      "item": {
+        "reference": "#medicationstatement-234"
+      }
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org.au/fhir/StructureDefinition/change-description",
+          "valueString": "Form change"
+        }
+      ],
+      "flag": {
+        "coding": [
+          {
+            "code": "amended",
+            "system": "http://terminology.hl7.org.au/CodeSystem/medicine-item-change",
+            "display": "Amended"
+          }
+        ]
+      },
+      "item": {
+        "reference": "#medicationstatement-890"
+      }
+    },
+    {
+      "flag": {
+        "coding": [
+          {
+            "code": "ceased",
+            "system": "http://terminology.hl7.org.au/CodeSystem/medicine-item-change",
+            "display": "Ceased"
+          }
+        ]
+      },
+      "item": {
+        "reference": "#medicationstatement-246"
+      }
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "veteran-status",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    }
+  ],
+  "url": "http://hl7.org.au/fhir/StructureDefinition/veteran-status",
+  "name": "AustralianVeteranStatus",
+  "title": "Australian Veteran Status",
+  "status": "active",
+  "description": "This extension applies to the Patient resource and is used to indicate whether a person is serving, or has served, in the Australian Defence Force.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "Patient",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Veteran / Australian Defence Force (ADF) status",
+        "definition": "Veteran / Australian Defence Force (ADF) status for a person.",
+        "comment": "This concept is equivalent to Australian Institute of Health and Welfare data element 737931 [Person—ADF veteran status, code N](https://meteor.aihw.gov.au/content/737931)."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://hl7.org.au/fhir/StructureDefinition/veteran-status"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "Veteran status",
+        "definition": "Veteran / Australian Defence Force (ADF) status code.",
+        "min": 1,
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://healthterminologies.gov.au/fhir/ValueSet/australian-veteran-status-1"
+        }
+      }
+    ]
+  }
+}

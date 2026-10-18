@@ -1,0 +1,70 @@
+{
+  "resourceType": "Endpoint",
+  "id": "example1",
+  "meta": {
+    "profile": [
+      "http://hl7.org.au/fhir/StructureDefinition/au-endpoint"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Endpoint.environmentType",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "prod",
+            "system": "http://hl7.org/fhir/endpoint-environment",
+            "display": "Production"
+          }
+        ]
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "system": "http://downunderhospital.example.com/id/endpoint",
+      "value": "DUH-FHIR-PROD-01"
+    }
+  ],
+  "status": "active",
+  "connectionType": {
+    "code": "hl7-fhir-rest",
+    "system": "http://terminology.hl7.org/CodeSystem/endpoint-connection-type",
+    "display": "HL7 FHIR"
+  },
+  "name": "Downunder Hospital FHIR API",
+  "managingOrganization": {
+    "reference": "Organization/example0",
+    "display": "Downunder Hospital"
+  },
+  "contact": [
+    {
+      "system": "email",
+      "value": "admini@downunderhospital.example.com",
+      "use": "work"
+    },
+    {
+      "system": "phone",
+      "value": "+61255505560",
+      "use": "work"
+    }
+  ],
+  "period": {
+    "start": "2023-07-01"
+  },
+  "payloadType": [
+    {
+      "coding": [
+        {
+          "code": "any",
+          "system": "http://terminology.hl7.org/CodeSystem/endpoint-payload-type"
+        }
+      ]
+    }
+  ],
+  "payloadMimeType": [
+    "application/fhir+json",
+    "application/fhir+xml"
+  ],
+  "address": "https://fhir.downunderhospital.example.com/R4"
+}

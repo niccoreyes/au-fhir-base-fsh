@@ -1,0 +1,38 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "indigenous-status",
+  "url": "http://hl7.org.au/fhir/SearchParameter/indigenous-status",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    }
+  ],
+  "name": "AustralianIndigenousStatus",
+  "status": "active",
+  "description": "This search parameter returns patients with an Australian Indigenous Status extension matching the specified code.",
+  "code": "indigenous-status",
+  "base": [
+    "Patient"
+  ],
+  "type": "token",
+  "expression": "Patient.extension('http://hl7.org.au/fhir/StructureDefinition/indigenous-status').value",
+  "multipleOr": true,
+  "_multipleOr": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+        "valueCode": "MAY"
+      }
+    ]
+  },
+  "multipleAnd": true,
+  "_multipleAnd": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+        "valueCode": "MAY"
+      }
+    ]
+  }
+}

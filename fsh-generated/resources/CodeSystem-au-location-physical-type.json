@@ -1,0 +1,64 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "LocationTypePhysicalAU",
+  "id": "au-location-physical-type",
+  "title": "Location Type (Physical) AU",
+  "description": "Additional concept codes for location physical type defined for use in Australian context. These codes are used as extensions to the HL7 International code set.",
+  "url": "http://terminology.hl7.org.au/CodeSystem/location-physical-type",
+  "concept": [
+    {
+      "code": "vi",
+      "display": "Virtual",
+      "definition": "Location of services delivered at a virtual location, such as by phone or on-line. ***Deprecation Comment:*** This code has been deprecated as it has been replaced by an equivalent term provided by HL7 international.",
+      "property": [
+        {
+          "code": "status",
+          "valueCode": "deprecated"
+        },
+        {
+          "code": "deprecationDate",
+          "valueDateTime": "2023-02-15"
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "profile": [
+      "https://healthterminologies.gov.au/fhir/StructureDefinition/complete-code-system-4"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.2.3.4.1.4.25"
+    }
+  ],
+  "experimental": false,
+  "caseSensitive": true,
+  "valueSet": "http://terminology.hl7.org.au/ValueSet/location-physical-type",
+  "compositional": false,
+  "versionNeeded": false,
+  "count": 1,
+  "property": [
+    {
+      "code": "status",
+      "uri": "http://hl7.org/fhir/concept-properties#status",
+      "description": "A property that indicates the status of the concept. One of active, experimental,   deprecated, retired",
+      "type": "code"
+    },
+    {
+      "code": "deprecationDate",
+      "uri": "http://hl7.org/fhir/concept-properties#deprecationDate",
+      "description": "The date at which a concept was deprecated. Concepts that are deprecated but not   inactive can still be used, but their use is discouraged",
+      "type": "dateTime"
+    }
+  ]
+}

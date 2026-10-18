@@ -1,0 +1,66 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "au-australiancompanynumber",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 2
+    }
+  ],
+  "url": "http://hl7.org.au/fhir/StructureDefinition/au-australiancompanynumber",
+  "name": "AUAustralianCompanyNumber",
+  "title": "AU Australian Company Number",
+  "status": "active",
+  "description": "This identifier profile defines an Australian Company Number in an Australian context. An ACN is allocated by the Australian Securities and Investments Commission (ASIC) when a body becomes registered as a company under Corporations Law.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "type": "Identifier",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Identifier",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Identifier",
+        "path": "Identifier",
+        "short": "Australian Company Number (ACN)",
+        "definition": "Australian Company Number (ACN) assigned by the Australian Securities and Investment Commission (ASIC) to a registered company.",
+        "constraint": [
+          {
+            "key": "inv-acn-0",
+            "human": "ACN shall be 9 digits",
+            "source": "http://hl7.org.au/fhir/StructureDefinition/au-australiancompanynumber",
+            "severity": "error",
+            "expression": "value.matches('^([0-9]{9})$')"
+          }
+        ]
+      },
+      {
+        "id": "Identifier.type",
+        "path": "Identifier.type",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "ACN",
+              "system": "http://terminology.hl7.org.au/CodeSystem/v2-0203"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Identifier.system",
+        "path": "Identifier.system",
+        "min": 1,
+        "fixedUri": "http://hl7.org.au/id/acn"
+      },
+      {
+        "id": "Identifier.value",
+        "path": "Identifier.value",
+        "short": "ACN",
+        "comment": "See information on the [format of the ACN](https://asic.gov.au/for-business/registering-a-company/steps-to-register-a-company/australian-company-numbers/australian-company-number-digit-check) from [ASIC](https://asic.gov.au/).",
+        "min": 1
+      }
+    ]
+  }
+}

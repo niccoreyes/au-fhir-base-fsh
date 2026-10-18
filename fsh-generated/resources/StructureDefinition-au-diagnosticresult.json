@@ -1,0 +1,161 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "au-diagnosticresult",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    }
+  ],
+  "url": "http://hl7.org.au/fhir/StructureDefinition/au-diagnosticresult",
+  "name": "AUBaseDiagnosticResult",
+  "title": "AU Base Diagnostic Result",
+  "status": "active",
+  "description": "This profile defines an observation structure to represent a diagnostic investigation result issued by a diagnostic service provider in an Australian context. This profile may be used to represent a specialist or other diagnostic (not imaging or pathology) observation including results of audiology studies, sleep studies or speech pathology. The observation may represent the result of a simple investigation or it may group the set of results of a multi-modality procedure or multi-test study / panel.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation",
+        "path": "Observation",
+        "short": "A diagnostic result observation in an Australian healthcare context",
+        "definition": "Diagnostic measurements and simple assertions made about a patient, device or other subject.",
+        "constraint": [
+          {
+            "key": "inv-obs-0",
+            "human": "A diagnostic result shall at least have value or data absent reason or a child observation with a value or data absent reason",
+            "source": "http://hl7.org.au/fhir/StructureDefinition/au-diagnosticresult",
+            "severity": "error",
+            "expression": "value.exists() or dataAbsentReason.exists() or hasMember.exists() or component.value.exists() or component.dataAbsentReason.exists()"
+          },
+          {
+            "key": "inv-obs-1",
+            "human": "BodyStructure Reference extension shall only be present if the body site is not present",
+            "source": "http://hl7.org.au/fhir/StructureDefinition/au-diagnosticresult",
+            "severity": "error",
+            "expression": "bodySite.exists() implies extension('http://hl7.org/fhir/StructureDefinition/bodySite').empty()"
+          }
+        ]
+      },
+      {
+        "id": "Observation.extension",
+        "path": "Observation.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Observation.extension:bodyStructure",
+        "path": "Observation.extension",
+        "sliceName": "bodyStructure",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/bodySite"
+            ]
+          }
+        ],
+        "condition": [
+          "inv-obs-1"
+        ]
+      },
+      {
+        "id": "Observation.category",
+        "path": "Observation.category",
+        "short": "Diagnostic service section",
+        "min": 1,
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "http://hl7.org/fhir/ValueSet/diagnostic-service-sections"
+        }
+      },
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "short": "Diagnostic procedure",
+        "binding": {
+          "strength": "example",
+          "valueSet": "https://healthterminologies.gov.au/fhir/ValueSet/evaluation-procedure-1"
+        }
+      },
+      {
+        "id": "Observation.subject",
+        "path": "Observation.subject",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.effective[x]",
+        "path": "Observation.effective[x]",
+        "min": 1
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "condition": [
+          "inv-obs-0"
+        ]
+      },
+      {
+        "id": "Observation.dataAbsentReason",
+        "path": "Observation.dataAbsentReason",
+        "condition": [
+          "inv-obs-0"
+        ]
+      },
+      {
+        "id": "Observation.hasMember",
+        "path": "Observation.hasMember",
+        "short": "Individual examinations in a group or study series",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org.au/fhir/StructureDefinition/au-diagnosticresult",
+              "http://hl7.org.au/fhir/StructureDefinition/au-imagingresult",
+              "http://hl7.org.au/fhir/StructureDefinition/au-pathologyresult"
+            ]
+          }
+        ],
+        "condition": [
+          "inv-obs-0"
+        ]
+      },
+      {
+        "id": "Observation.component.value[x]",
+        "path": "Observation.component.value[x]",
+        "condition": [
+          "inv-obs-0"
+        ]
+      },
+      {
+        "id": "Observation.component.dataAbsentReason",
+        "path": "Observation.component.dataAbsentReason",
+        "condition": [
+          "inv-obs-0"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ihi-record-status",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 3
+    }
+  ],
+  "url": "http://hl7.org.au/fhir/StructureDefinition/ihi-record-status",
+  "name": "IHIRecordStatus",
+  "title": "IHI Record Status",
+  "status": "active",
+  "description": "This extension applies to the [Identifier](http://hl7.org/fhir/datatypes.html#identifier) data type and is used to indicate whether verification of the Individual Healthcare Identifier (IHI) has occurred and is based on the evidence available for a person’s identity.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "Identifier",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "IHI record status",
+        "definition": "Known IHI record status associated with an IHI identifier.",
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://hl7.org.au/fhir/StructureDefinition/ihi-record-status"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "IHI record status",
+        "comment": "This concept is equivalent to Australian Institute of Health and Welfare data element 743464 [Identifier—record status, Individual Healthcare Identifier record status code N](https://meteor.aihw.gov.au/content/index.phtml/itemId/743464).",
+        "min": 1,
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://healthterminologies.gov.au/fhir/ValueSet/ihi-record-status-1"
+        }
+      }
+    ]
+  }
+}

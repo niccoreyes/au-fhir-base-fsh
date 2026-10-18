@@ -1,0 +1,58 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "vaccine-serial-number",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    }
+  ],
+  "url": "http://hl7.org.au/fhir/StructureDefinition/vaccine-serial-number",
+  "name": "VaccineSerialNumber",
+  "title": "Vaccine Vial Serial Number",
+  "status": "active",
+  "description": "This extension applies to the Immunization resource and is used to represent the serial number of the vial of vaccine. Vial serial number is part of the [Australian Immunisation Register Rule 2015](https://www.legislation.gov.au/Latest/F2021C00234) data elements to report for COVID-19 vaccines.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "Immunization",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Vaccine vial serial number",
+        "definition": "Serial number for the vial of vaccine used in an administration.",
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://hl7.org.au/fhir/StructureDefinition/vaccine-serial-number"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

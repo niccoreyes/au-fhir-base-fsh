@@ -1,0 +1,119 @@
+{
+  "resourceType": "HealthcareService",
+  "id": "example3",
+  "meta": {
+    "profile": [
+      "http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice"
+    ]
+  },
+  "providedBy": {
+    "reference": "Organization/example3",
+    "display": "Devonport Family Medicine Clinic"
+  },
+  "specialty": [
+    {
+      "coding": [
+        {
+          "code": "408443003",
+          "system": "http://snomed.info/sct",
+          "display": "General medical practice"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "code": "23961000087102",
+          "system": "http://snomed.info/sct",
+          "display": "Opioid dependency management specialty"
+        }
+      ]
+    }
+  ],
+  "location": [
+    {
+      "reference": "Location/example3"
+    }
+  ],
+  "name": "General Practitioner services",
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "(03) 8543 5555",
+      "use": "work"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org.au/fhir/StructureDefinition/contact-purpose",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "legal",
+                "system": "http://terminology.hl7.org.au/CodeSystem/contact-purpose",
+                "display": "Legal"
+              }
+            ]
+          }
+        }
+      ],
+      "system": "phone",
+      "value": "(03) 8543 5558",
+      "use": "work"
+    }
+  ],
+  "serviceProvisionCode": [
+    {
+      "coding": [
+        {
+          "code": "MIX",
+          "system": "http://terminology.hl7.org.au/CodeSystem/service-provision-conditions",
+          "display": "Mixed Billing"
+        }
+      ]
+    }
+  ],
+  "communication": [
+    {
+      "coding": [
+        {
+          "code": "de",
+          "system": "urn:ietf:bcp:47",
+          "display": "German"
+        }
+      ],
+      "text": "German"
+    },
+    {
+      "coding": [
+        {
+          "code": "en",
+          "system": "urn:ietf:bcp:47",
+          "display": "English"
+        }
+      ],
+      "text": "English"
+    }
+  ],
+  "availableTime": [
+    {
+      "daysOfWeek": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri"
+      ],
+      "availableStartTime": "08:00:00",
+      "availableEndTime": "20:00:00"
+    },
+    {
+      "daysOfWeek": [
+        "sat",
+        "sun"
+      ],
+      "availableStartTime": "10:00:00",
+      "availableEndTime": "16:00:00"
+    }
+  ]
+}

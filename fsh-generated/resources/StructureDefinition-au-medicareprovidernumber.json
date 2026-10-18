@@ -1,0 +1,62 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "au-medicareprovidernumber",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 2
+    }
+  ],
+  "url": "http://hl7.org.au/fhir/StructureDefinition/au-medicareprovidernumber",
+  "name": "AUMedicareProviderNumber",
+  "title": "AU Medicare Provider Number",
+  "status": "active",
+  "description": "This identifier profile defines a Medicare provider number assigned by Services Australia to practitioners who provide services covered by the Medicare Benefits Schedule (MBS) at a specific location. A practitioner may have more than one Medicare provider number if they deliver health services in different locations or are registered in multiple health professions.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "type": "Identifier",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Identifier",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Identifier",
+        "path": "Identifier",
+        "short": "Medicare Provider Number",
+        "definition": "Medicare provider number assigned by Services Australia to practitioners who provide services covered by Medicare Benefits Schedule (MBS) at a specific location."
+      },
+      {
+        "id": "Identifier.type",
+        "path": "Identifier.type",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "UPIN",
+              "system": "http://terminology.hl7.org.au/CodeSystem/v2-0203"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Identifier.system",
+        "path": "Identifier.system",
+        "min": 1,
+        "fixedUri": "http://ns.electronichealth.net.au/id/medicare-provider-number"
+      },
+      {
+        "id": "Identifier.value",
+        "path": "Identifier.value",
+        "short": "Medicare provider number",
+        "min": 1,
+        "example": [
+          {
+            "label": "Medicare provider number",
+            "valueString": "2426621B"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "au-medicalrecordnumber",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 2
+    }
+  ],
+  "url": "http://hl7.org.au/fhir/StructureDefinition/au-medicalrecordnumber",
+  "name": "AUMedicalRecordNumber",
+  "title": "AU Medical Record Number",
+  "status": "active",
+  "description": "This identifier profile defines a  (MRN) (sometimes referred to as unit record number (URN) or (UR)) in an Australian context. An MRN is an institution's identifier for a patient's record at that institution. A patient may have more than one MRN for a single institution due to organisational restructures.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "type": "Identifier",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Identifier",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Identifier",
+        "path": "Identifier",
+        "short": "Medical Record Number (MRN)",
+        "definition": "Medical record number (MRN) (sometimes referred to as unit record number (URN) or (UR)) assigned by an institution to a patient’s record at that institution."
+      },
+      {
+        "id": "Identifier.type",
+        "path": "Identifier.type",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "MR",
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Identifier.system",
+        "path": "Identifier.system",
+        "short": "System identifier namespace for the institution that assigned the MRN",
+        "min": 1
+      },
+      {
+        "id": "Identifier.value",
+        "path": "Identifier.value",
+        "short": "MRN",
+        "min": 1
+      },
+      {
+        "id": "Identifier.assigner",
+        "path": "Identifier.assigner",
+        "short": "Institution that assigned the MRN",
+        "min": 1
+      },
+      {
+        "id": "Identifier.assigner.display",
+        "path": "Identifier.assigner.display",
+        "short": "Name of the assigning institution",
+        "min": 1
+      }
+    ]
+  }
+}

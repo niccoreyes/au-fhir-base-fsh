@@ -1,0 +1,69 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "au-localreportidentifier",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    }
+  ],
+  "url": "http://hl7.org.au/fhir/StructureDefinition/au-localreportidentifier",
+  "name": "AULocalReportIdentifier",
+  "title": "AU Local Report Identifier",
+  "status": "active",
+  "description": "This identifier profile defines a local report identifier in an Australian context. A local report identifier is an organisation's identifier for a report in that organisation's local system set of reports. A report identifier must uniquely identify the report from all other reports in a particular system (e.g. diagnostic imaging system, clinical laboratory system, document management system, referral systems). In some laboratory systems, the report identifier may be a concatenation of a lab number and report panel code (e.g. 19P123456-FBC), where the panel code makes the identifier unique from other reports under the same lab number.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "type": "Identifier",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Identifier",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Identifier",
+        "path": "Identifier",
+        "short": "Local Report Identifier",
+        "definition": "Local report identifier assigned by an organisation to a report in that organisation's set of reports. A local report identifier is a unique identifier for each report and must uniquely identify the report from all other reports in a particular system (e.g. diagnostic imaging system, clinical laboratory system, document management system, referral systems)."
+      },
+      {
+        "id": "Identifier.type",
+        "path": "Identifier.type",
+        "short": "Coded identifier type for local report identifier",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "LRI",
+              "system": "http://terminology.hl7.org.au/CodeSystem/v2-0203"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Identifier.system",
+        "path": "Identifier.system",
+        "short": "System identifier namespace for the organisation that assigned the report identifier",
+        "min": 1
+      },
+      {
+        "id": "Identifier.value",
+        "path": "Identifier.value",
+        "short": "Report identifier",
+        "min": 1
+      },
+      {
+        "id": "Identifier.assigner",
+        "path": "Identifier.assigner",
+        "short": "Organisation that assigned the report identifier",
+        "min": 1
+      },
+      {
+        "id": "Identifier.assigner.display",
+        "path": "Identifier.assigner.display",
+        "short": "Name of the assigning organisation",
+        "min": 1
+      }
+    ]
+  }
+}

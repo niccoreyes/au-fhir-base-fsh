@@ -1,0 +1,39 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "not-present",
+  "name": "MIMS",
+  "id": "mims-external",
+  "title": "Monthly Index of Medical Specialties (MIMS)",
+  "description": "This CodeSystem resource represents the Monthly Index of Medical Specialties (MIMS) code system published by MIMS Australia. The intended use of MIMS data is to fully specify the product as a combination of product code, form code, and pack code. For example, when providing a MIMS Code within a Clinical Document Architecture (CDA) document, the MIMS code will be a minimum of 5 digits (in most cases, will be 8 digits).This is not the canonical publication of this code system nor it is intended to be publication on behalf of the MIMS Australia. For the complete content of the code system contact the publisher.",
+  "url": "http://www.mims.com.au/codes",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 2
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:1.2.36.1.2001.1005.11.1"
+    }
+  ],
+  "experimental": false,
+  "publisher": "MIMS Australia",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.mims.com.au/",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright (c) MIMS Australia Pty Ltd.",
+  "caseSensitive": true,
+  "compositional": false,
+  "versionNeeded": false
+}

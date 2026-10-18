@@ -1,0 +1,71 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "encounter-description",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "deprecated",
+      "_valueCode": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status-reason",
+            "valueMarkdown": "This extension was deprecated in AU Base 5.0.0 as supporting clinical summary information (including clinical notes) in a resource-level extension is not in alignment with widely implemented approaches internationally and not considered best practice.\n\nSupport for clinical notes in Australia is subject to further discussion and input is sought from the community."
+          }
+        ]
+      }
+    }
+  ],
+  "url": "http://hl7.org.au/fhir/StructureDefinition/encounter-description",
+  "name": "EncounterDescription",
+  "title": "Encounter Description",
+  "status": "retired",
+  "description": "This extension applies to the Encounter resource and is used to represent a narrative description of the healthcare event or encounter. The description may include a summary of the issues or problems, management strategies, outcomes or progress, possible prognosis, and the patient’s understanding of the healthcare event. The description may capture text about the encounter that is not captured in other fields.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "Encounter",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Deprecated: Description, overview or summary of an encounter",
+        "definition": "This extension is deprecated as supporting clinical summary information (including clinical notes) in a resource-level extension is not in alignment with widely implemented approaches internationally and not considered best practice. Support for clinical notes in Australia is subject to further discussion and input is sought from the community.\n\nDescription, overview or summary of a clinical event and its reasons.",
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://hl7.org.au/fhir/StructureDefinition/encounter-description"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "Encounter description",
+        "min": 1,
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

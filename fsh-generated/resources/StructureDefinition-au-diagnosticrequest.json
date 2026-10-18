@@ -1,0 +1,146 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "au-diagnosticrequest",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "deprecated",
+      "_valueCode": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status-reason",
+            "valueMarkdown": "This profile was deprecated in AU Base 5.0.0 as work is being undertaken in the [AU eRequesting](https://build.fhir.org/ig/hl7au/au-fhir-erequesting) project to define the requirements for a diagnostic request. In AU Base this profile is replaced by [AU Base ServiceRequest](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-servicerequest.html), which localises core concepts, including identifiers and terminology, for use in an Australian context and enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs."
+          }
+        ]
+      }
+    }
+  ],
+  "url": "http://hl7.org.au/fhir/StructureDefinition/au-diagnosticrequest",
+  "name": "AUBaseDiagnosticRequest",
+  "title": "AU Base Diagnostic Request",
+  "status": "retired",
+  "description": "This profile defines a service request structure to represent a request for a diagnostic investigation in an Australian context. This profile is intended to support ordering for pathology, radiology, and specialist diagnostic investigations.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "ServiceRequest",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "ServiceRequest",
+        "path": "ServiceRequest",
+        "short": "Deprecated: A diagnostic service request in an Australian healthcare context",
+        "definition": "This profile is deprecated in AU Base as work is being undertaken in the [AU eRequesting](https://build.fhir.org/ig/hl7au/au-fhir-erequesting) project to define the requirements for a diagnostic request. In AU Base this profile is replaced by [AU Base ServiceRequest](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-servicerequest.html), which localises core concepts, including identifiers and terminology, for use in an Australian context and enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs.\n\nA record of a request for one or more diagnostic investigations to be performed."
+      },
+      {
+        "id": "ServiceRequest.extension",
+        "path": "ServiceRequest.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "ServiceRequest.extension:targetBodyStructure",
+        "path": "ServiceRequest.extension",
+        "sliceName": "targetBodyStructure",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/procedure-targetBodyStructure"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ServiceRequest.identifier",
+        "path": "ServiceRequest.identifier",
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/Identifier",
+              "http://hl7.org.au/fhir/StructureDefinition/au-localorderidentifier"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ServiceRequest.code",
+        "path": "ServiceRequest.code",
+        "comment": "A pathology order is preferred to be a member of the [RCPA - SPIA Requesting Pathology Terminology Reference Set](https://www.rcpa.edu.au/fhir/ValueSet/spia-requesting-refset-3) [(NCTS)](https://www.healthterminologies.gov.au/integration/R4/fhir/ValueSet/spia-requesting-refset-3). An imaging order is preferred to be a member of the [Imaging Procedure](https://healthterminologies.gov.au/fhir/ValueSet/imaging-procedure-1) value set.",
+        "binding": {
+          "strength": "example",
+          "valueSet": "https://healthterminologies.gov.au/fhir/ValueSet/evaluation-procedure-1"
+        }
+      },
+      {
+        "id": "ServiceRequest.requester",
+        "path": "ServiceRequest.requester",
+        "short": "Authorising individual, organisation or program (e.g. National Bowel Cancer Screening Program)",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Practitioner",
+              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+              "http://hl7.org/fhir/StructureDefinition/Organization",
+              "http://hl7.org/fhir/StructureDefinition/Patient",
+              "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ServiceRequest.performerType",
+        "path": "ServiceRequest.performerType",
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "https://healthterminologies.gov.au/fhir/ValueSet/practitioner-role-1"
+        }
+      },
+      {
+        "id": "ServiceRequest.reasonCode",
+        "path": "ServiceRequest.reasonCode",
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "https://healthterminologies.gov.au/fhir/ValueSet/reason-for-request-1"
+        }
+      },
+      {
+        "id": "ServiceRequest.specimen",
+        "path": "ServiceRequest.specimen",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org.au/fhir/StructureDefinition/au-specimen"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ServiceRequest.bodySite",
+        "path": "ServiceRequest.bodySite",
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "https://healthterminologies.gov.au/fhir/ValueSet/body-site-1"
+        }
+      }
+    ]
+  }
+}

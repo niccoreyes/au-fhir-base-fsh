@@ -1,0 +1,65 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "au-accessionnumber",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    }
+  ],
+  "url": "http://hl7.org.au/fhir/StructureDefinition/au-accessionnumber",
+  "name": "AUAccessionNumber",
+  "title": "AU Accession Number",
+  "status": "active",
+  "description": "This identifier profile defines an accession number in an Australian context. Accession numbers are typically assigned by a diagnostic imaging system or clinical laboratory system and depending on the domain an accession number may for example identify a specimen, imaging examination, or biological polymer sequence.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "type": "Identifier",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Identifier",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Identifier",
+        "path": "Identifier",
+        "short": "Accession Number",
+        "definition": "Accession number typically assigned by a diagnostic imaging system or clinical laboratory system and depending on the domain an accession number may for example identify a specimen, imaging examination, or biological polymer sequence."
+      },
+      {
+        "id": "Identifier.type",
+        "path": "Identifier.type",
+        "short": "Coded identifier type for accession number",
+        "min": 1,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org.au/ValueSet/accession-number-type"
+        }
+      },
+      {
+        "id": "Identifier.system",
+        "path": "Identifier.system",
+        "short": "System identifier namespace for the organisation that assigned the accession number",
+        "min": 1
+      },
+      {
+        "id": "Identifier.value",
+        "path": "Identifier.value",
+        "short": "Accession number",
+        "min": 1
+      },
+      {
+        "id": "Identifier.assigner",
+        "path": "Identifier.assigner",
+        "short": "Organisation that assigned the accession number",
+        "min": 1
+      },
+      {
+        "id": "Identifier.assigner.display",
+        "path": "Identifier.assigner.display",
+        "short": "Name of the assigning organisation",
+        "min": 1
+      }
+    ]
+  }
+}

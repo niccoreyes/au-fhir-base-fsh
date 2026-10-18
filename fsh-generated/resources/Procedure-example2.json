@@ -1,0 +1,50 @@
+{
+  "resourceType": "Procedure",
+  "id": "example2",
+  "meta": {
+    "profile": [
+      "http://hl7.org.au/fhir/StructureDefinition/au-procedure"
+    ]
+  },
+  "partOf": [
+    {
+      "reference": "Procedure/example1"
+    }
+  ],
+  "status": "completed",
+  "code": {
+    "coding": [
+      {
+        "code": "36969009",
+        "system": "http://snomed.info/sct",
+        "display": "Placement of stent in coronary artery"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example1"
+  },
+  "performedDateTime": "2021-09-25",
+  "performer": [
+    {
+      "actor": {
+        "reference": "PractitionerRole/example4"
+      }
+    }
+  ],
+  "location": {
+    "reference": "Location/example0"
+  },
+  "reasonCode": [
+    {
+      "coding": [
+        {
+          "code": "876856005",
+          "system": "http://snomed.info/sct",
+          "display": "Stenosis of right coronary artery"
+        }
+      ],
+      "text": "Occlusion of right coronary artery"
+    }
+  ]
+}

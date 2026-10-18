@@ -1,0 +1,38 @@
+{
+  "resourceType": "Observation",
+  "id": "norelevantfinding-example2",
+  "meta": {
+    "profile": [
+      "http://hl7.org.au/fhir/StructureDefinition/au-norelevantfinding"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "ASSERTION",
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "display": "Assertion"
+      }
+    ]
+  },
+  "status": "final",
+  "subject": {
+    "reference": "Patient/example0"
+  },
+  "effectiveDateTime": "2018-10-23",
+  "performer": [
+    {
+      "reference": "PractitionerRole/example3"
+    }
+  ],
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "443508001",
+        "system": "http://snomed.info/sct",
+        "display": "No H/O: clinical finding in subject"
+      }
+    ],
+    "text": "No history of clinical finding in subject"
+  }
+}

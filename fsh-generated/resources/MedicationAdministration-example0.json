@@ -1,0 +1,50 @@
+{
+  "resourceType": "MedicationAdministration",
+  "id": "example0",
+  "meta": {
+    "profile": [
+      "http://hl7.org.au/fhir/StructureDefinition/au-medicationadministration"
+    ]
+  },
+  "status": "completed",
+  "category": {
+    "coding": [
+      {
+        "code": "community",
+        "system": "http://terminology.hl7.org/CodeSystem/medication-admin-category"
+      }
+    ]
+  },
+  "medicationReference": {
+    "reference": "Medication/BrandedPackSingleActiveIngredient0"
+  },
+  "subject": {
+    "reference": "Patient/example1"
+  },
+  "effectiveDateTime": "2021-10-09T10:00:00+10:00",
+  "performer": [
+    {
+      "function": {
+        "coding": [
+          {
+            "code": "performer",
+            "system": "http://terminology.hl7.org/CodeSystem/med-admin-perform-function"
+          }
+        ]
+      },
+      "actor": {
+        "reference": "RelatedPerson/example1"
+      }
+    }
+  ],
+  "dosage": {
+    "text": "2 drops to the left eye",
+    "site": {
+      "text": "Left eye"
+    },
+    "dose": {
+      "value": 2,
+      "unit": "drop"
+    }
+  }
+}

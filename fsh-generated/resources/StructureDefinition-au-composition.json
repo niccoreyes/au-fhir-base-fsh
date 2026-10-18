@@ -1,0 +1,54 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "au-composition",
+  "url": "http://hl7.org.au/fhir/StructureDefinition/au-composition",
+  "name": "AUBaseComposition",
+  "title": "AU Base Composition",
+  "status": "active",
+  "description": "This profile defines a composition structure that localises core concepts for use in an Australian context. The purpose of this profile is to provide national level agreement on core localised concepts. This profile does not force conformance to core localised concepts. It enables implementers and modellers to make their own rules, i.e. [profiling](http://hl7.org/fhir/profiling.html), about how to support these concepts for specific implementation needs.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Composition",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Composition",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Composition",
+        "path": "Composition",
+        "short": "Composition for the Australian realm"
+      },
+      {
+        "id": "Composition.extension",
+        "path": "Composition.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Composition.extension:informationRecipient",
+        "path": "Composition.extension",
+        "sliceName": "informationRecipient",
+        "short": "Who and/or what should receive a copy of the composition",
+        "definition": "A recipient who should receive a copy of the composition. A recipient is an entity to whom a copy of the composition is directed at the time of authoring of the composition.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org.au/fhir/StructureDefinition/information-recipient"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

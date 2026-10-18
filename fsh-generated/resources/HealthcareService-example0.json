@@ -1,0 +1,83 @@
+{
+  "resourceType": "HealthcareService",
+  "id": "example0",
+  "meta": {
+    "profile": [
+      "http://hl7.org.au/fhir/StructureDefinition/au-healthcareservice"
+    ]
+  },
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "NOI",
+            "system": "http://terminology.hl7.org.au/CodeSystem/v2-0203",
+            "display": "National Organisation Identifier"
+          }
+        ],
+        "text": "HPI-O"
+      },
+      "system": "http://ns.electronichealth.net.au/id/hi/hpio/1.0",
+      "value": "8003621566684455"
+    }
+  ],
+  "active": true,
+  "specialty": [
+    {
+      "coding": [
+        {
+          "code": "394603008",
+          "system": "http://snomed.info/sct",
+          "display": "Cardiothoracic surgery"
+        }
+      ]
+    }
+  ],
+  "name": "Cardiothoracic Services",
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "0255503333",
+      "use": "work"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org.au/fhir/StructureDefinition/contact-purpose",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "medical-record",
+                "system": "http://terminology.hl7.org.au/CodeSystem/contact-purpose",
+                "display": "Medical Record"
+              }
+            ]
+          }
+        }
+      ],
+      "system": "phone",
+      "value": "0255504444",
+      "use": "work"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org.au/fhir/StructureDefinition/contact-purpose",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "after-hours",
+                "system": "http://terminology.hl7.org.au/CodeSystem/contact-purpose",
+                "display": "After Hours"
+              }
+            ]
+          }
+        }
+      ],
+      "system": "phone",
+      "value": "0255505555",
+      "use": "work"
+    }
+  ]
+}

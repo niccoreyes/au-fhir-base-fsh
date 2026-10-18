@@ -1,0 +1,76 @@
+{
+  "resourceType": "HealthcareService",
+  "id": "example5",
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "RACSI",
+            "system": "http://terminology.hl7.org.au/CodeSystem/v2-0203"
+          }
+        ],
+        "text": "RACS ID"
+      },
+      "system": "http://ns.electronichealth.net.au/id/residential-aged-care-service-id",
+      "value": "0011"
+    }
+  ],
+  "active": true,
+  "providedBy": {
+    "reference": "Organization/example5"
+  },
+  "type": [
+    {
+      "coding": [
+        {
+          "code": "1120991000168102",
+          "system": "http://snomed.info/sct"
+        }
+      ],
+      "text": "Aged care residential service"
+    }
+  ],
+  "location": [
+    {
+      "reference": "Location/example9"
+    }
+  ],
+  "name": "Honourable Mark's Home For Aged Men",
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "(07) 8543 5956",
+      "use": "work"
+    }
+  ],
+  "serviceProvisionCode": [
+    {
+      "coding": [
+        {
+          "code": "FAP",
+          "system": "http://terminology.hl7.org.au/CodeSystem/service-provision-conditions"
+        }
+      ],
+      "text": "Fees Apply"
+    },
+    {
+      "coding": [
+        {
+          "code": "COP",
+          "system": "http://terminology.hl7.org.au/CodeSystem/service-provision-conditions"
+        }
+      ],
+      "text": "Co-payment"
+    },
+    {
+      "coding": [
+        {
+          "code": "MIX",
+          "system": "http://terminology.hl7.org.au/CodeSystem/service-provision-conditions"
+        }
+      ],
+      "text": "Mixed Billing"
+    }
+  ]
+}

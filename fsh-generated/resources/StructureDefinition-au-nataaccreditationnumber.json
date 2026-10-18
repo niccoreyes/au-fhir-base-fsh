@@ -1,0 +1,62 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "au-nataaccreditationnumber",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    }
+  ],
+  "url": "http://hl7.org.au/fhir/StructureDefinition/au-nataaccreditationnumber",
+  "name": "AUNATAAccreditationNumber",
+  "title": "AU NATA Accreditation Number",
+  "status": "active",
+  "description": "This identifier profile defines a National Association of Testing Authorities (NATA) accreditation number in an Australian context (see [NATA](https://www.nata.com.au/) for further information).",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "type": "Identifier",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Identifier",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Identifier",
+        "path": "Identifier",
+        "short": "National Association of Testing Authorities (NATA) Accreditation Number",
+        "definition": "National Association of Testing Authorities (NATA) accreditation number associated with an accredited facility."
+      },
+      {
+        "id": "Identifier.type",
+        "path": "Identifier.type",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "NATAA",
+              "system": "http://terminology.hl7.org.au/CodeSystem/v2-0203"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Identifier.system",
+        "path": "Identifier.system",
+        "min": 1,
+        "fixedUri": "http://hl7.org.au/id/nata-accreditation"
+      },
+      {
+        "id": "Identifier.value",
+        "path": "Identifier.value",
+        "short": "NATA accreditation number",
+        "min": 1,
+        "example": [
+          {
+            "label": "NATA accreditation number",
+            "valueString": "244842"
+          }
+        ]
+      }
+    ]
+  }
+}

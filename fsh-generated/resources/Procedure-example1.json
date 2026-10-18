@@ -1,0 +1,45 @@
+{
+  "resourceType": "Procedure",
+  "id": "example1",
+  "meta": {
+    "profile": [
+      "http://hl7.org.au/fhir/StructureDefinition/au-procedure"
+    ]
+  },
+  "status": "completed",
+  "code": {
+    "coding": [
+      {
+        "code": "41976001",
+        "system": "http://snomed.info/sct",
+        "display": "Cardiac catheterisation"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example1"
+  },
+  "performedDateTime": "2021-09-25",
+  "performer": [
+    {
+      "actor": {
+        "reference": "PractitionerRole/example4"
+      }
+    }
+  ],
+  "location": {
+    "reference": "Location/example0"
+  },
+  "reasonCode": [
+    {
+      "coding": [
+        {
+          "code": "876856005",
+          "system": "http://snomed.info/sct",
+          "display": "Stenosis of right coronary artery"
+        }
+      ],
+      "text": "Occlusion of right coronary artery"
+    }
+  ]
+}

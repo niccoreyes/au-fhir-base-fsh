@@ -1,0 +1,89 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "au-pathologyreport",
+  "url": "http://hl7.org.au/fhir/StructureDefinition/au-pathologyreport",
+  "name": "AUBasePathologyReport",
+  "title": "AU Base Pathology Report",
+  "status": "active",
+  "description": "This profile defines a diagnostic report structure to represent a pathology report issued by a diagnostic service provider in an Australian context. This profile is intended to be capable of supporting reporting for all pathology disciplines (e.g. including microbiology, histopathology, cytology, blood transfusion) with the exception of genomics.\n\nThis profile does not provide full support for structured pathology reporting. It is expected that this support is best handled by a set of profiles that represent the structured reporting requirements for each specific protocol (see for example [RCPA’s structured pathology reporting of cancer](https://www.rcpa.edu.au/Library/Practising-Pathology/Structured-Pathology-Reporting-of-Cancer)); this is not in the scope of this implementation guide at this time.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "DiagnosticReport",
+  "baseDefinition": "http://hl7.org.au/fhir/StructureDefinition/au-diagnosticreport",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "DiagnosticReport",
+        "path": "DiagnosticReport",
+        "short": "A pathology report in an Australian healthcare context"
+      },
+      {
+        "id": "DiagnosticReport.basedOn",
+        "path": "DiagnosticReport.basedOn",
+        "short": "Pathology order",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
+              "http://hl7.org.au/fhir/StructureDefinition/au-servicerequest",
+              "http://hl7.org/fhir/StructureDefinition/CarePlan"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.category",
+        "path": "DiagnosticReport.category",
+        "min": 1,
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://healthterminologies.gov.au/fhir/ValueSet/pathology-diagnostic-service-category-1"
+        }
+      },
+      {
+        "id": "DiagnosticReport.code",
+        "path": "DiagnosticReport.code",
+        "short": "Pathology test or test group",
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "https://healthterminologies.gov.au/fhir/ValueSet/spia-pathology-reporting-1"
+        }
+      },
+      {
+        "id": "DiagnosticReport.subject",
+        "path": "DiagnosticReport.subject",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.effective[x]",
+        "path": "DiagnosticReport.effective[x]",
+        "short": "Time of specimen collection",
+        "min": 1
+      },
+      {
+        "id": "DiagnosticReport.result",
+        "path": "DiagnosticReport.result",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org.au/fhir/StructureDefinition/au-diagnosticresult",
+              "http://hl7.org.au/fhir/StructureDefinition/au-pathologyresult"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
